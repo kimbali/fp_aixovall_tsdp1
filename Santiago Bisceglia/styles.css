@@ -1,0 +1,49 @@
+body{
+    background-color: grey;
+}
+.title{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.spotify-search{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.rectangle-div{
+    display: flex;
+    width: 590px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: 450px;
+    margin-top: 40px;
+}
+.textbox{
+    height: 100px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: #706B6B;
+    font-size: 30px;
+    font-style: bold;
+}
+.buscar{
+    display: inline-flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: #246D0A;
+    color: #FFF;
+    margin-left: 700px;
+    margin-top: 80px;
+}
