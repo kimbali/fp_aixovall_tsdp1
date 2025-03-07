@@ -47,3 +47,7 @@ body{
     margin-left: 700px;
     margin-top: 80px;
 }
+.buscar:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
