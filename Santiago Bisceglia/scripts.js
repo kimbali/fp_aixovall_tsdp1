@@ -20,5 +20,5 @@ async function getAccessToken() {
     console.error('Error:', error);
     }
 }
-const token = getAccessToken();
-console.log(token);
+
+console.log(getAccessToken());
