@@ -7,10 +7,17 @@
     <title>Spotify</title>
 </head>
 <body> 
+    
     <div class="container">
+
         <h1>Buscador de cançons</h1> 
-        <input type="text" placeholder="Escribe algo..."> 
-        <button class="text"> Cercar </button> 
+
+        <input id="searchInput" type="search"/>
+
+        <input type="text" placeholder="Escribe algo...">
+
+        <button onclick="searchTracks()" class="text"> Cercar </button> 
+
         <div id="resultats"></div>
     </div>
 
