@@ -1,7 +1,5 @@
 const clientId = '7b494704a577424bbea360c81944d53f';
 const clientSecret = '9922d861e8854814a2a1ebe4a15c95dc';
-const button = document.getElementById("buttonBuscar");
-const input = document.getElementById("search");
 
 async function getAccessToken() {
     try {
@@ -21,4 +19,36 @@ async function getAccessToken() {
     }
 }
 
-console.log(getAccessToken());
+async function searchTracks() {
+    const query = document.getElementById('search').value.trim();
+    
+    try {
+    const token = await getAccessToken();
+    
+    const url = `https://api.spotify.com/v1/search?q=${encodeURIComponent(
+    query
+    )}&type=track&limit=10`;
+    
+    const response = await fetch(url, {
+    headers: {
+    Authorization: 'Bearer ' + token,
+    },
+    });
+    
+    const data = await response.json();
+    
+    return displayResults(data.tracks.items);
+    } catch (error) {
+    throw new Error('Error en la busqueda');
+    }
+}
+
+function displayResults(tracks) {
+    console.log(tracks);
+
+    const resultsDiv = document.getElementById('results');
+    resultsDiv = innerHTML = '';
+
+    console.log(resultsDiv);
+    
+}
