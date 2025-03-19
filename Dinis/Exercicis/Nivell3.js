@@ -20,3 +20,16 @@ let parametre2 = 10;
 console.log("Ex. 12:", multiplicarParametres(parametre1, parametre2));
 
 // Exercici 13
+let arrayy = [52, 61, 26, 109, 2, 7];
+Math.max(...arrayy);
+console.log("Ex. 13:", Math.max(...arrayy));
+
+// Exercici 14
+arrayy.reverse();
+console.log("Ex. 14:", arrayy);
+
+// Exercici 15
+let arrayDuplicat = [2, 2, 7, 4, 90, 2, 2, 6, 6];
+new Set(arrayDuplicat);
+Array.from(new Set(arrayDuplicat));
+console.log("Ex. 15:", Array.from(new Set(arrayDuplicat)));
