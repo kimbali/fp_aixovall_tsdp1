@@ -16,7 +16,8 @@ async function getAccessToken() {
         if (!response.ok) throw new Error(data.error || 'Error obtenint el token');
         return data.access_token;
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Error obtenint el token:', error);
+        alert('No s\'ha pogut obtenir el token de Spotify.');
     }
 }
 
@@ -29,16 +30,23 @@ async function searchTracks() {
 
     try {
         const token = await getAccessToken();
-        const response = await fetch(`https://api.spotify.com/v1/search?q=${encodeURIComponent(query)}&type=track&limit=10`, {
-            method: 'GET',
-            headers: { 'Authorization': 'Bearer ' + token }
+        if (!token) return;
+
+        const url = `https://api.spotify.com/v1/search?q=${encodeURIComponent(query)}&type=track&limit=10`;
+
+        const response = await fetch(url, {
+            headers: {
+                Authorization: 'Bearer ' + token,
+            },
         });
 
         const data = await response.json();
-        if (!response.ok) throw new Error(data.error || 'Error en la cerca');
-        displayResults(data.tracks.items);
+        if (!response.ok) throw new Error(data.error?.message || 'Error en la cerca');
+
+        return displayResults(data.tracks.items);
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Error en la cerca:', error);
+        alert('Hi ha hagut un problema amb la cerca de cançons.');
     }
 }
 
@@ -64,8 +72,28 @@ function displayResults(tracks) {
         infoDiv.innerHTML = `
             <strong>${track.name}</strong><br>
             ${track.artists.map(artist => artist.name).join(', ')}
-            <br><audio controls src="${track.preview_url || ''}"></audio>
         `;
+
+        if (track.preview_url) {
+            const audio = document.createElement('audio');
+            audio.controls = true;
+            audio.src = track.preview_url;
+            infoDiv.appendChild(audio);
+        } else {
+            const noPreview = document.createElement('p');
+            noPreview.textContent = 'No hi ha previsualització disponible';
+            noPreview.style.color = 'red';
+
+            const spotifyLink = document.createElement('a');
+            spotifyLink.href = track.external_urls.spotify;
+            spotifyLink.target = '_blank';
+            spotifyLink.textContent = 'Escoltar a Spotify';
+            spotifyLink.style.display = 'block';
+            spotifyLink.style.marginTop = '5px';
+
+            infoDiv.appendChild(noPreview);
+            infoDiv.appendChild(spotifyLink);
+        }
 
         songDiv.appendChild(img);
         songDiv.appendChild(infoDiv);
