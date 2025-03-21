@@ -31,7 +31,7 @@ async function searchTracks() {
     try {
         const token = await getAccessToken();
 
-        const URL = 'https://api.spotify.com/v1/search?offset=0&limit=20&query=remaster%2520track%3ADoxy%2520artist%3AMiles%2520Davis&type=album&locale=en-US,en;q%3D0.9,es;q%3D0.8'
+     const URL = `https://api.spotify.com/v1/search?offset=0&limit=20&query=${encodeURIComponent(query)}locale=en-US,en;q%3D0.9,es;q%3D0.8`
 
         const response = await fetch(url, {
             headers: {
@@ -49,6 +49,7 @@ async function searchTracks() {
 }
 
 function displayResults(trakcs) {
-    console.log(searchTracks);
+    console.log(trakcs);
 
 }
+
