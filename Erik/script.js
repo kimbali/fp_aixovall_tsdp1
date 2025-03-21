@@ -72,39 +72,5 @@ function displayResults(tracks) {
     });
 }
 
-// Afegir event al botó de cerca
+
 document.getElementById('searchButton').addEventListener('click', searchTracks);
-function displayResults(tracks) {
-    const resultsDiv = document.getElementById('results');
-    resultsDiv.innerHTML = ''; // Esborrar resultats anteriors
-
-    if (tracks.length === 0) {
-        resultsDiv.innerHTML = '<p>No s\'han trobat resultats.</p>';
-        return;
-    }
-
-    tracks.forEach(track => {
-        const songDiv = document.createElement('div');
-        songDiv.classList.add('song');
-
-        const img = document.createElement('img');
-        img.src = track.album.images[0]?.url || 'https://via.placeholder.com/50';
-        img.alt = track.name;
-
-        const text = document.createElement('p');
-        text.innerHTML = `<strong>${track.name}</strong> - ${track.artists.map(artist => artist.name).join(', ')}`;
-
-        const audio = document.createElement('audio');
-        if (track.preview_url) {
-            audio.src = track.preview_url;
-            audio.controls = true; // Afegim controls de reproducció
-        } else {
-            audio.innerHTML = '<p>No hi ha previsualització disponible.</p>';
-        }
-
-        songDiv.appendChild(img);
-        songDiv.appendChild(text);
-        songDiv.appendChild(audio);
-        resultsDiv.appendChild(songDiv);
-    });
-}

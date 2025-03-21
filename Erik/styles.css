@@ -42,7 +42,7 @@ button:hover {
 }
 
 .song {
-    background: white;
+    background: rgb(90, 89, 89);
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
