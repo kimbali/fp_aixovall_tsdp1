@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="keywords"
+      content="rocanolich, Marc Pimienta, cursa, Aixovall"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rocanolich race</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/loogo_roca.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+
+    <style>
+      /* V2 Kim, test*/
+      /* Variables de colors */
+      :root {
+        --color-principal: #0e3489; /* Blau fosc */
+        --color-secundari: #ffc72c; /* Groc */
+        --color-tercer: #ff5733; /* Taronja */
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      /* Capçalera */
+      .header {
+        position: relative;
+        height: 45vh;
+        background: var(--color-principal)
+          url('./assets/img/ROCANOLICH-2025.svg') no-repeat bottom;
+        background-size: contain;
+        color: white;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      /* Fons fosc a la capçalera */
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      /* Navbar transparent */
+      .navbar {
+        background: var(--color-principal);
+        /* position: absolute; */
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+        height: 102px;
+      }
+
+      /* Logo i nom de l'esdeveniment */
+      .logo-container {
+        display: flex;
+        align-items: center;
+        color: var(--color-tercer);
+      }
+
+      .logo {
+        height: 100px;
+        margin-right: 10px;
+      }
+
+      .event-name {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .event-subtitle {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      /* Menú */
+      .navbar-nav {
+        background-color: var(--color-principal);
+      }
+      .navbar-nav .nav-link {
+        color: var(--color-tercer) !important;
+        font-weight: bold;
+        text-align: end;
+        font-size: 16px;
+        padding: 12px 22px;
+      }
+
+      /* Secció d'història */
+      .section {
+        padding: 40px 0;
+      }
+
+      /* Títol de secció */
+      .section-title {
+        color: var(--color-secundari);
+        font-weight: bold;
+        font-size: 3rem;
+      }
+
+      /* Imatge vertical */
+      .history-img {
+        width: 100%;
+        border-radius: 15px;
+      }
+
+      .race-title {
+        color: var(--color-secundari);
+        font-weight: bold;
+      }
+
+      /* Cards */
+      .race-card {
+        background: var(--color-principal);
+        color: white;
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+
+      .race-card:hover {
+        transform: scale(1.05);
+      }
+
+      /* Títol de cada card */
+      .race-card h3 {
+        color: var(--color-tercer);
+        font-weight: bold;
+      }
+
+      /* Link de descàrrega */
+      .download-link {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .download-link:hover {
+        text-decoration: underline;
+      }
+
+      /* Fons semi-transparent */
+      .card-overlay {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 15px;
+      }
+      /* Espai entre els elements de la fila (gap) */
+      .row.gap-4 {
+        gap: 20px; /* ajusta aquest valor segons el que necessitis */
+      }
+
+      /* Vídeo */
+      .video-div {
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Títol de cada video */
+      .video-div h3 {
+        color: var(--color-tercer);
+        font-weight: bold;
+      }
+
+      /* Estils dels serveis */
+      .servei .imatge {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-principal);
+        border-radius: 50%;
+        width: 58px;
+        height: 58px;
+        color: var(--color-secundari);
+        margin-bottom: 16px;
+        font-size: 32px;
+      }
+
+      .img-circuit-container {
+        .img-circuit {
+          width: 30%;
+        }
+      }
+
+      /* Ajust en tablets */
+      @media (max-width: 960px) {
+        /* Secció Rocanolic Race */
+        .section {
+          padding: 30px 0;
+        }
+
+        .img-circuit-container {
+          .img-circuit {
+            width: 100%;
+          }
+        }
+      }
+
+      /* Ajust en mòbils */
+      @media (max-width: 768px) {
+        .header {
+          height: 32vh;
+          background: var(--color-principal)
+            url('./assets/img/ROCANOLICH-2025.svg') no-repeat center center/100%;
+        }
+        .history-section {
+          text-align: center;
+        }
+        /* Secció Rocanolic Race */
+        .section {
+          padding: 20px 0;
+        }
+        .logo {
+          height: 50px;
+        }
+      }
+
+      .inscripcio-cta {
+        position: fixed;
+        bottom: 32px;
+        right: 24px;
+        z-index: 10;
+        background-color: var(--color-principal);
+        border: thin solid var(--color-secundari);
+        border-radius: 50px;
+        padding: 12px 18px;
+        box-shadow: 0 0 10px rgba(129, 128, 128, 0.5);
+
+        a {
+          font-weight: bold;
+          justify-content: flex-end;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          font-size: 20px;
+          color: var(--color-secundari);
+          text-decoration: none;
+        }
+
+        .icon {
+          height: 24px;
+          margin: 0;
+          font-size: 32px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .timeline {
+        text-align: center;
+
+        .timeline-title {
+          margin-bottom: 24px;
+        }
+
+        .timeline-day-title {
+          font-size: 24px;
+          color: var(--color-secundari);
+        }
+
+        .timeline-day {
+          list-style: none;
+          margin-bottom: 24px;
+
+          .timeline-item {
+            margin-bottom: 12px;
+            .horari {
+              font-weight: bold;
+              color: var(--color-principal);
+            }
+
+            .activitat {
+              
+            }
+
+            .highlighted {
+              color: var(--color-principal);
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="inscripcio-cta">
+      <a
+        href="https://topcrono.net/ca/esdeveniments/rocanolich-memorial-marc-pimienta/"
+        target="_blank"
+      >
+        Inscriure'm
+
+        <span class="icon material-symbols-outlined"> chevron_right </span>
+      </a>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand logo-container" href="#">
+          <img src="./assets/img/loogo_roca.png" alt="Logo" class="logo" />
+          <div>
+            <div class="event-name">ROCANOLICH</div>
+            <div class="event-subtitle">Memorial Marc Pimienta</div>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#programa">PROGRAMA</a>
+            </li>
+            <!-- <li class="nav-item"><a class="nav-link" href="#">Edicions</a></li> -->
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="./assets/tracks/REGLAMENT_CORREDORS.pdf"
+                download="reglament_rocanolich.pdf"
+                >REGLAMENT</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://topcrono.net/ca/esdeveniments/rocanolich-memorial-marc-pimienta/"
+                target="_blank"
+                >INSCRIPCIONS</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Capçalera -->
+    <header class="header">
+      <!-- <div class="overlay"></div> -->
+      <!-- <div class="container position-relative">
+            <h1 class="display-4 fw-bold">Benvinguts a Rocanolich</h1>
+            <p class="lead">Un homenatge a la passió per la muntanya</p>
+            <a href="#" class="btn btn-warning btn-lg">Inscriu-te ara</a>
+        </div> -->
+    </header>
+
+    <!-- Secció d'història -->
+    <section class="section bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Imatge vertical -->
+          <div class="col-lg-4 col-md-6 col-9 mx-auto text-center p-5">
+            <img
+              src="./assets/img/Imatge_Marc_negre.svg"
+              alt="Record del Marc"
+              class="history-img"
+            />
+          </div>
+
+          <!-- Text -->
+          <div class="col-lg-8">
+            <h2 class="section-title">Memorial Marc Pimienta</h2>
+            <p class="mt-4">
+              Tots els projectes de la nostra vida tenen un punt de partida, i
+              el nostre, malauradament, va néixer d'una pèrdua profunda. La
+              pèrdua d'un company, d'un referent, d'un amic, d'una persona que
+              no deixava a ningú indiferent...
+            </p>
+            <p>
+              Una vegada passat el cop, si és que veritablement es pot superar
+              un cop com aquest, va sorgir en l'entorn del Centre de Formació
+              Professional d'Aixovall la necessitat d'emprendre alguna acció en
+              memòria del Marc. Valorant la seva passió per les nostres
+              muntanyes, per l'esport i la seva dedicació educativa, ens hem
+              aventurat a organitzar una cursa de muntanya com a homenatge a tot
+              el que la seva figura representa.
+            </p>
+            <p>
+              Les curses de muntanya no són només una competició esportiva; són
+              un símbol de perseverança, companyerisme i record. És un
+              recordatori constant dels valors que el Marc ens va ensenyar i que
+              encara avui perduren entre nosaltres.
+            </p>
+            <p class="fst-italic">
+              "Que cada passa sigui un homenatge, cada somriure una memòria i
+              cada repte superat una victòria compartida amb ell en l'eternitat
+              dels nostres cors."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secció Rocanolich Race -->
+    <section class="section bg-light">
+      <div class="container">
+        <!-- Títol i descripció -->
+        <h2 class="text-center section-title">Rocanolich Race</h2>
+        <p class="text-center mt-3">
+          Aquesta segona edició de la Rocanolich - Memorial Marc Pimienta
+          presenta tres itineraris diferents per tal d'oferir una prova adaptada
+          a tots els públics. Des d'aquells corredors experimentats, passant
+          pels amants de la muntanya fins als que volen participar en
+          l'esdeveniment amb un vessant no competitiu. Us esperem!
+        </p>
+        <p class="text-center fw-bold text-danger mt-2">
+          Com a novetat, aquest any la cursa és puntuable per la Copa d'Andorra
+        </p>
+
+        <!-- Cards -->
+        <div
+          class="mt-4 d-flex flex-wrap justify-content-around gap-4 img-circuit-container"
+        >
+          <!-- Card 1 -->
+          <div class="race-card flex-grow-1 img-circuit">
+            <!-- <h3>Distància <br><span class="fw-bold">15K</span></h3> -->
+            <img
+              src="./assets/img/logo_circuit_llarg.png"
+              alt="Itinerari"
+              class="img-fluid"
+            />
+            <a
+              href="./assets/tracks/13km_Rocanolich.gpx"
+              download="rocanolich_13k.gpx"
+              class="download-link d-block my-2"
+              >Descarrega't el track</a
+            >
+          </div>
+
+          <!-- Card 2 -->
+          <div class="race-card flex-grow-1 img-circuit">
+            <!-- <h3>Distància <br><span class="fw-bold">10K</span></h3> -->
+            <img
+              src="./assets/img/logo_circuit_curt.png"
+              alt="Itinerari"
+              class="img-fluid"
+            />
+            <a
+              href="./assets/tracks/10km_rocanolich.gpx"
+              download="rocanolich_10K.gpx"
+              class="download-link d-block my-2"
+              >Descarrega't el track</a
+            >
+          </div>
+
+          <!-- Card 3 -->
+          <div class="race-card flex-grow-1 img-circuit">
+            <!-- <h3>Distància <br><span class="fw-bold">Caminada</span></h3> -->
+
+            <img
+              src="./assets/img/logo_caminada_inclusiva.png"
+              alt="Itinerari"
+              class="img-fluid"
+            />
+            <a href="#" class="download-link d-block my-2"
+              >Descarrega't el track</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secció Vídeos -->
+    <section class="section bg-light">
+      <div class="container">
+        <!-- Títol i descripció -->
+        <h2 class="text-center section-title">Vídeos de la cursa</h2>
+
+        <!-- Videos -->
+        <div
+          class="row row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center gy-5"
+        >
+          <!-- Vídeo 1 -->
+          <div class="col video-div">
+            <h3 class="text-center">Cursa llarga</h3>
+            <div class="card-overlay ratio ratio-16x9">
+              <video controls poster="./assets/img/poster_cursa_llarga.png">
+                <source
+                  src="./assets/videos/video_cursa_llarga.webm"
+                  type="video/webm"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+          <!-- Vídeo 2 -->
+          <div class="col video-div">
+            <h3 class="text-center">Cursa curta</h3>
+            <div class="card-overlay ratio ratio-16x9">
+              <video controls poster="./assets/img/poster_cursa_curta.png">
+                <source
+                  src="./assets/videos/video_cursa_curta.webm"
+                  type="video/webm"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+          <!-- Vídeo 3 -->
+          <!-- <div class="col video-div">
+            <h3 class="text-center">Caminada popular</h3>
+            <div class="card-overlay ratio ratio-16x9">
+              <video controls poster="./assets/img/poster_caminada_popular.png">
+                <source
+                  src="./assets/videos/video_caminada_popular.webm"
+                  type="video/webm"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div> -->
+
+          <!-- Vídeo 4 -->
+          <div class="col video-div">
+            <h3 class="text-center">Consell d'alimentació</h3>
+            <div class="card-overlay ratio ratio-16x9">
+              <video
+                controls
+                poster="./assets/img/poster_consells_alimentacio.png"
+              >
+                <source
+                  src="./assets/videos/video_consells_alimentacio.webm"
+                  type="video/webm"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secció Serveis -->
+    <section class="section bg-light">
+      <div class="container">
+        <!-- Títol i descripció -->
+        <h2 class="text-center section-title mb-5">Serveis</h2>
+
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+            <div class="servei d-flex flex-column justify-content-center">
+              <span class="material-symbols-outlined icon mx-auto imatge">
+                water_bottle
+              </span>
+              <h5>AVITUALLAMENT</h5>
+              <p>
+                Les curses tindran dos avituallaments durant el recorregut i un
+                a l'arribada
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+            <div class="servei d-flex flex-column justify-content-center">
+              <span class="material-symbols-outlined icon mx-auto imatge">
+                medical_services
+              </span>
+              <h5>ASSISTÈNCIA SANITÀRIA</h5>
+              <p>
+                Professionals del món de la salut a la vostra disposició durant
+                el recorregut
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+            <div class="servei d-flex flex-column justify-content-center">
+              <span class="material-symbols-outlined icon mx-auto imatge">
+                social_leaderboard
+              </span>
+              <h5>MEDALLA FINISHER</h5>
+              <p>Un record per a tots/es aquells/es que arribeu a la meta</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+            <div class="servei d-flex flex-column justify-content-center">
+              <span class="material-symbols-outlined icon mx-auto imatge">
+                memory
+              </span>
+              <h5>CRONOMETRATGE AMB XIP</h5>
+              <p>Sistema de cronometratge professional a través de TopCrono</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+            <div class="servei d-flex flex-column justify-content-center">
+              <span class="material-symbols-outlined icon mx-auto imatge">
+                bedroom_baby
+              </span>
+              <h5>LUDOTECA</h5>
+              <p>
+                Vine amb els petits de la família i els nostres monitors
+                s'encarreguen d'ells mentre tu fas la cursa
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+            <div class="servei d-flex flex-column justify-content-center">
+              <span class="material-symbols-outlined icon mx-auto imatge">
+                photo_camera
+              </span>
+              <h5>FOTOGRAFIA I VÍDEO</h5>
+              <p>
+                Captura d'imatges i vídeos durant els recorreguts que posarem a
+                la vostra disposició... GRATIS!
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+            <div class="servei d-flex flex-column justify-content-center">
+              <span class="material-symbols-outlined icon mx-auto imatge">
+                physical_therapy
+              </span>
+              <h5>MASSATGE RECUPERACIÓ</h5>
+              <p>
+                Si ho necessites, a l'arribada podràs gaudir d'un massatge
+                recuperador
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+            <div class="servei d-flex flex-column justify-content-center">
+              <span class="material-symbols-outlined icon mx-auto imatge">
+                queue_music
+              </span>
+              <h5>ANIMACIÓ</h5>
+              <p>
+                Farem de l'esdeveniment una festa i l'escalfament de la caminada
+                estarà dirigit per passar-ho d'allò més bé!
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+            <div class="servei d-flex flex-column justify-content-center">
+              <span class="material-symbols-outlined icon mx-auto imatge">
+                local_parking
+              </span>
+              <h5>PÀRQUING</h5>
+              <p>
+                Habilitarem una zona d'aparcament tot i que us recomanem el
+                transport públic per no colapsar l'espai
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-light" id="programa">
+      <div class="container timeline">
+        <h2 class="text-center section-title timeline-title">Programa Rocanolich 2025</h2>
+
+        <p class="timeline-day-title">📅 Divendres 9 de maig 2025</p>
+        <ul class="timeline-day">
+          <li class="timeline-item">
+            <span class="horari">🕔 17h - 20h</span>
+            <span class="activitat"> 🏅 Recollida de dorsals</span></li>
+          </li>
+        </ul>
+
+        <p class="timeline-day-title">📅 Dissabte 10 de maig 2025</p>
+        <ul class="timeline-day">
+          <li class="timeline-item">
+            <span class="horari">🕢 7:30h - 10h </span>
+            <span class="activitat"> 👟 Rebuda de corredors i recollida de dorsals</span>
+          </li>
+          <li class="timeline-item">
+            <span class="horari">🏁 9h </span>
+            <span class="activitat highlighted"> 🏃‍♂️ Sortida cursa llarga</span>
+          </li>
+          <li class="timeline-item">
+            <span class="horari">🏁 10h </span>
+            <span class="activitat highlighted"> 🏃‍♀️ Sortida cursa curta</span>
+          </li>
+          <li class="timeline-item">
+            <span class="horari">🔥 10h </span>
+            <span class="activitat"> 💪 Escalfament dirigit a càrrec dels alumnes de BP AFEL B</span>
+          </li>
+          <li class="timeline-item">
+            <span class="horari">🚶‍♂️ 10:10h </span>
+            <span class="activitat highlighted"> ♿ Sortida caminada inclusiva</span>
+          </li>
+          <li class="timeline-item">
+            <span class="horari">⏳ 10:50h </span>
+            <span class="activitat"> 🎉 Hora prevista arribada primers corredors</span>
+          </li>
+          <li class="timeline-item">
+            <span class="horari">🎤 11h </span>
+            <span class="activitat"> 🏅 Acte d'homenatge a Marc Pimienta al Centre de Congressos de Sant Julià de Lòria</span>
+          </li>
+          <li class="timeline-item">
+            <span class="horari">🥤 11:30h </span>
+            <span class="activitat"> 🍌 Avituallament final</span>
+          </li>
+          <li class="timeline-item">
+            <span class="horari">🏆 12:30h </span>
+            <span class="activitat"> 🏅 Entrega de premis als guanyadors/es</span>
+          </li>
+          <li class="timeline-item">
+            <span class="horari">⏳ 13h </span>
+            <span class="activitat"> 🎊 Hora prevista arribada darrers corredors</span>
+          </li>
+          <li class="timeline-item">
+            <span class="horari">🎶 15h</span>
+            <span class="activitat"> 🎉 Fi de festa</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Secció Partners -->
+    <section class="section bg-light">
+      <div class="container">
+        <!-- Títol i descripció -->
+        <h2 class="text-center section-title">Partners</h2>
+        <p class="text-center mt-4">Els nostres col·laboradors</p>
+        <div class="row justify-content-center align-items-center gx-5 gy-5">
+          <div class="col-10 mx-auto order-1">
+            <img
+              src="./assets/img/logo_grup_becier.jpg"
+              alt="Grup Becier"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-6 col-md-4 col-lg-4 order-3 order-lg-2 mx-auto">
+            <img
+              src="./assets/img/Logo_standar.JPG"
+              alt="Formació Professional"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-6 col-md-8 order-lg-6 order-2 mx-auto">
+            <img
+              src="./assets/img/logo_eleclerc_hiperandorra.jpg"
+              alt="Eclerc Andorra"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-4 col-md-4 col-lg-4 order-4 mx-auto">
+            <img
+              src="./assets/img/Logo St. Julià.png"
+              alt="Comú Sant Julià"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-4 col-md-4 col-lg-4 order-5 mx-auto">
+            <img
+              src="./assets/img/logo-1-2.png"
+              alt="Federació Andorra Muntanya"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-4 col-md-4 col-lg-4 order-5 mx-auto">
+            <img src="./assets/img/multisegur.jpg" alt class="img-fluid" />
+          </div>
+          <div class="col-4 col-md-4 col-lg-3 order-5 mx-auto">
+            <img
+              src="./assets/img/logo_CreuRoja.svg"
+              alt="Creu Roja"
+              class="img-fluid"
+            />
+          </div>
+          <!-- <div class="col-8 col-md-6 col-lg-3 order-5">
+                    <img src="./assets/img/logo_auditand.jpg" alt="Auditand" class="img-fluid">
+                </div> -->
+          <div class="col-4 col-md-4 col-lg-3 order-5 mx-auto">
+            <img
+              src="./assets/img/logo_CrownSports.svg"
+              alt="Crown Sports"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-4 col-md-4 col-lg-3 order-5 mx-auto">
+            <img
+              src="./assets/img/logo_flaixfm.svg"
+              alt="FlaixFM"
+              class="img-fluid"
+            />
+          </div>
+          <!-- <div class="col-6 col-sm-5 col-md-2 order-5">
+                    <img src="./assets/img/viladomatpng.png" alt="Viladomat" class="img-fluid">
+                </div> -->
+        </div>
+      </div>
+    </section>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

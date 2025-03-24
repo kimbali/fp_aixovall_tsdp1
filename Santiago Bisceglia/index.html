@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Spotify Search</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <script src="scripts.js"></script>
+
+    <div class="title">
+        <h1 class="spotify-search">Spotify Search</h1>
+    </div>
+    <div class="rectangle-div">
+        <input id="search" class="textbox" type="search" placeholder="Search Song">
+    </div>
+    <div class="button">
+        <button onclick="searchTracks()" id="buttonBuscar" class="buscar">Buscar</button>
+    </div>
+    <div id="results"></div>
+
 </body>
 </html>
