@@ -1,5 +1,5 @@
-const CLIENT_ID = '66b208be839f48838ed6e20b6dabf839';
-const CLIENT_SECRET_ID = 'a5690ef0162f4cce9d6f66ebae40e0c2';
+const CLIENT_ID = "aa5ec65cb98548e1ba874ff7e2d52faa";
+const CLIENT_SECRET_ID = "00b6afe491c043eb9bbd3e11f8306891";
 
 async function getAccessToken() {
   try {
@@ -24,16 +24,16 @@ async function getAccessToken() {
 }
 
 async function searchTracks() {
-  const query = document.getElementById('search').value.trim();
+  const query = document.getElementById('searchInput').value.trim();
 
   try {
     const token = await getAccessToken();
 
-    const url = `https://api.spotify.com/v1/search?q=${encodeURIComponent(
+    const URL = `https://api.spotify.com/v1/search?q=${encodeURIComponent(
       query
     )}&type=track&limit=10`;
 
-    const response = await fetch(url, {
+    const response = await fetch(URl, {
       headers: {
         Authorization: 'Bearer ' + token,
       },
