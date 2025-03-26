@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reglament</title>
+    <link rel="stylesheet" href="reglament.css">
+</head>
+<body>
+    <h1 class="important" id="inicio">REGLAMENT CORREDORS</h1>
+    <!-- Botones que dirigen a cada parte -->
+   <!--  <ul class="button-list">
+        <li><button onclick="irASeccion('definicio')">DEFINICIÓ DE LES CURSES</button></li>
+        <li><button onclick="irASeccion('compromis')">COMPROMÍS DEL CORREDOR</button></li>
+        <li><button onclick="irASeccion('autosuficiència')">AUTOSUFICIÈNCIA</button></li>
+        <li><button onclick="irASeccion('material')">MATERIAL</button></li>
+        <li><button onclick="irASeccion('verificació')">VERIFICACIÓ DEL MATERIAL</button></li>
+        <li><button onclick="irASeccion('dorsals')">DORSALS</button></li>
+        <li><button onclick="irASeccion('avituallaments')">AVITUALLAMENTS</button></li>
+        <li><button onclick="irASeccion('puntsDeControl')">PUNTS DE CONTROL</button></li>
+        <li><button onclick="irASeccion('marcatgeDeCami')">MARCATGE DE CAMÍ</button></li>
+        <li><button onclick="irASeccion('seguretat')">SEGURETAT I ASSISTÈNCIA</button></li>
+        <li><button onclick="irASeccion('tempsLimit')">TEMPS LÍMIT</button></li>
+        <li><button onclick="irASeccion('abandonament')">ABANDONAMENT</button></li>
+        <li><button onclick="irASeccion('finishLine')">FINISH LINE</button></li>
+        <li><button onclick="irASeccion('massatge')">MASSATGES, DUTXES, WC I LUDOTECA</button></li>
+        <li><button onclick="irASeccion('classificació')">CLASSIFICACIÓ</button></li>
+        <li><button onclick="irASeccion('premis')">PREMIS</button></li>
+        <li><button onclick="irASeccion('sancions')">SANCIONS</button></li>
+        <li><button onclick="irASeccion('queixes')">QUEIXES</button></li>
+        <li><button onclick="irASeccion('condicionsExcepcionals')">CONDICIONS EXCEPCIONALS</button></li>
+        <li><button onclick="irASeccion('reemborsament')">REEMBORSAMENT</button></li>
+        <li><button onclick="irASeccion('assegurança')">ASSEGURANÇA</button></li>
+        <li><button onclick="irASeccion('contacte')">CONTACTE I MES INFORMACIÓ</button></li>
+    </ul> -->
+    <div class="section">
+        <h2>Informació General</h2>
+        <div class="buttons-container">
+            <button onclick="irASeccion('definicio')">Definició de les curses</button>
+            <button onclick="irASeccion('contacte')">Contacte i més informació</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Normativa i Responsabilitats</h2>
+        <div class="buttons-container">
+            <button onclick="irASeccion('compromis')">Compromís del corredor</button>
+            <button onclick="irASeccion('autosuficiència')">Autosuficiència</button>
+            <button onclick="irASeccion('material')">Material obligatori</button>
+            <button onclick="irASeccion('verificació')">Verificació del material</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Inscripció i Participació</h2>
+        <div class="buttons-container">
+            <button onclick="irASeccion('dorsals')">Dorsals</button>
+            <button onclick="irASeccion('assegurança')">Assegurança</button>
+            <button onclick="irASeccion('reemborsament')">Política de reemborsament</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Recorregut i Avituallaments</h2>
+        <div class="buttons-container">
+            <button onclick="irASeccion('avituallaments')">Avituallaments</button>
+            <button onclick="irASeccion('puntsDeControl')">Punts de control</button>
+            <button onclick="irASeccion('marcatgeDeCami')">Marcatge del camí</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Seguretat i Assistència</h2>
+        <div class="buttons-container">
+            <button onclick="irASeccion('seguretat')">Seguretat i assistència</button>
+            <button onclick="irASeccion('tempsLimit')">Temps límit</button>
+            <button onclick="irASeccion('abandonament')">Abandonament</button>
+            <button onclick="irASeccion('condicionsExcepcionals')">Condicions excepcionals</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Meta i Serveis Postcursa</h2>
+        <div class="buttons-container">
+            <button onclick="irASeccion('finishLine')">Arribada a meta</button>
+            <button onclick="irASeccion('massatge')">Massatges, dutxes i serveis</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Classificacions i Premis</h2>
+        <div class="buttons-container">
+            <button onclick="irASeccion('classificació')">Classificació</button>
+            <button onclick="irASeccion('premis')">Premis</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Reglament i Reclamacions</h2>
+        <div class="buttons-container">
+            <button onclick="irASeccion('sancions')">Sancions</button>
+            <button onclick="irASeccion('queixes')">Queixes i reclamacions</button>
+        </div>
+    </div>
+
+</div>
+    <button id="btnArriba" onclick="irASeccion('inicio')">⬆</button>
+    <script>
+        function irASeccion(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    <h2 class="important" id="definicio">DEFINICIÓ DE LES CURSES</h2>
+    <div id="general">
+        <ul>
+            <p class="text">
+                La <b>ROCANOLICH</b> Memorial <b>Marc Pimienta</b> és un esdeveniment que inclou dues curses que
+                passen per rutes de senderisme de la parròquia de Sant Julià i una caminada inclusiva.<br><br>
+                Cada cursa es duu a terme en una sola etapa, al ritme de cada corredor i dins d'un límit de temps,
+                excepte la caminada popular inclusiva.
+            </p>
+            <li class="important-2">CURSA LLARGA</li>
+            <p class="text">• Al voltant de <b>13 km</b> i uns <b>1300 metres de desnivell</b>, comença i acaba al Centre de Formació
+                Professional d’Aixovall.El temps de tall per acabar la cursa és de 6h.</p>
+            <li class="important-2">CURSA CURTA</li>
+            <p class="text">• Al voltant de <b>10 km</b> i uns <b>640 metres de desnivell</b>, comença i acaba al Centre de Formació
+                Professional d’Aixovall.</p>
+            <li class="important-2">CURSA POPULAR INCLUSIVA</li>
+            <p class="text">• Caminada popular d’uns <b>4 km</b> i <b>200 metres de desnivell</b>, amb sortida i arribada al Centre de
+                Formació Professional.</p>
+        </ul>
+    </div>
+    <h2 class="important" id="compromis">COMPROMÍS DEL CORREDOR</h2>
+    <div id="general">
+        <p class="text">Per participar a la ROCANOLICH és essencial:</p>
+        <p class="text">• Ser completament conscient de la durada i dificultat de l'esdeveniment i estar adequadament
+            preparat.
+        </p>
+        <p class="text">
+            • Haver adquirit, abans de la cursa, una comprensió real de l'autonomia personal a la
+            muntanya/terreny que permeti la gestió dels possibles problemes trobats durant aquest tipus
+            d'esdeveniments, en particular:
+        </p>
+        <p class="text">➡️Capacitat per enfrontar, sense ajuda externa, condicions climàtiques canviants en altitud
+            (vent, fred, boira, pluja o neu).<br>
+            ➡️Capacitat per manejar, fins i tot quan un està aïllat, problemes físics o mentals derivats
+            d'una fatiga, problemes digestius, dolors musculars o articulars, petites ferides, etc.<br>
+            ➡️Conscients que el paper de l'organització no és ajudar un corredor a gestionar aquests
+            problemes.<br>
+            ➡️Conscients que per a una activitat d'aquest tipus a la muntanya, la seguretat depèn de
+            la capacitat del corredor per adaptar-se als problemes trobats o previstos.<br>
+            ➡️Informar i educar els seguidors del corredor envers el respecte de la natura, les persones
+            i les regulacions de la cursa.
+        </p>
+    </div>
+    <h2 class="important" id="autosuficiència">SEMI-AUTONOMIA/AUTOSUFICIÈNCIA</h2>
+    <div id="general">
+        <p class="text">S'espera que els participants demostrin els principis de semi-autonomia/autosuficiència. Han
+            d'estar preparats per transportar els seus propis líquids, aliments i equip (inclòs l'equip
+            d'inclemències del temps) entre els punts d'avituallament. Els participants també hi han d'estar
+            preparats, dins de les pautes de seguretat del curs, per manejar condicions adverses o canviants.
+            Aquest principi d'autosuficiència implica les regles següents:
+        </p>
+        <p class="text"><b>1.</b> Al llarg de tota la cursa cada corredor haurà de portar amb si tot l'equipament obligatori.
+            Aquest equip es portarà en una motxilla i no es pot canviar al llarg de la ruta de la cursa.<br><br>
+            <b>2.</b> Els punts d'avituallament proporcionen begudes i aliments. L'organitzador de la cursa només
+            proporciona aigua sense gas i beguda esportiva / electrolítica per omplir ampolles d'aigua. El
+            corredor ha de tenir cura d'assegurar-se que té, en sortir de cada lloc d'ajuda, la quantitat
+            adequada de beguda i menjar per mantenir-los en marxa fins al següent lloc d'ajuda.<br><br>
+            <b>3.</b> Està prohibit acompanyar o ser acompanyat al llarg de qualsevol part del recorregut de la cursa
+            per una persona no inscrita en la cursa. Els corredors no poden participar amb un gos o qualsevol
+            altre animal, inclosos els animals de servei.<br><br>
+            <b>4.</b> Un participant que accepta ser acompanyat fora de les zones designades viola el principi
+            d'autosuficiència. Els comissaris de cursa, testimonis d'aquesta violació, estan autoritzats a
+            penalitzar el participant per fer complir les regles.</p>
+    </div>
+    <h2 class="important" id="material">MATERIAL</h2>
+    <div id="general">
+        <p>Per garantir la seva seguretat, cada participant ha de portar tots els elements enumerats en la
+            llista de material obligatoris i han de portar tot l'equip amb ells durant la durada de la cursa, fins
+            i tot si el corredor no l'està utilitzant.<br><br>
+            <b>Tingui en compte:</b> els articles inclosos en la llista de verificació de material obligatori són les
+            peces bàsiques de material que cada corredor ha de portar. És important no triar la roba més
+            lleugera possible. En el seu lloc, els corredors han de tenir en compte que la roba proporcioni
+            una protecció adequada a les muntanyes / terreny durant tota la prova pensant amb les males
+            condicions climàtiques, inclòs el fred, el vent, les fortes precipitacions i la neu.
+        </p>
+    </div>
+    <h2 class="important" id="verificació">LLISTA DE VERIFICACIÓ OBLIGATÒRIA DE MATERIAL</h2>
+    <div id="general">
+        <p class="important">CURSA LLARGA I CURTA</p>
+        <ul>
+            <p id="imp">➡️Obligatori:</p>
+            <p class="obligatori">➯reserva d'aigua (omplint sortint de l'avituallament i de la línia de sortida).<br>
+                Ampolles d'aigua o bidons de Trail amb capacitat per transportar 1 i 0,50 litres d'aigua.
+            </p><br>
+            <p class="obligatori">➯got reutilitzable (per raons de sostenibilitat, no n'hi haurà cap en els
+                avituallaments).<br> Cada corredor haurà de portar el seu got.
+            </p><br>
+            <p class="obligatori">➯jaqueta impermeable a prova d'aigua. Els ponxos de plàstic per a la pluja, les<br>
+                jaquetes de vent, les jaquetes resistents a l' aigua NO són adequades.
+            </p><br>
+            <p class="obligatori">➯ calçat adequat a la competició. Sabates de trail running resistents a l'aigua i <br>
+                tancades (excloses les sabatilles minimalistes o ultralleugeres).
+            </p>
+            <p id="acons">➡️Aconsellable:</p>
+            <p class="aconsellable">➯reserva alimentària, recomanació de 800 kcal (2 gels + 2 barres
+                energètiques).
+            </p><br>
+            <p class="aconsellable">➯protecció tèrmica del cap que cobreix les orelles (tubular autoritzat).<br>
+                Gorro, passamuntanyes o braga de coll.
+            </p><br>
+            <p class="aconsellable">➯tallavent de dalt amb mànegues llargues i a la talla del corredor.
+            </li><br>
+            <p class="aconsellable">➯manta tèrmica de supervivència d'1,40 m x 2 m mínim / 55 polzades x 80
+                polzades.
+            </p><br>
+            <p class="aconsellable">➯farmaciola de primers auxilis. Embenatge elàstic auto adherent per a <br>
+                embenat o llanejat (mínim 100 cm x 6 cm / 40 polzades x 2,5 polzades).
+            </p><br>
+            <p class="aconsellable">➯si tries prendre bastons/pals, és per la durada de la cursa. Està prohibit <br>
+                arrencar sense bastons i recuperar-los durant la cursa.
+            </p><br>
+            <p class="aconsellable">➯telèfon mòbil amb bateria completament carregada (què funcioni a <br>
+                Andorra) Ha de tenir una targeta SIM que es pugui connectar a la Xarxa Cel·lular<br>
+                d'Andorra. També asseguri's que el seu telèfon estigui completament carregat i que la<br>
+                bateria duri tot el seu temps de cursa. Cada corredor ha de guardar els números de<br>
+                seguretat de l'organització, no emmascarar / bloquejar el seu número.
+            </p><br>
+            <p class="aconsellable">➯DNI o Passaport, xiulet, protector solar.
+            </p>
+        </ul>
+        <p class="aconsellable">Totes les peces de vestir s'han d'ajustar al corredor, de mida, i no s'han d'alterar de cap manera
+            després de sortir de la fàbrica.<br><br>
+            El material obligatori s'ha de portar en una motxilla de Trail durant tota la cursa.<br><br>
+            Altres equips recomanats (inclosos, entre d'altres):<br><br>
+            • Roba d'abrigar de recanvi, essencial en cas de clima fred i plujós o en cas de lesions;<br>
+            • Vaselina o crema anti calent;<br>
+            • Disposa almenys de 20 euros en efectiu (per si de cas...).<br>
+            • Rellotge GPS.<br>
+            • Ganivet o tisores per tallar embenatge elàstic.<br>
+            • Steri-Strep adhesiu d'emergència.<br><br>
+            Música: Escoltar música amb auriculars o qualsevol altre dispositiu electrònic no està permès
+            per raons de seguretat.
+        </p>
+        <p class="important">CAMINADA POPULAR INCLUSIVA</p>
+        <p id="imp">➡️Obligatori:</p>
+        <p class="obligatori">➯sabates de trail running/muntanya i roba còmoda d’esport.
+        </p>
+        <p id="acons">➡️Aconsellable:</p>
+        <p class="aconsellable">➯bastons/pals de muntanya.
+        </p><br>
+        <p class="aconsellable">➯jaqueta impermeable en cas que les condicions meteorològiques ho
+            requereixin.
+        </p>
+    </div>
+    <h2 class="important" id="dorsals">DORSALS</h2>
+    <div id="general">
+        <p>Els dorsals es lliuren a cada corredor amb una prèvia presentació de:<br><br>
+            • Una identificació vàlida amb foto.<br><br>
+            El dorsal s'ha de portar al pit o l'estómac en tot moment i ha de romandre completament visible
+            durant tota la cursa. Sempre s'ha de col·locar damunt de tota la roba i no s'ha de col·locar en
+            una cama o a la motxilla.<br>
+            Els logos dels patrocinadors no han de ser alterats o ocultats. El dorsal és l'acreditació per accedir
+            als avituallaments, punts mèdics, zones de lliurament d'equipatge o recollida. El dorsal només
+            es retira si el corredor es nega a complir amb les instruccions del director de cursa. Si el corredor
+            es retira de la cursa, el dorsal es talla i es desactiva.<br><br>
+            NOTA: al finalitzar la cursa els corredors obligatòriament han de tornar el xip de seguiment.</p>
+    </div>
+    <h2 class="important" id="avituallaments">AVITUALLAMENTS</h2>
+    <div id="general">
+        <p>Al llarg de les diferents curses, hi ha punts on els corredors reben aliments i begudes.<br><br>
+            Els avituallaments subministren begudes i aliments per al seu consum. L'organització subministra<br>
+            aigua sense gas i beguda esportiva per omplir les ampolles d'aigua obligatòries / bidons<br>
+            d'hidratació i gots personals. Els corredors s'han d'assegurar, en sortir de l'avituallament, que<br>
+            disposen de la quantitat necessària d'aliments i begudes per mantenir-los en marxa fins al<br>
+            següent avituallament.<br><br>
+            Per entrar als avituallaments, els corredors hauran de portar el seu dorsal.</p>
+    </div>
+    <h2 class="important" id="puntsDeControl">PUNTS DE CONTROL</h2>
+    <div id="general">
+        <p>Els corredors són revisats a la seva arribada a un punt d'avituallaments i en alguns punts de<br>
+            seguretat al llarg del recorregut. Tot participant que no passi per aquests punts, serà sancionant<br>
+            (vegeu PENALITZACIONS).
+        </p>
+    </div>
+    <h2 class="important" id="marcatgeDeCami">MARCATGE DE CAMÍ</h2>
+    <div id="general">
+        <p>El marcatge del camí es farà amb cinta blanca i vermella i amb esprai de pintura biodegradable<br>
+            de color groc. ADVERTÈNCIA: si no pot veure cap marcador de camí, retrocedeixi!
+        </p>
+    </div>
+    <h2 class="important" id="seguretat">SEGURETAT I ASSISTÈNCIA MÈDICA</h2>
+    <div id="general">
+        <p>L’estació mèdica està destinada a ajudar qualsevol corredor que necessiti assistència mèdica i
+            proporcionar les primeres cures.<br><br>
+            Els corredors han de donar assistència a qualsevol persona en perill i alertar el centre de control.<br>
+            Si un corredor no pot trucar al centre de control, i només si es tracta d'una emergència absoluta,<br>
+            els corredors poden trucar directament a un dels serveis de seguretat nacional (especialment si<br>
+            està creuant una àrea on només són possibles trucades d'emergència): 112<br><br>
+            Una sèrie d'esdeveniments inesperats, inclosos els esdeveniments climàtics inclements, podrien
+            fer que esperi ajuda més de l'esperat. Per tant, la seva seguretat depèn de la qualitat dels articles
+            que ha posat a la seva motxilla. Tot el personal designat per la direcció de cursa pot:
+        </p>
+        <ul>
+            <li>➯Eliminar qualsevol participant que es consideri incapaç de continuar l'esdeveniment;</li>
+            <li>➯Exigir a qualsevol competidor que usi qualsevol element del material obligatori;</li>
+            <li>➯Evacuar qualsevol corredor que es consideri en perill;</li>
+            <li>➯Referir als corredors al centre d'atenció més apropiat.</li>
+        </ul>
+        <p>Un corredor que és tractat per un metge o contactat pel personal de recerca i rescat se sotmetrà<br>
+            a l'autoritat del professional i accepta acceptar les seves decisions.<br><br>
+            Si l'estat de salut d'un corredor justifica el tractament per degoteig intravenós, el corredor es<br>
+            retirarà obligatòriament de la cursa.<br><br>
+            Els corredors han de romandre en el camí marcat.<br><br>
+            Tots els corredors que voluntàriament s'aventuren fora del recorregut marcat ja no estan sota la<br>
+            responsabilitat de l'organització.
+        </p>
+    </div>
+    <h2 class="important" id="tempsLimit">TEMPS LÍMIT</h2>
+    <div id="general">
+        <p>El temps límit per acabar cada cursa és:</p>
+        <li>13K: 6 hores (*)</li>
+        <li>10K: 4h</li>
+        <p>(*) Barratge horari al Santuari de Canòlich a les 14:00h.<br><br>
+            Els temps de tall es calculen per permetre als participants arribar a la meta dins del límit de<br>
+            temps.<br><br>
+            Els corredors que s'han retirat de la cursa estan sota la seva pròpia responsabilitat i ja no són<br>
+            recolzats per l'organitzador de la cursa. Es recomana encaridament que qualsevol corredor<br>
+            retirat sigui transportat de retorn a la línia de meta pel transport de cursa ofert.
+        </p>
+    </div>
+    <h2 class="important" id="abandonament">ABANDONAMENT</h2>
+    <div id="general">
+        <p>Excepte en cas de lesió, un corredor que desitja retirar-se de la cursa ho ha de fer en un punt de<br>
+            control (avituallament). Hi ha d'informar la persona responsable del punt i informar el centre de<br>
+            control.<br><br>
+            Si un corredor desitja retirar-se mentre està en la ruta entre dos punts de control, ha d'arribar al<br>
+            punt de control més proper on ha d'informar de la seva retirada. Els corredors que es retirin<br>
+            hauran de conservar el seu dorsal.<br><br>
+            • Els corredors que abandonin en qualsevol altre avituallament o punt de control, però l'estat de<br>
+            salut dels quals no els obligui a ser evacuats hauran de gestionar l’abandonament pels seus<br>
+            propis mitjans.<br><br>
+            • Pel que fa als avituallaments o punts de seguretat accessibles en cotxe o 4x4:<br>
+            Després del tancament de l'avituallament/ punts de seguretat, l'organització podria repatriar<br>
+            qualsevol corredor que hagi abandonat i encara no hagi sortit de l'avituallament.<br><br>
+            En cas que les males condicions meteorològiques justifiquin l'aturada parcial o total de la cursa,<br>
+            l'organització s'assegurarà que tots els corredors siguin transportats al més aviat possible a la<br>
+            zona de sortida de l’esdeveniment. D’altra banda l’organització és guarda el dret<br>
+            d’alterar/modificar o cancel·lar el recorregut si les condicions meteorològiques ho justifiquen.
+        </p>
+    </div>
+    <h2 class="important" id="finishLine">FINISH LINE</h2>
+    <div id="general">
+        <p>Quan un corredor acabi la cursa, rebrà la medalla finisher. Tots els participants que acabin una<br>
+            de les curses de la ROCANOLICH tindran accés a un avituallament final.
+        </p>
+    </div>
+    <h2 class="important" id="massatge">ZONA MASSATGES, DUTXES, WC I SERVEI DE LUDOTECA</h2>
+    <div id="general">
+        <p>Els corredors de la ROCANOLICH tindran accés a una zona adaptada per a la realització d’un<br>
+            massatge relaxant. Per accedir-hi, els corredors han de mostrar el seu dorsal.<br><br>
+            També tindran accés a una zona amb dutxes i banys.<br><br>
+            Els corredors amb infants tenen la possibilitat d’utilitzar el servei de ludoteca durant la durada<br>
+            de la cursa.
+        </p>
+    </div>
+    <h2 class="important" id="classificació">CLASSIFICACIÓ</h2>
+    <div id="general">
+        <p>Per a les dues modalitats de cursa hi ha una classificació general, homes i dones on es realitzarà<br>
+            l’entrega d’un trofeu i targeta regal.<br><br>
+            CURSA LLARGA: categoria absoluta masculina i femenina.<br><br>
+            CURSA CURTA: categoria absoluta masculina i femenina.<br><br>
+        </p>
+    </div>
+    <h2 class="important" id="premis">PREMIS</h2>
+    <div id="general">
+        <p>Per rebre el premi, els atletes han de ser presents en persona a la Ceremònia de Premis. Si l'atleta<br>
+            no es presenta a aquesta cerimònia, ja no serà elegible per al seu premi. A més, si el corredor no<br>
+            accepta el premi ofert per l'organització, en CAP CAS EL CONVERTIRÀ EN METÀL·LIC.<br><br>
+            A més a més, tots els participants de la ROCANOLICH (cursa llarga, curta i caminada) participaran<br>
+            a un sorteig on poden optar a diferents premis proporcionats per un dels patrocinadors de<br>
+            l’esdeveniment.
+        </p>
+    </div>
+    <h2 class="important" id="sancions">SANCIONS: PENALITZACIONS DE TEMPS I INHABILITACIÓ</h2>
+    <div id="general">
+        <p>Penalitats:
+        </p>
+        <img src="penalitats.png" alt="penalidades">
+        <p>Desqualificació amb possible sanció:
+            Incorre en el següent, suposarà la desqualificació immediata del corredor i podria suposar una<br>
+            sanció disciplinària:<br><br>
+            • Provocar un incident esportiu (agressió o insults greus) a un competidor, o a un membre de<br>
+            l’organització o del jurat;<br><br>
+            • Provocar un accident de forma voluntària;<br><br>
+            Les possibles sancions s’hauran de tractar amb els responsables de l’organització.</p>
+    </div>
+    <h2 class="important" id="queixes">QUEIXES / PROTESTES</h2>
+    <div id="general">
+        <p>Qualsevol queixa adreçar-se a info@rocanolich.com</p>
+    </div>
+    <h2 class="important" id="condicionsExcepcionals">CONDICIONS EXCEPCIONALS</h2>
+    <div id="general">
+        <p>En cas de ser necessari, l'organització es reserva el dret de modificar en qualsevol moment els<br>
+            recorreguts, horaris d'inici, horaris de tall, la posició dels avituallaments i qualsevol altre aspecte<br>
+            relacionat amb el bon desenvolupament dels esdeveniments.<br><br>
+            En cas de força major, males condicions meteorològiques o qualsevol altra circumstància que<br>
+            posi en perill la seguretat dels participants, l'organització es reserva el dret a:<br><br>
+            • Posposar l'inici de la cursa;<br><br>
+            • Modificar els temps de tall;<br><br>
+            • Canviar la data d'inici;<br><br>
+            • Adaptar el recorregut de la cursa;<br><br>
+            • Cancel·lar la cursa *;<br><br>
+            • Aturar temporalment la cursa;<br><br>
+            • Aturar la cursa en curs.<br><br>
+            * Si es cancel·la una cursa o si l'esdeveniment necessita ser modificat (per exemple, una o més<br>
+            carreres han de ser cancel·lades), per qualsevol motiu fora del control de l'organització, més de<br>
+            30 dies abans de la sortida, els corredors rebran una comunicació amb diferents opcions per<br>
+            gestionar la seva inscripció.</p>
+    </div>
+    <h2 class="important" id="reemborsament">REEMBORSAMENT DE LA INSCRIPCIÓ</h2>
+    <div id="general">
+        <p>En cas de ser necessari, l'organització pot cancel·lar l'esdeveniment. Aquesta decisió no la<br>
+            prendran només l'organització, sinó que hi ha tot un conjunt d'actors que poden aconsellar i/o<br>
+            cancel·lar l'esdeveniment.<br><br>
+            Tot corredor pot anul·lar la seva participació en l'esdeveniment sempre que hi hagi una causa<br>
+            major que ho justifiqui (defunció familiar, lesió...).<br><br>
+            En ambdós casos, hi haurà un reemborsament de la inscripció.</p>
+    </div>
+    <h2 class="important" id="assegurança">ASSEGURANÇA</h2>
+    <div id="general">
+        <p>Responsabilitat civil<br><br>
+            L'organització contracta una assegurança a tercers durant la durada de l'esdeveniment. Aquesta<br>
+            assegurança de responsabilitat civil garanteix les conseqüències econòmiques de la seva<br>
+            responsabilitat, la de l'STAFF i la dels participants.</p>
+    </div> 
+    <h2 class="important" id="contacte">CONTACTE I MÉS INFORMACIÓ</h2>
+    <div id="general">
+        <p>Si us plau, llegeix atentament la guia del corredor disponible al nostre lloc web. Si necessites més<br>
+            informació, posa’t en contacte amb el nostre personal:<br><br>
+            info@rocanolich.com<br><br>
+            Gaudeix de la cursa!
+        </p>
+    </div>
+</body>
+</html>
