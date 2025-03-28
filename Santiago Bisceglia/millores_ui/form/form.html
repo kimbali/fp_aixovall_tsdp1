@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulari de registre</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+
+  <body>
+    <form id="registerForm">
+      <h2>Registre</h2>
+      <button id="buttonRegistre" type="submit" disabled>Registrat</button>
+      <input type="text" id="name" placeholder="Nom complet" />
+      <input type="email" id="email" placeholder="Email" event oninput="validateForm()"/>
+      <span class="error" id="emailError" style="color: red; font-size: 12px; display: none;">
+        Email no valido
+      </span>
+      <input type="password" id="password" placeholder="Contrasenya" event oninput="validateForm()"/>
+      <span class="error" id="passwordError" style="color: red; font-size: 12px; display: none;">
+        La contraseña debe contener al menos 8 caracteres
+      </span>
+      <input type="number" id="phone" placeholder="Numero telefono">
+    </form>
+    <script src="form.js"></script>
+  </body>
+</html>
