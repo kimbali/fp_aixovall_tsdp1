@@ -9,107 +9,60 @@
 <body>
     <h1 class="important" id="inicio">REGLAMENT CORREDORS</h1>
     <!-- Botones que dirigen a cada parte -->
-   <!--  <ul class="button-list">
-        <li><button onclick="irASeccion('definicio')">DEFINICIÓ DE LES CURSES</button></li>
-        <li><button onclick="irASeccion('compromis')">COMPROMÍS DEL CORREDOR</button></li>
-        <li><button onclick="irASeccion('autosuficiència')">AUTOSUFICIÈNCIA</button></li>
-        <li><button onclick="irASeccion('material')">MATERIAL</button></li>
-        <li><button onclick="irASeccion('verificació')">VERIFICACIÓ DEL MATERIAL</button></li>
-        <li><button onclick="irASeccion('dorsals')">DORSALS</button></li>
-        <li><button onclick="irASeccion('avituallaments')">AVITUALLAMENTS</button></li>
-        <li><button onclick="irASeccion('puntsDeControl')">PUNTS DE CONTROL</button></li>
-        <li><button onclick="irASeccion('marcatgeDeCami')">MARCATGE DE CAMÍ</button></li>
-        <li><button onclick="irASeccion('seguretat')">SEGURETAT I ASSISTÈNCIA</button></li>
-        <li><button onclick="irASeccion('tempsLimit')">TEMPS LÍMIT</button></li>
-        <li><button onclick="irASeccion('abandonament')">ABANDONAMENT</button></li>
-        <li><button onclick="irASeccion('finishLine')">FINISH LINE</button></li>
-        <li><button onclick="irASeccion('massatge')">MASSATGES, DUTXES, WC I LUDOTECA</button></li>
-        <li><button onclick="irASeccion('classificació')">CLASSIFICACIÓ</button></li>
-        <li><button onclick="irASeccion('premis')">PREMIS</button></li>
-        <li><button onclick="irASeccion('sancions')">SANCIONS</button></li>
-        <li><button onclick="irASeccion('queixes')">QUEIXES</button></li>
-        <li><button onclick="irASeccion('condicionsExcepcionals')">CONDICIONS EXCEPCIONALS</button></li>
-        <li><button onclick="irASeccion('reemborsament')">REEMBORSAMENT</button></li>
-        <li><button onclick="irASeccion('assegurança')">ASSEGURANÇA</button></li>
-        <li><button onclick="irASeccion('contacte')">CONTACTE I MES INFORMACIÓ</button></li>
-    </ul> -->
-    <div class="section">
-        <h2>Informació General</h2>
-        <div class="buttons-container">
-            <button onclick="irASeccion('definicio')">Definició de les curses</button>
-            <button onclick="irASeccion('contacte')">Contacte i més informació</button>
+    <div class="menu">
+        <div class="dropdown">
+            <button onclick="toggleMenu()">☰ Menú</button>
+            <div id="dropdownMenu" class="dropdown-content">
+                <button onclick="irASeccion('definicio')">DEFINICIÓ DE LES CURSES</button>
+                <button onclick="irASeccion('compromis')">COMPROMÍS DEL CORREDOR</button>
+                <button onclick="irASeccion('autosuficiència')">AUTOSUFICIÈNCIA</button>
+                <button onclick="irASeccion('material')">MATERIAL</button>
+                <button onclick="irASeccion('verificació')">VERIFICACIÓ DEL MATERIAL</button>
+                <button onclick="irASeccion('dorsals')">DORSALS</button>
+                <button onclick="irASeccion('avituallaments')">AVITUALLAMENTS</button>
+                <button onclick="irASeccion('puntsDeControl')">PUNTS DE CONTROL</button>
+                <button onclick="irASeccion('marcatgeDeCami')">MARCATGE DE CAMÍ</button>
+                <button onclick="irASeccion('seguretat')">SEGURETAT I ASSISTÈNCIA</button>
+                <button onclick="irASeccion('tempsLimit')">TEMPS LÍMIT</button>
+                <button onclick="irASeccion('abandonament')">ABANDONAMENT</button>
+                <button onclick="irASeccion('finishLine')">FINISH LINE</button>
+                <button onclick="irASeccion('massatge')">MASSATGES, DUTXES, WC I LUDOTECA</button>
+                <button onclick="irASeccion('classificació')">CLASSIFICACIÓ</button>
+                <button onclick="irASeccion('premis')">PREMIS</button>
+                <button onclick="irASeccion('sancions')">SANCIONS</button>
+                <button onclick="irASeccion('queixes')">QUEIXES</button>
+                <button onclick="irASeccion('condicionsExcepcionals')">CONDICIONS EXCEPCIONALS</button>
+                <button onclick="irASeccion('reemborsament')">REEMBORSAMENT</button>
+                <button onclick="irASeccion('assegurança')">ASSEGURANÇA</button>
+                <button onclick="irASeccion('contacte')">CONTACTE I MÉS INFORMACIÓ</button>
+            </div>
         </div>
     </div>
 
-    <div class="section">
-        <h2>Normativa i Responsabilitats</h2>
-        <div class="buttons-container">
-            <button onclick="irASeccion('compromis')">Compromís del corredor</button>
-            <button onclick="irASeccion('autosuficiència')">Autosuficiència</button>
-            <button onclick="irASeccion('material')">Material obligatori</button>
-            <button onclick="irASeccion('verificació')">Verificació del material</button>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Inscripció i Participació</h2>
-        <div class="buttons-container">
-            <button onclick="irASeccion('dorsals')">Dorsals</button>
-            <button onclick="irASeccion('assegurança')">Assegurança</button>
-            <button onclick="irASeccion('reemborsament')">Política de reemborsament</button>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Recorregut i Avituallaments</h2>
-        <div class="buttons-container">
-            <button onclick="irASeccion('avituallaments')">Avituallaments</button>
-            <button onclick="irASeccion('puntsDeControl')">Punts de control</button>
-            <button onclick="irASeccion('marcatgeDeCami')">Marcatge del camí</button>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Seguretat i Assistència</h2>
-        <div class="buttons-container">
-            <button onclick="irASeccion('seguretat')">Seguretat i assistència</button>
-            <button onclick="irASeccion('tempsLimit')">Temps límit</button>
-            <button onclick="irASeccion('abandonament')">Abandonament</button>
-            <button onclick="irASeccion('condicionsExcepcionals')">Condicions excepcionals</button>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Meta i Serveis Postcursa</h2>
-        <div class="buttons-container">
-            <button onclick="irASeccion('finishLine')">Arribada a meta</button>
-            <button onclick="irASeccion('massatge')">Massatges, dutxes i serveis</button>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Classificacions i Premis</h2>
-        <div class="buttons-container">
-            <button onclick="irASeccion('classificació')">Classificació</button>
-            <button onclick="irASeccion('premis')">Premis</button>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Reglament i Reclamacions</h2>
-        <div class="buttons-container">
-            <button onclick="irASeccion('sancions')">Sancions</button>
-            <button onclick="irASeccion('queixes')">Queixes i reclamacions</button>
-        </div>
-    </div>
-
-</div>
-    <button id="btnArriba" onclick="irASeccion('inicio')">⬆</button>
     <script>
+        function toggleMenu() {
+            document.getElementById("dropdownMenu").classList.toggle("show");
+        }
         function irASeccion(id) {
             document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
         }
+
+        // Cerrar el menú si el usuario hace clic fuera de él
+        window.onclick = function(event) {
+            if (!event.target.matches('.menu button')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
     </script>
+    <button id="btnArriba" onclick="irASeccion('inicio')">⬆</button>
+    
+
     <h2 class="important" id="definicio">DEFINICIÓ DE LES CURSES</h2>
     <div id="general">
         <ul>
@@ -141,15 +94,15 @@
             muntanya/terreny que permeti la gestió dels possibles problemes trobats durant aquest tipus
             d'esdeveniments, en particular:
         </p>
-        <p class="text">➡️Capacitat per enfrontar, sense ajuda externa, condicions climàtiques canviants en altitud
-            (vent, fred, boira, pluja o neu).<br>
-            ➡️Capacitat per manejar, fins i tot quan un està aïllat, problemes físics o mentals derivats
-            d'una fatiga, problemes digestius, dolors musculars o articulars, petites ferides, etc.<br>
-            ➡️Conscients que el paper de l'organització no és ajudar un corredor a gestionar aquests
-            problemes.<br>
-            ➡️Conscients que per a una activitat d'aquest tipus a la muntanya, la seguretat depèn de
-            la capacitat del corredor per adaptar-se als problemes trobats o previstos.<br>
-            ➡️Informar i educar els seguidors del corredor envers el respecte de la natura, les persones
+        <p class="text">➡️ Capacitat per enfrontar, sense ajuda externa, condicions climàtiques canviants en altitud
+            (vent, fred, boira, pluja o neu).<br><br>
+            ➡️ Capacitat per manejar, fins i tot quan un està aïllat, problemes físics o mentals derivats
+            d'una fatiga, problemes digestius, dolors musculars o articulars, petites ferides, etc.<br><br>
+            ➡️ Conscients que el paper de l'organització no és ajudar un corredor a gestionar aquests
+            problemes.<br><br>
+            ➡️ Conscients que per a una activitat d'aquest tipus a la muntanya, la seguretat depèn de
+            la capacitat del corredor per adaptar-se als problemes trobats o previstos.<br><br>
+            ➡️ Informar i educar els seguidors del corredor envers el respecte de la natura, les persones
             i les regulacions de la cursa.
         </p>
     </div>
@@ -191,43 +144,43 @@
         <p class="important">CURSA LLARGA I CURTA</p>
         <ul>
             <p id="imp">➡️Obligatori:</p>
-            <p class="obligatori">➯reserva d'aigua (omplint sortint de l'avituallament i de la línia de sortida).<br>
+            <p class="obligatori">➯<b>reserva d'aigua</b> (omplint sortint de l'avituallament i de la línia de sortida).<br>
                 Ampolles d'aigua o bidons de Trail amb capacitat per transportar 1 i 0,50 litres d'aigua.
             </p><br>
-            <p class="obligatori">➯got reutilitzable (per raons de sostenibilitat, no n'hi haurà cap en els
+            <p class="obligatori">➯<b>got reutilitzable</b> (per raons de sostenibilitat, no n'hi haurà cap en els
                 avituallaments).<br> Cada corredor haurà de portar el seu got.
             </p><br>
-            <p class="obligatori">➯jaqueta impermeable a prova d'aigua. Els ponxos de plàstic per a la pluja, les<br>
+            <p class="obligatori">➯<b>jaqueta impermeable</b> a prova d'aigua. Els ponxos de plàstic per a la pluja, les<br>
                 jaquetes de vent, les jaquetes resistents a l' aigua NO són adequades.
             </p><br>
-            <p class="obligatori">➯ calçat adequat a la competició. Sabates de trail running resistents a l'aigua i <br>
+            <p class="obligatori">➯<b>calçat adequat</b> a la competició. Sabates de trail running resistents a l'aigua i <br>
                 tancades (excloses les sabatilles minimalistes o ultralleugeres).
             </p>
             <p id="acons">➡️Aconsellable:</p>
-            <p class="aconsellable">➯reserva alimentària, recomanació de 800 kcal (2 gels + 2 barres
+            <p class="aconsellable">➯<b>reserva alimentària</b>, recomanació de 800 kcal (2 gels + 2 barres
                 energètiques).
             </p><br>
-            <p class="aconsellable">➯protecció tèrmica del cap que cobreix les orelles (tubular autoritzat).<br>
+            <p class="aconsellable">➯<b>protecció tèrmica</b> del cap que cobreix les orelles (tubular autoritzat).<br>
                 Gorro, passamuntanyes o braga de coll.
             </p><br>
-            <p class="aconsellable">➯tallavent de dalt amb mànegues llargues i a la talla del corredor.
+            <p class="aconsellable">➯<b>tallavent</b> de dalt amb mànegues llargues i a la talla del corredor.
             </li><br>
-            <p class="aconsellable">➯manta tèrmica de supervivència d'1,40 m x 2 m mínim / 55 polzades x 80
+            <p class="aconsellable">➯<b>manta tèrmica</b> de supervivència d'1,40 m x 2 m mínim / 55 polzades x 80
                 polzades.
             </p><br>
-            <p class="aconsellable">➯farmaciola de primers auxilis. Embenatge elàstic auto adherent per a <br>
+            <p class="aconsellable">➯<b>farmaciola de primers auxilis</b>. Embenatge elàstic auto adherent per a <br>
                 embenat o llanejat (mínim 100 cm x 6 cm / 40 polzades x 2,5 polzades).
             </p><br>
-            <p class="aconsellable">➯si tries prendre bastons/pals, és per la durada de la cursa. Està prohibit <br>
+            <p class="aconsellable">➯<b>si tries prendre bastons/pals</b>, és per la durada de la cursa. Està prohibit <br>
                 arrencar sense bastons i recuperar-los durant la cursa.
             </p><br>
-            <p class="aconsellable">➯telèfon mòbil amb bateria completament carregada (què funcioni a <br>
+            <p class="aconsellable">➯<b>telèfon mòbil</b> amb bateria completament carregada (què funcioni a <br>
                 Andorra) Ha de tenir una targeta SIM que es pugui connectar a la Xarxa Cel·lular<br>
                 d'Andorra. També asseguri's que el seu telèfon estigui completament carregat i que la<br>
                 bateria duri tot el seu temps de cursa. Cada corredor ha de guardar els números de<br>
                 seguretat de l'organització, no emmascarar / bloquejar el seu número.
             </p><br>
-            <p class="aconsellable">➯DNI o Passaport, xiulet, protector solar.
+            <p class="aconsellable">➯<b>DNI o Passaport</b>, xiulet, protector solar.
             </p>
         </ul>
         <p class="aconsellable">Totes les peces de vestir s'han d'ajustar al corredor, de mida, i no s'han d'alterar de cap manera
@@ -245,12 +198,12 @@
         </p>
         <p class="important">CAMINADA POPULAR INCLUSIVA</p>
         <p id="imp">➡️Obligatori:</p>
-        <p class="obligatori">➯sabates de trail running/muntanya i roba còmoda d’esport.
+        <p class="obligatori">➯<b>sabates de trail running/muntanya</b> i roba còmoda d’esport.
         </p>
         <p id="acons">➡️Aconsellable:</p>
-        <p class="aconsellable">➯bastons/pals de muntanya.
+        <p class="aconsellable">➯<b>bastons/pals de muntanya</b>.
         </p><br>
-        <p class="aconsellable">➯jaqueta impermeable en cas que les condicions meteorològiques ho
+        <p class="aconsellable">➯<b>jaqueta impermeable</b> en cas que les condicions meteorològiques ho
             requereixin.
         </p>
     </div>
@@ -398,7 +351,7 @@
     </div>
     <h2 class="important" id="queixes">QUEIXES / PROTESTES</h2>
     <div id="general">
-        <p>Qualsevol queixa adreçar-se a info@rocanolich.com</p>
+        <p>Qualsevol queixa adreçar-se a <a href="mailto:info@rocanolich.com">info@rocanolich.com</a></p>
     </div>
     <h2 class="important" id="condicionsExcepcionals">CONDICIONS EXCEPCIONALS</h2>
     <div id="general">
@@ -439,7 +392,7 @@
     <div id="general">
         <p>Si us plau, llegeix atentament la guia del corredor disponible al nostre lloc web. Si necessites més<br>
             informació, posa’t en contacte amb el nostre personal:<br><br>
-            info@rocanolich.com<br><br>
+            <a href="mailto:info@rocanolich.com">info@rocanolich.com</a><br><br>
             Gaudeix de la cursa!
         </p>
     </div>
