@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <title>Rocanolich race</title>
+    <style>
+      :root {
+        --color-primary: #000000;
+        --color-secondary: #3c5ee7;
+        --color-light: #ecf0f1;
+        --font-primary: 'Montserrat', sans-serif;
+      }
+
+      body {
+        font-family: var(--font-primary);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      .section {
+        padding: 5rem 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        position: relative;
+        text-align: center;
+      }
+
+      .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 4px;
+        background: var(--color-secondary);
+      }
+
+      /* CSS PER LA SECCIÓ HORARIS */
+      .timeline {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .timeline-day-title {
+        font-size: 1.5rem;
+        color: var(--color-primary);
+        font-weight: bold;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid var(--color-secondary);
+      }
+
+      .timeline-item {
+        background: white;
+        border-radius: 8px;
+        padding: 1rem 1.5rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: transform 0.2s ease;
+      }
+
+      .timeline-item:hover {
+        transform: translateX(5px);
+      }
+
+      .timeline-item .horari {
+        min-width: 120px;
+        font-weight: bold;
+        color: var(--color-primary);
+      }
+
+      .timeline-item .activitat {
+        flex-grow: 1;
+      }
+
+      .timeline-item.highlighted {
+        background: var(--color-light);
+        border-left: 4px solid var(--color-secondary);
+      }
+
+      @media (max-width: 576px) {
+        .timeline-item {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5rem;
+        }
+
+        .timeline-item .horari {
+          min-width: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Secció Horaris -->
+    <section class="section bg-light" id="programa">
+      <div class="container">
+        <h2 class="text-center section-title">Programa Rocanolich 2025</h2>
+        
+        <div class="timeline">
+          <p class="timeline-day-title">📅 Divendres 9 de maig 2025</p>
+          <div class="timeline-item">
+            <span class="horari">🕔 17h - 20h</span>
+            <span class="activitat">🏅 Recollida de dorsals</span>
+          </div>
+
+          <p class="timeline-day-title">📅 Dissabte 10 de maig 2025</p>
+          <div class="timeline-item">
+            <span class="horari">🕢 7:30h - 10h</span>
+            <span class="activitat">👟 Rebuda de corredors i recollida de dorsals</span>
+          </div>
+
+          <div class="timeline-item highlighted">
+            <span class="horari">🏁 9h</span>
+            <span class="activitat">🏃‍♂️ Sortida cursa llarga</span>
+          </div>
+
+          <div class="timeline-item highlighted">
+            <span class="horari">🏁 10h</span>
+            <span class="activitat">🏃‍♀️ Sortida cursa curta</span>
+          </div>
+
+          <div class="timeline-item">
+            <span class="horari">🔥 10h</span>
+            <span class="activitat">💪 Escalfament dirigit a càrrec dels alumnes de BP AFEL B</span>
+          </div>
+
+          <div class="timeline-item highlighted">
+            <span class="horari">🚶‍♂️ 10:10h</span>
+            <span class="activitat">♿ Sortida caminada inclusiva</span>
+          </div>
+
+          <div class="timeline-item">
+            <span class="horari">⏳ 10:50h</span>
+            <span class="activitat">🎉 Hora prevista arribada primers corredors</span>
+          </div>
+
+          <div class="timeline-item">
+            <span class="horari">🎤 11h</span>
+            <span class="activitat">🏅 Acte d'homenatge a Marc Pimienta</span>
+          </div>
+
+          <div class="timeline-item">
+            <span class="horari">🥤 11:30h</span>
+            <span class="activitat">🍌 Avituallament final</span>
+          </div>
+
+          <div class="timeline-item">
+            <span class="horari">🏆 12:30h</span>
+            <span class="activitat">🏅 Entrega de premis als guanyadors/es</span>
+          </div>
+
+          <div class="timeline-item">
+            <span class="horari">⏳ 13h</span>
+            <span class="activitat">🎊 Hora prevista arribada darrers corredors</span>
+          </div>
+
+          <div class="timeline-item">
+            <span class="horari">🎶 15h</span>
+            <span class="activitat">🎉 Fi de festa</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+</html>
