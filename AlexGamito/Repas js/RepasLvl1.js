@@ -1,32 +1,32 @@
-//nivel 1 /exericie 1
-console.log("Hello World");
+// nivell 1 / exercici 1
+console.log("Hola Món");
 
-//nivel 1 /exericie 2
+// nivell 1 / exercici 2
 function calculadora(num1, num2) {
   console.log("suma", num1 + num2);
   console.log("resta", num1 - num2);
-  console.log("multiplicacio", num1 * num2);
-  console.log("divisio", num1 / num2);
+  console.log("multiplicació", num1 * num2);
+  console.log("divisió", num1 / num2);
 }
 calculadora(10, 5);
 
-//nivel 1 /exericie 3
+// nivell 1 / exercici 3
 var num = 0;
-var boolean = true;
-var string = "string";
+var boolea = true;
+var cadena = "cadena";
 
-console.log(num, boolean, string);
+console.log(num, boolea, cadena);
 
-//nivel 1 /exericie 4
+// nivell 1 / exercici 4
 nom = "Alex";
 cognom = "Gamito";
 console.log(nom + " " + cognom);
 
-//nivel 1 /exericie 5
-par = 5;
+// nivell 1 / exercici 5
+parell = 5;
 
-if (par % 2 == 0) {
-  console.log("es par");
+if (parell % 2 == 0) {
+  console.log("és parell");
 } else {
-  console.log("es impar");
+  console.log("és imparell");
 }
