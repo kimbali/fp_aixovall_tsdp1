@@ -38,3 +38,23 @@ if (numero % 2 === 0) {
 } else {
     console.log(`${numero} es impar.`);
 }
+
+//NIVELL 2 
+//Exercici 6
+let edat = parseInt(prompt("Su edad es de:"));
+
+if (edat < 18) {
+    console.log("Es menor de edat");
+} else {
+    console.log("Es major de edat");
+}
+
+//Exercici 7
+let num1 = parseInt(prompt("Introduce un número:"));
+let num2 = parseInt(prompt("Introduce otro número:"));
+let num3 = parseInt(prompt("Introduce un tercer número:"));
+
+console.log(`El número más grande es: ${Math.max(num1, num2, num3)}`);
+
+//Exercici 8
+
