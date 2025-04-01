@@ -116,6 +116,56 @@
         let suma = array.reduce((acumulador, elemento) => acumulador + elemento, 0);
         document.getElementById("sumaArray").textContent = suma;
     }
-    
-    
 
+    //Exercici 12
+    function multiplicar(nu1, nu2) {
+        return nu1 * nu2;
+    }
+    
+    document.getElementById("btnCalcular").addEventListener("click", function() {
+        let nu1 = parseInt(prompt("Ingresa un número:"));
+        let nu2 = parseInt(prompt("Ingresa otro número:"));
+        let resultado = multiplicar(nu1, nu2);
+        document.getElementById("multi").textContent = resultado;
+    });
+    
+    //Exercici 13
+    function maxArray() {
+        let array2 = [];
+
+        for (let i = 0; i < 5; i++) {
+            let numero = parseInt(prompt("Ingresa un número " + (i + 1) + "/5"));
+            array2.push(numero);  
+        }
+
+        let biggest = Math.max(...array2);
+        document.getElementById("maxArray").textContent = biggest;
+    }
+
+    //Exercici 14
+    function arrayInv() {
+        let array3 = [];
+
+        for (let i = 0; i < 5; i++) {
+            let numero = parseInt(prompt("Ingresa un número " + (i + 1) + "/5"));
+            array3.push(numero);  
+        }
+
+        let invert = array3.reverse()
+        document.getElementById("invert").textContent = invert;
+
+    }
+
+    //Exercici 15
+    function arrayDup () {
+        let array4 = [];
+
+        for (let i = 0; i < 5; i++) {
+            let numero = parseInt(prompt("Ingresa un número " + (i + 1) + "/5"));
+            array4.push(numero);  
+        }
+
+        let sinDup = Array.from(new Set(array4));
+        document.getElementById("arrayDup").textContent = sinDup;
+    }
+    
