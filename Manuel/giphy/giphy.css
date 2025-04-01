@@ -1,0 +1,22 @@
+#body{
+    background-color: black;
+}
+#titol{
+    color: aliceblue;
+}
+#header{
+margin-left: 450px;
+margin-right: 500px;
+display: flex;
+flex-wrap: wrap;
+background-color: black;
+}
+#giphyInput{
+    display: flex;
+    width:800px;
+    text-size-adjust: 100px;
+}
+#inputBoton{
+    display: flex;
+    align-items: baseline;
+}
