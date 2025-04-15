@@ -1,11 +1,10 @@
 
 
-body {
-    background-image: url('nubes.jpeg');
-    background-size: cover; 
-    background-position: center center; 
-    height: 100vh;
-    margin: 0;
+body{
+    background-image: url('blue-sky-background-and-white-clouds-vector.jpg');
+    align-items: center;
+    text-align: center;
+    background-size: 100%;
 }
 
 .title{
@@ -18,7 +17,7 @@ body {
 
 #general{
     border: 3px solid green;
-    background-color: #c4e8f6;
+    background-color: #e3f3f9;
     border-radius: 50px;
     margin: 50px;
     font-size: 20px;
