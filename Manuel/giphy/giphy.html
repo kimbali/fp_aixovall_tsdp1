@@ -1,13 +1,28 @@
 <!DOCTYPE html>
-<head>
-    <link rel="stylesheet" href="giphy.css">
-</head>
-<body>
-    <header id="header">
-        <h1 id="titol">GIPHY</h1>
-        <div id="inputBoton">
-            <input id="giphyInput" placeholder="Search all the Gifs and Stickers">
-            <button id="boton">boton</button>
-        </div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giphy | Inicio</title>
+    <link rel="stylesheet" href="giphy.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">"
+  </head>
+  <body>
+    <header>
+    <div id="imagenTitulo">
+      <img id="imagen" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAA1VBMVEUSEhIAzP8A/5n/ZmaZM///81wA/5wSAAAA1P8SDgsKvXIHu3IRIykA0f8NEQafNf8uF0YSBwAOSlthJJ8LDBEQEgwpJxf//WCflz0ACgodFSQAAAD/+V4AAA9bVyeuSUl9Nja9tEbDUFBGIiIgFSxzWOgKl70QOkYpGBhW5YBKRyHOVFTpXl5QHaMD4pebmjvLcFLv5FdzKb1tKLQqKRclGxfXd1b361lCqmBYtmRbTiE+Rh22VEv/bW3/aGMACCZvJdIdCx0Kp3EGsYIPQFclHkAA3P8YDBXzAAACD0lEQVR4nO3Z104DMRBA0UACofcWNqH3TugldPj/TyKhxUZyQCN2vBnuebfkq3nxyLkcAAAAAAAAAAAAAAAAAABAdkwIxb73r00dT4kcn2x4YncEVRanZc5Oa67tUuySkMpiuUugfLh/kHctGSssH87YLqwH2i5sBJoufAu0XPgeaLjwI9Bu4Weg2cKvQKuFzUCjhU6gzUI3sH0Lyy2czbQoTEqu2FmO5HzTdXE5F7blurr2Cne2XUuxsxzFvm5Xf1IJ8xbgZD4ftpOhIdYLO5u6+4u/PViiMCsoDKIwMygMojAzKAyiMDPSKszOppFS4YIn6rdNOoW+2nLMKVIYRCGFaigMopBCNRQGUfivCvPtWlhr0XTjac/CXCkJu9113Y0MpVjwE3lhC5Mr447qsPHCasF4YbVgvLAeaLuwEWi68KhgvPA90HDhR6Ddws9As4VfgVYLm4FGC51Ak4WzbqDNwgKFeigUoVAVhSIUqqJQhEJVFIpQqIpCEQpVUShCoSoKRShURaEIhaooFKFQFYUiFKqiUIRCVRSKUKiKQhEKVVEoQqEqCkUoVEWhCIWqKBShUBWFIhSq+lbYVxz9C/dZKnzYcz0+jf2JVc/zZMzCtQ7PYApe1nujFg52pK2HQgoppJBCCimkkEIKfyx86Ulb3Jd374CCiH2NRAVxCwEAAAAAAAAAAAAAAAAAADyv/RXopshLW5MAAAAASUVORK5CYII=">
+      <h1 id="TITOL">GIPHY</h1>
+    </div>
+      <input type="text" id="searchInput" placeholder="Buscar..." />
+      <button id="searchButton">
+        <i class="fas fa-search"></i>
+      </button>
     </header>
-</body>
+
+    <main>
+      <div id="gifContainer"></div>
+    </main>
+
+    <script src="giphy.js"></script>
+  </body>
+</html>
