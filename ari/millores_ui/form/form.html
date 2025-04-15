@@ -1,96 +1,29 @@
-<!-- Exercici 1: Formulari -->
 <!DOCTYPE html>
 <html lang="ca">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Millores UI - Formulari</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .form-container {
-            width: 360px;
-            background: white;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            text-align: center;
-        }
-        h2 {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .error {
-            color: red;
-            font-size: 0.8rem;
-            display: none;
-        }
-        button {
-            width: auto;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 20px;
-            background: #007bff;
-            color: white;
-            cursor: not-allowed;
-            float: right;
-        }
-        button.active {
-            cursor: pointer;
-            background: #0056b3;
-        }
-    </style>
-</head>
-<body>
-    <div class="form-container">
-        <h2>Registra't</h2>
-        <form id="registerForm">
-            <input type="email" id="email" placeholder="Correu electrònic" required>
-            <span class="error" id="emailError">Format incorrecte</span>
-            <input type="password" id="password" placeholder="Contrasenya" required>
-            <span class="error" id="passwordError">Mínim 8 caràcters</span>
-            <input type="tel" id="phone" placeholder="Telèfon" required>
-            <button type="submit" id="submitButton" disabled>Envia</button>
-        </form>
-    </div>
-    <script>
-        const email = document.getElementById('email');
-        const password = document.getElementById('password');
-        const submitButton = document.getElementById('submitButton');
-        const emailError = document.getElementById('emailError');
-        const passwordError = document.getElementById('passwordError');
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulari de registre</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
 
-        function validateForm() {
-            const isEmailValid = email.value.includes('@') && email.value.includes('.');
-            const isPasswordValid = password.value.length >= 8;
-            
-            emailError.style.display = isEmailValid ? 'none' : 'block';
-            passwordError.style.display = isPasswordValid ? 'none' : 'block';
-            
-            submitButton.disabled = !(isEmailValid && isPasswordValid);
-            submitButton.classList.toggle('active', isEmailValid && isPasswordValid);
-        }
+  <body>
+    <form id="registerForm">
+      <h2>Registre</h2>
+      <button type="submit">Registrar-se a la pàgina web</button>
+      <input type="text" id="name" placeholder="Nom complet" />
+      
+      <input type="text" id="email" placeholder="Email" />
+      <span class="error" id="emailError">
+        Email no vàlid
+     </span>
+      <input type="text" id="password" placeholder="Contrasenya" />
+      <span class="error" id="passwordError">
+        La contrasenya ha de tenir almenys 8 caràcters
+     </span>
+      <input type="text" id="telefon" placeholder="telefon"/>
+     
 
-        email.addEventListener('input', validateForm);
-        password.addEventListener('input', validateForm);
-
-        document.getElementById('registerForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Registre completat amb èxit!');
-        });
-    </script>
-</body>
+    </form>
+  </body>
 </html>
-

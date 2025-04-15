@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta amb la botiga de llibres Llibres & Més">
+    <title>Llibres & Més | Contacte</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Llibres & Més</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inici</a></li>
+                    <li><a href="index.html#novetats">Novetats</a></li>
+                    <li><a href="index.html#best-sellers">Best Sellers</a></li>
+                    <li><a href="contacte.html" class="active">Contacte</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="formulari-contacte">
+            <h2>Contacta amb nosaltres</h2>
+            <form id="contacte-form">
+                <div class="form-group">
+                    <label for="nom">Nom:</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="assumpte">Assumpte:</label>
+                    <select id="assumpte" name="assumpte">
+                        <option value="consulta">Consulta</option>
+                        <option value="reclamacio">Reclamació</option>
+                        <option value="suggeriment">Suggeriment</option>
+                        <option value="altres">Altres</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="missatge">Missatge:</label>
+                    <textarea id="missatge" name="missatge" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Vull rebre el butlletí de novetats</label>
+                </div>
+                <button type="submit">Enviar missatge</button>
+            </form>
+        </section>
+
+        <section id="ubicacio">
+            <h2>On som</h2>
+            <div class="mapa-container">
+                <!-- Mapa fictici amb imatge de fons -->
+                <div class="mapa" aria-label="Mapa de ubicació de la botiga Llibres & Més al carrer dels Llibres, 123 de Barcelona"></div>
+                <p>Ens trobem al cor de Barcelona, al Carrer dels Llibres, 123. Estem a prop de l'estació de metro Catalunya.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>Enllaços ràpids</h3>
+                <ul>
+                    <li><a href="index.html">Inici</a></li>
+                    <li><a href="index.html#novetats">Novetats</a></li>
+                    <li><a href="index.html#best-sellers">Best Sellers</a></li>
+                    <li><a href="contacte.html">Contacte</a></li>
+                    <li><a href="#top">Torna amunt</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacte</h3>
+                <p>Carrer dels Llibres, 123</p>
+                <p>08001 Barcelona</p>
+                <p>Tel: 934 123 456</p>
+                <p>Email: info@llibresimes.com</p>
+            </div>
+            <div class="footer-section">
+                <p>&copy; 2023 Llibres & Més. Tots els drets reservats.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
