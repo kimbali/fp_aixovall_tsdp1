@@ -1,0 +1,42 @@
+#gifContainer {
+    display: grid;
+  }
+header{
+    background-color: hsl(27, 25, 25);
+    margin-left: 400PX;
+    margin-right: 400px;
+    margin-top: 100px;
+}
+
+#TITOL{
+    color: aliceblue;
+    order: 1;
+}
+#searchInput{
+    width: 1010px;
+    height: 60px;
+}
+#searchButton{
+    height: 65px;
+}
+#gifContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 400px;
+    margin-right: 400px;
+    gap: 10px;
+    margin-top: 50px;
+}
+body{
+    background-color: rgb(27, 25, 25);
+}
+#imagen{
+    width: 50px;
+    height: 60px;
+    order: 0;
+}
+#imagenTitulo{
+    display: flex;
+    flex-direction: row;
+}
