@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Temps</title>
-    <link rel="stylesheet" href="./styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>El Temps</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="main-container">
-        <div class="tittle">
-            <h1>El Temps</h1>
-        </div>
-        <div class="tarda-container">
-            <h1>Tarda</h1>
-            <h3>10ºC</h3>
-            <img src="" alt="">
-        </div>
+  <div class="container">
+    <div class="header">El Temps</div>
+
+    <div class="box tarda">
+      <div class="title">Tarda 10ºC <span class="icon">🌤️</span></div>
+      <div class="range">Max 13ºC - Min 8ºC</div>
     </div>
+
+    <div class="box nit">
+      <div class="title">Nit 7ºC <span class="icon">🌧️</span></div>
+      <div class="range">Max 9ºC - Min 5ºC</div>
+    </div>
+
+    <div class="box mati">
+      <div class="title">Matí 10ºC <span class="icon">☀️</span></div>
+      <div class="description">Pronòstic del dia en general <br>+ Max i Min</div>
+    </div>
+  </div>
 </body>
 </html>
