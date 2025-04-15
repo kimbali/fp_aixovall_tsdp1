@@ -1,0 +1,30 @@
+#gifContainer {
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+body{
+    background-color: red;
+    color: white;
+    font-style: oblique;
+}
+#searchButton{
+    height: 50px;
+    font-size: 20px;
+    
+    
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    border: 1px solid black;
+    flex-direction: column;
+    
+}
+#searchInput{
+    height: 30px;
+
+}

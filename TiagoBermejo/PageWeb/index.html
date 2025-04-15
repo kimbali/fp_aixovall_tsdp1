@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acudit Chuck Norris</title>
+    <link rel="stylesheet" href="PaginaWeb.css">
+</head>
+<body>
+    <h1 id="title">Acudit Aleatori de Chuck Norris</h1>
+
+    <div>
+        <label for="language-select">Trieu idioma:</label>
+        <select id="language-select" onchange="changeLanguage()">
+            <option value="ca">Català</option>
+            <option value="en">Anglès</option>
+        </select>
+    </div>
+
+    <div class="joke-container">
+        <p class="joke" id="joke">Carregant acudit...</p>
+        <button onclick="fetchJoke()">
+            <span id="btn-text">Obtenir un altre acudit</span>
+        </button>
+    </div>
+
+    <script>
+        let currentLanguage = 'ca';
+
+
+        function fetchJoke() {
+            fetch('https://api.chucknorris.io/jokes/random')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('joke').innerText = data.value;
+                })
+                .catch(error => {
+                    document.getElementById('joke').innerText = "Error carregant l'acudit.";
+                });
+        }
+
+        // Funció per canviar l'idioma de la pàgina
+        function changeLanguage() {
+            currentLanguage = document.getElementById('language-select').value;
+            updateText();
+        }
+
+        // Funció per actualitzar el text en funció de l'idioma seleccionat
+        function updateText() {
+            if (currentLanguage === 'ca') {
+                document.getElementById('title').innerText = 'Acudit Aleatori de Chuck Norris';
+                document.getElementById('btn-text').innerText = 'Obtenir un altre acudit';
+            } else if (currentLanguage === 'en') {
+                document.getElementById('title').innerText = 'Random Chuck Norris Joke';
+                document.getElementById('btn-text').innerText = 'Get another joke';
+            }
+        }
+
+        // Carregar un acudit i aplicar l'idioma inicial quan es carrega la pàgina
+        window.onload = function() {
+            fetchJoke();
+            updateText();
+        };
+    </script>
+</body>
+</html>

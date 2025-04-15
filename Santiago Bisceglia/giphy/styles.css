@@ -1,0 +1,47 @@
+#gifContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 15px;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+body{
+  background-color: lightgrey;
+}
+
+#titulo{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 50px;
+  margin-left: 10px;
+}
+
+#titulo:hover{
+  color: grey;
+}
+
+#searchInput{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  height: 50px;
+  width: 80%;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+#searchButton{
+  font-size: 30px;
+  background-color: lightblue;
+  color: white;
+  border-color: white;
+  margin-left: 15px;
+}
+
+#searchButton:hover{
+  transform: scale(1.15);
+  background-color: grey;
+}
+
+
