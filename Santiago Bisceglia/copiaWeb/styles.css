@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilo para el icono en el header */
+.menu-icon {
+    width: 200px; /* Ajusta este valor para cambiar el tamaño */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 10px; /* Espaciado con los enlaces */
+}
+
+/* Otros estilos */
+.menu-parent {
+    width: 100%;
+    background-color: #150f35;
+    min-height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    gap: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Se asegura de que la imagen ocupe el 100% del ancho disponible y mantenga la proporción */
+.section-content {
+    width: 100%;  /* El contenedor ocupa todo el ancho disponible */
+    overflow: hidden; /* Evita que la imagen se desborde */
+}
+
+/* Imagen dentro del contenedor */
+.section-content img {
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina cualquier espacio extra debajo de la imagen */
+}
+
+/* Asegúrate de que el contenedor no tenga un margen que lo limite */
+#section {
+    width: 100%; /* Asegura que el contenedor de la imagen ocupe todo el ancho */
+    margin: 0;
+    padding: 0;
+}
+#pr-destacados {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    font-size: 30px;
+    padding: 16px;
+}
+
+/* Grid de productos */
+.destacados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px; /* ✅ Ajusta la separación entre las tarjetas */
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-bottom: 20px;
+}
+
+/* Tarjeta de producto */
+.phone-container {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    padding: 1rem 1.2rem;
+    text-align: center;
+    max-width: 220px;
+    margin: 0 auto;
+    transition: transform 0.2s ease;
+}
+
+.phone-container:hover {
+    transform: translateY(-4px);
+}
+
+/* Título */
+.phone-container h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e1e1e;
+    margin-bottom: 0.8rem;
+}
+
+/* Imagen */
+.img-phone {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 0.8rem;
+}
+
+/* Precio */
+.price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2e7d32;
+}
+
+/* Precio anterior */
+.older-price {
+    font-size: 0.9rem;
+    color: #999;
+    text-decoration: line-through;
+    display: inline-block;
+    margin-top: 0.3rem;
+}
+
+/* Estado */
+.estado {
+    display: inline-block;
+    background-color: #f2f2f2;
+    color: #444;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 10px;
+    margin-top: 0.4rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #pr-destacados {
+        font-size: 22px;
+        padding: 12px;
+        margin: 0;
+    }
+
+    .phone-container h2 {
+        font-size: 0.95rem;
+    }
+
+    .price {
+        font-size: 1rem;
+    }
+}
+
+footer{
+    background-color: #150f35;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+
+}
+
+#pagos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #150f35;
+    padding: 40px 5%;
+    color: #fff;
+    text-align: center;
+}
+
+.columna {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+#pagos p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.grupo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.grupo img {
+    height: 30px;
+    object-fit: contain;
+}
+
+#quienes-somos {
+    max-width: 300px;
+    margin: 0 auto;         /* centra el bloque */
+    padding: 20px;
+    color: #fff;
+}
+
+#quienes-somos #title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: justify;     /* título centrado */
+}
+
+#quienes-somos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#quienes-somos li {
+    margin-bottom: 10px;
+    text-align: justify;    /* justifica el contenido de cada li */
+}
+
+#quienes-somos a {
+    color: #fff;
+    font-size: 16px;
+    display: block;         /* necesario para justificar enlaces */
+}
+
+#quienes-somos a:hover{
+    text-decoration: underline;
+}
+
+#card {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    padding: 1rem 1.2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#card h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+#card p {
+    font-size: 14px;
+    text-align: justify;
+}
+
+#card h4{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    margin-top: 20px;
+    color: #4caff7;
+}
+
+#text-links{
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+    
+}
+
+
+
+#proceso-certificacion {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px 5%;
+    background-color: #fefefe;
+    color: #333;
+    text-align: justify;
+    flex-wrap: wrap;
+}
+
+.bloque {
+    flex: 1;
+    min-width: 280px;
+    max-width: 360px;
+}
+
+.bloque img {
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 80px;
+    height: auto;
+}
+
+.bloque h3 {
+    text-align: center;
+    color: #4c8ef5;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.bloque .destacado {
+    font-weight: bold;
+    color: #3573d1;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.bloque p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* MODIFICAR  */
+
+
+#card-control{
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    padding: 1rem 1.2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#card-control li{
+    text-align: justify;
+    margin-left: 100px;
+}
+
+h1{
+    text-align: center;
+    margin: 20px;
+}
+
+#form-contacto {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#form-contacto h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+}
+
+.inp-form {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.inp-form:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+  outline: none;
+}
+
+#btn-enviar {
+    width: 300px;
+    background-color: #F76140;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;   
+    cursor: pointer;
+    display: block;
+    margin: 1rem auto 0 auto;
+    text-align: center;
+}
+
+
+
+
