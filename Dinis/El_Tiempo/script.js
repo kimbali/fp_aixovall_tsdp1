@@ -7,3 +7,4 @@ fetch(url)
 .then(data =>{
     console.log(data);
 });
+
