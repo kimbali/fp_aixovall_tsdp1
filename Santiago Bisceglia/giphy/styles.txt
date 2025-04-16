@@ -1,0 +1,42 @@
+#gifContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 15px;
+  justify-content: center;
+}
+
+header{
+  border: solid 2px;
+  background-color: lightgrey;
+}
+
+#titulo{
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 50px;
+}
+
+#searchInput{
+  margin-left: 45%;
+  height: 50px;
+  width: max-content;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+#searchButton{
+  color: white;
+  background-color: green;
+  border-radius: 20px;
+  border-color: white;
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+#searchButton:hover{
+  transform: scale(1.05);
+  background-color: lightslategrey;
+}

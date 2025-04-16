@@ -11,6 +11,7 @@ async function getAccessToken() {
             },
             body: 'grant_type=client_credentials'
         });
+        
         const data = await response.json();
         if (!response.ok) throw new Error(data.error || 'Error obteniendo el token');
         return data.access_token;
@@ -34,7 +35,7 @@ async function searchSpotify() {
                 'Authorization': 'Bearer ' + token
             }
         });
-
+        
         if (!response.ok) throw new Error('Error en la petició a la API de Spotify');
         
         const data = await response.json();
