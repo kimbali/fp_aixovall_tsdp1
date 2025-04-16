@@ -29,8 +29,20 @@ function fetchCurrentWeather() {
       document.getElementById('icona').alt = descripcio;
 
       // Temperatura + temperatura maxima i minima
-      
+      const graus = document.getElementById('graus');
+      graus.textContent = data.main.temp + ' ºC';
+
+      const maxMin = document.getElementById('maxmin');
+      maxMin.innerHTML = `
+      <span class="max">${Math.floor(data.main.temp_max)}</span> -
+      <span class="min">${Math.floor(data.main.temp_min)}</span>
+      ºC`;
       // Vent + direccio
+      const velocitat = document.getElementById('velocitat');
+      velocitat.textContent = data.wind.speed + ' m/s';
+
+      const direccio = document.getElementById('direccio');
+      direccio.textContent = data.wind.deg + ' º';
 
       // El día d'avui: Miercoles 16 de Abril
     });
