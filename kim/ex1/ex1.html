@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projecte Solidari</title>
+
+    <link rel="stylesheet" href="ex1.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ONG Ajuda Global</h1>
+    </header>
+
+    <nav>
+      <a href="#">Inici</a>
+      <a href="#">Projectes</a>
+      <a href="#">Contacte</a>
+    </nav>
+
+    <main>
+      <h2>Sobre nosaltres</h2>
+
+      <div class="container">
+        <p>
+          Som una ONG que ajuda a tot arreu. Aquesta web explica qui som i què
+          fem. Esperem que t'agradi!
+        </p>
+
+        <!-- Placehold de imagen: https://placehold.co/ -->
+        <img src="https://placehold.co/600x400" alt="Imatge solidària" />
+
+        <form>
+          <h3>Contacta amb nosaltres</h3>
+
+          <label>Nom</label>
+          <input type="text" />
+
+          <label>Missatge</label>
+          <textarea></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>ONG Ajuda Global - Tots els drets reservats</p>
+    </footer>
+
+    <script>
+      document.querySelector('form').addEventListener('submit', function (e) {
+        alert('Missatge enviat!');
+      });
+    </script>
+  </body>
+</html>
