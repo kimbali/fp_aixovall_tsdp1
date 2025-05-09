@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     background-color: #ffffff;
     font-family: Arial, sans-serif;
@@ -63,4 +64,8 @@ body {
 
 #vent {
     border: 1px solid black;
+=======
+.min {
+  color: gray;
+>>>>>>> dbb6ed96a9f506f4777639aa94d765dfd608e9f8
 }
