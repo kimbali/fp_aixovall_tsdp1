@@ -1,4 +1,3 @@
-// Función para la calculadora
 function calcular(operacion) {
     let num1 = parseFloat(document.getElementById('num1').value);
     let num2 = parseFloat(document.getElementById('num2').value);
@@ -34,7 +33,7 @@ function calcular(operacion) {
     document.getElementById('resultado').textContent = 'Resultado: ' + resultado;
 }
 
-// Función para el juego de Piedra, Papel o Tijera
+
 function jugar(eleccion) {
     const opciones = ['piedra', 'papel', 'tijera'];
     const eleccionComputadora = opciones[Math.floor(Math.random() * 3)];
@@ -55,7 +54,7 @@ function jugar(eleccion) {
     document.getElementById('resultado-juego').textContent = 'Computadora eligió: ' + eleccionComputadora + '. ' + resultado;
 }
 
-// Función para convertir la temperatura
+
 function convertir(tipo) {
     let temperatura = parseFloat(document.getElementById('temperatura').value);
     let resultado = '';
@@ -66,20 +65,18 @@ function convertir(tipo) {
     }
 
     if (tipo === 'C') {
-        // Convertir de Fahrenheit a Celsius
         resultado = (temperatura - 32) * (5 / 9);
         document.getElementById('resultado-temp').textContent = temperatura + '°F = ' + resultado.toFixed(2) + '°C';
-    } else if (tipo === 'F') {
-        // Convertir de Celsius a Fahrenheit
+    } else if (tipo === 'F') {        
         resultado = (temperatura * 9 / 5) + 32;
         document.getElementById('resultado-temp').textContent = temperatura + '°C = ' + resultado.toFixed(2) + '°F';
     }
 }
 
-// Función para el cronómetro
+
 let tiempo = 0;
 let intervalo;
-
+   
 function iniciarCronometro() {
     if (intervalo) clearInterval(intervalo);
     intervalo = setInterval(() => {
@@ -100,7 +97,7 @@ function resetearCronometro() {
     document.getElementById('cronometro').textContent = '00:00';
 }
 
-// Función para la validación del formulario
+
 document.getElementById('formulario').addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -127,3 +124,4 @@ document.getElementById('formulario').addEventListener('submit', function (event
         document.getElementById('formulario').reset(); // Limpiar el formulario
     }
 });
+ 
