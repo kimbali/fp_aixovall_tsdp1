@@ -29,19 +29,14 @@ function fetchCurrentWeather() {
       document.getElementById('icona').alt = descripcio;
 
       // Temperatura + temperatura maxima i minima
-<<<<<<< HEAD
       const graus = document.getElementById('graus');
       graus.textContent = data.main.temp + ' ºC';
 
       const maxMin = document.getElementById('maxmin');
       maxMin.innerHTML = `
-      <span class="max">${data.main.temp_max}</span>  
-      <span class="min">${data.main.temp_min}</span>
-      `;
-
-=======
-      
->>>>>>> 6a15b1df422e50ac60283a3d6a15375bcab55c1a
+      <span class="max">${Math.floor(data.main.temp_max)}</span> -
+      <span class="min">${Math.floor(data.main.temp_min)}</span>
+      ºC`;
       // Vent + direccio
       const velocitat = document.getElementById('velocitat');
       velocitat.textContent = data.wind.speed + ' m/s';
