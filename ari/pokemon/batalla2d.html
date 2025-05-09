@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Batalla Pokémon 2D</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="battlefield">
+    <div class="pokemon opponent">
+      <h2>Charmander</h2>
+      <div class="hp-bar">
+        <div class="hp" id="opponent-hp"></div>
+      </div>
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png" alt="Charmander">
+    </div>
+
+    <div class="pokemon player">
+      <h2>Squirtle</h2>
+      <div class="hp-bar">
+        <div class="hp" id="player-hp"></div>
+      </div>
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="Squirtle">
+    </div>
+  </div>
+
+  <div class="controls">
+    <button onclick="playerAttack('Tacle')">Tacle</button>
+    <button onclick="playerAttack('Pistola d Aigua')">Pistola d'Aigua</button>
+  </div>
+
+  <div class="log" id="battle-log">La batalla comença!</div>
+
+  <script src="batalla2d.js"></script>
+</body>
+</html>
