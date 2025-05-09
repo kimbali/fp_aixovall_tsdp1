@@ -30,3 +30,17 @@ body{
     font-size: 1.5pc;
     margin-bottom: 0%;
 }
+.graella{
+    display: flex;
+    flex-direction: row;
+    margin:auto;
+    width: 20pc;
+    border: 1px solid white;
+
+ 
+
+}
+.dia{
+    margin: auto;
+    opacity: 800%;
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <title>Preinscripció universitària</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        padding: 20px;
+      }
+
+      .error {
+        color: red;
+        font-size: 12px;
+        margin-top: 4px;
+        display: none;
+      }
+
+      .inputContainer {
+        margin-bottom: 12px;
+      }
+
+      input {
+        width: 100%;
+        padding: 8px;
+        border: thin solid #ccc;
+        border-radius: 4px;
+      }
+
+      .row {
+        display: flex;
+        gap: 12px;
+        width: 100%;
+      }
+
+      .row .inputContainer {
+        flex: 1;
+      }
+
+      button {
+        padding: 12px;
+        background: none;
+        border: none;
+        color: black;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <i class="fas fa-person"></i> Formulari de sol·licitud d’informació de
+      l'universitat
+    </h1>
+
+    <h2>
+      Omple aquest formulari per rebre informació rellevant sobre els nostres
+      programes universitaris i les possibles opcions formatives que podrien ser
+      d'interès per al teu futur acadèmic.
+    </h2>
+    <p>
+      Algunes dades són importants per garantir que rebis una atenció
+      personalitzada, però no totes són imprescindibles, tot i que es recomana
+      completar-les en la mesura del possible per tal d’optimitzar la
+      comunicació entre tu i la institució.
+    </p>
+    <p>
+      A continuació, recorda que la informació proporcionada s’utilitzarà per
+      diversos propòsits relacionats amb el procés informatiu, que pot incloure
+      —sense limitar-se a— l'enviament de documentació oficial, notificacions
+      personalitzades, inscripció a jornades de portes obertes, o fins i tot la
+      gestió d'interaccions puntuals amb altres departaments acadèmics,
+      administratius o relacionats amb serveis complementaris de la institució,
+      com poden ser beques, transport, allotjament o altres recursos, i en
+      general qualsevol canal que es consideri adequat per part de la
+      universitat per garantir un accés fluid a tota la informació possible
+      relacionada amb les opcions acadèmiques disponibles en els diferents
+      graus, cicles, dobles titulacions i altres programes que podrien estar
+      subjectes a modificacions en funció de la demanda, l'oferta, els acords
+      institucionals o canvis normatius vigents, ja sigui a nivell autonòmic,
+      estatal o europeu, per la qual cosa es recomana facilitar totes les dades
+      possibles, encara que no totes siguin tècnicament obligatòries, per evitar
+      qualsevol tipus de malentès o manca d'informació en futures comunicacions
+      per part del departament corresponent.
+    </p>
+
+    <form id="form">
+      <div class="inputContainer">
+        <input type="text" placeholder="Nom complet" />
+        <div class="error">Camp requerit</div>
+      </div>
+
+      <div class="inputContainer">
+        <input type="text" placeholder="Correu electrònic" />
+        <div class="error">Introdueix un correu vàlid</div>
+      </div>
+
+      <div class="inputContainer">
+        <input type="text" placeholder="Número de telèfon" />
+        <div class="error">Introdueix un número vàlid</div>
+      </div>
+
+      <div class="inputContainer">
+        <input type="text" placeholder="DNI / NIE" />
+        <div class="error">Aquest camp és obligatori</div>
+      </div>
+
+      <div class="inputContainer">
+        <input type="text" placeholder="Adreça completa" />
+        <div class="error">Aquest camp és obligatori</div>
+      </div>
+
+      <div class="row">
+        <div class="inputContainer">
+          <input type="text" placeholder="Població" />
+          <div class="error">Aquest camp és obligatori</div>
+        </div>
+        <div class="inputContainer">
+          <input type="text" placeholder="Codi postal" />
+          <div class="error">Aquest camp és obligatori</div>
+        </div>
+        <div class="inputContainer">
+          <input type="text" placeholder="Província" />
+          <div class="error">Aquest camp és obligatori</div>
+        </div>
+      </div>
+
+      <div class="inputContainer">
+        <input type="text" placeholder="Nom del tutor legal (si s’escau)" />
+        <div class="error">Opcional</div>
+      </div>
+
+      <div class="inputContainer">
+        <input type="text" placeholder="Últim centre educatiu" />
+        <div class="error">Aquest camp és obligatori</div>
+      </div>
+
+      <div class="inputContainer">
+        <input type="text" placeholder="Nota mitjana ESO / Batxillerat" />
+        <div class="error">Introdueix un valor numèric</div>
+      </div>
+
+      <div class="inputContainer">
+        <input type="text" placeholder="Grau o cicle sol·licitat" />
+        <div class="error">Aquest camp és obligatori</div>
+      </div>
+
+      <div class="inputContainer">
+        <input
+          type="text"
+          placeholder="Motivació personal (mínim 200 paraules)"
+        />
+        <div class="error">Mínim 200 paraules</div>
+      </div>
+
+      <div class="inputContainer">
+        <input
+          type="text"
+          placeholder="Coneixements previs de programació (si escau)"
+        />
+        <div class="error">Opcional</div>
+      </div>
+
+      <div class="inputContainer">
+        <input type="text" placeholder="Altres observacions" />
+        <div class="error">Opcional</div>
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+      document.getElementById('form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const inputs = Array.from(this.querySelectorAll('input'));
+        const errors = Array.from(this.querySelectorAll('.error'));
+        let hasErrors = false;
+
+        inputs.forEach((input, i) => {
+          const errorDiv = errors[i];
+          const value = input.value.trim();
+
+          if (i === 0 && value === '') {
+            errorDiv.textContent = 'Camp requerit';
+            errorDiv.style.display = 'block';
+            input.style.borderColor = 'red';
+            hasErrors = true;
+          } else if (i === 1 && !value.includes('@')) {
+            errorDiv.textContent = 'Introdueix un correu vàlid';
+            errorDiv.style.display = 'block';
+            input.style.borderColor = 'red';
+            hasErrors = true;
+          } else if (i === 2 && value.length < 9) {
+            errorDiv.textContent = 'Introdueix un número vàlid';
+            errorDiv.style.display = 'block';
+            input.style.borderColor = 'red';
+            hasErrors = true;
+          } else if (i === 10 && value.split(' ').length < 200) {
+            errorDiv.textContent = 'Mínim 200 paraules';
+            errorDiv.style.display = 'block';
+            input.style.borderColor = 'red';
+            hasErrors = true;
+          } else if (i === 8 && isNaN(parseFloat(value))) {
+            errorDiv.textContent = 'Introdueix un valor numèric';
+            errorDiv.style.display = 'block';
+            input.style.borderColor = 'red';
+            hasErrors = true;
+          } else if ([3, 4, 7, 9].includes(i) && value === '') {
+            errorDiv.textContent = 'Aquest camp és obligatori';
+            errorDiv.style.display = 'block';
+            input.style.borderColor = 'red';
+            hasErrors = true;
+          } else {
+            errorDiv.style.display = 'none';
+          }
+        });
+
+        // Valida els inputs en fila (població, codi postal, província)
+        const filaContainers = document.querySelectorAll(
+          '.row .inputContainer'
+        );
+        filaContainers.forEach(container => {
+          const input = container.querySelector('input');
+          const error = container.querySelector('.error');
+          if (input.value.trim() === '') {
+            error.style.display = 'block';
+            input.style.borderColor = 'red';
+            hasErrors = true;
+          } else {
+            error.style.display = 'none';
+            input.style.borderColor = '#ccc';
+          }
+        });
+
+        if (!hasErrors) {
+          alert('Formulari enviat correctament!');
+        }
+      });
+    </script>
+  </body>
+</html>
