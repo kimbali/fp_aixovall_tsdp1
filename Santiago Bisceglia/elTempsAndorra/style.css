@@ -1,101 +1,102 @@
-:root{
-    --text-light: #ffffff;
-  --text-subtle: rgba(255, 255, 255, 0.8);
-  --card-bg: rgba(255, 255, 255, 0.15);
-  --border-glass: rgba(255, 255, 255, 0.3);
-  --accent-blue: #64b5f6;
-  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.2);
-  --radius: 20px;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: linear-gradient(to bottom, #1e3c72, #2a5298);
-    color: var(--text-light);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: linear-gradient(to top, #1e3c72, #2a5298);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
 }
 
-h1{
-    font-size: 3rem;
-    font-weight: 600;
-    text-align: center;
-    margin: 60px 20px 20px;
+/* Encabezado principal */
+h1 {
+  font-size: 3em;
+  font-weight: 300;
+  margin-bottom: 10px;
 }
 
-h2, h3{
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-top: 40px;
-    margin-bottom: 10px;
-    color: var(--text-subtle);
-    text-align: center;
+h2 {
+  font-size: 2em;
+  font-weight: 300;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
-#temps, #temperatura, #vent, #dies > div{
-    background: var(--card-bg);
-    border-radius: var(--radius);
-    padding: 20px;
-    margin: 15px auto;
-    backdrop-filter: blur(12px);
-    border: 1px solid var(--border-glass);
-    box-shadow: var(--shadow-glass);
-    width: 90%;
-    max-width: 600px;
-    color: var(--text-light);
-    text-align: center;
-    transition: transform 0.3s ease;
+h3 {
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
-#temps:hover, #temperatura:hover, #vent:hover, #dies:hover > div:hover{
-    transform: scale(1.02);
+/* Descripción e icono del clima */
+#temps {
+  margin: 20px 0;
 }
 
-#temps img{
-    width: 100px;
-    margin: 10px 0;
+#descripcio {
+  font-size: 1.3em;
+  margin-bottom: 10px;
 }
 
-#temperatura p, #vent p{
-    font-size: 1.2rem;
-    margin: 6px 0;
+#icona {
+  width: 100px;
+  height: 100px;
 }
 
-#setmana{
-    width: 100%;
-    max-width: 800px;
-    padding: 20px;
+/* Temperatura */
+#temperatura {
+  font-size: 1.2em;
+  margin-bottom: 20px;
 }
 
-#dies{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
+#graus {
+  font-size: 2em;
+  font-weight: 200;
 }
 
-#dies > div{
-    padding: 15px;
+#maxmin {
+  font-size: 1em;
+  opacity: 0.8;
 }
 
-#dies img{
-    width: 60px;
-    margin: 8px 0;
+/* Viento */
+#vent p {
+  font-size: 1.1em;
 }
 
-@media (max-width: 600px){
-    h1{
-        font-size: 2.2rem;
-    }
+/* Pronóstico semanal */
+#dies {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
 
-    h2, h3{
-        font-size: 1.2rem;
-    }
+#dies > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
 
-    #dies{
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    }
+#dies div span {
+  flex: 1;
+  text-align: left;
+  font-size: 1em;
+}
+
+#dies div img {
+  width: 40px;
+  height: 40px;
+  flex: 0;
 }
