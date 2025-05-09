@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Motivación Diaria</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      height: 200vh;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f8ff;
+      color: #333;
+    }
+
+    .sticky-box {
+      position: sticky;
+      top: 0;
+      background-color: #4caf50;
+      padding: 20px;
+      font-size: 1.5rem;
+      color: white;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .content {
+      padding: 40px;
+    }
+
+    .phrase {
+      margin-bottom: 60px;
+      font-size: 1.3rem;
+      font-weight: 500;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .fixed-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 15px 25px;
+      font-size: 1rem;
+      background-color: #2196f3;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      z-index: 10;
+    }
+
+    .fixed-button:hover {
+      background-color: #1976d2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sticky-box">
+    🌟 "Cree en ti. Eres más fuerte de lo que piensas." 🌟
+  </div>
+
+  <div class="content">
+    <div class="phrase">💡 “El éxito es la suma de pequeños esfuerzos repetidos cada día.”</div>
+    <div class="phrase">🚀 “No tienes que ser grande para comenzar, pero tienes que comenzar para ser grande.”</div>
+    <div class="phrase">🌈 “Cada día es una nueva oportunidad para cambiar tu vida.”</div>
+    <div class="phrase">🔥 “La disciplina tarde o temprano vencerá al talento.”</div>
+    <div class="phrase">💪 “No te rindas. Lo mejor está por venir.”</div>
+    <div class="phrase">🌱 “Las grandes cosas nunca vienen de tu zona de confort.”</div>
+    <div class="phrase">🏁 “Sigue adelante. El esfuerzo de hoy es el éxito de mañana.”</div>
+  </div>
+
+  <button class="fixed-button" onclick="alert('¡Tú puedes con todo! ✨')">
+    🌟 Motivación
+  </button>
+
+</body>
+</html>

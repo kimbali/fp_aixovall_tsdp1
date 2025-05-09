@@ -1,0 +1,108 @@
+/* CSS */
+body {
+  background-color: #191414; /* Fondo oscuro típico de Spotify */
+  color: #ffffff; /* Texto blanco */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Fuente similar a la de Spotify */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.Content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.SearchBar {
+  width: 50%;
+  max-width: 600px;
+  background-color: #282828; /* Fondo oscuro para la barra de búsqueda */
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 16px;
+  outline: none;
+}
+
+.SearchBar::placeholder {
+  color: #b3b3b3; /* Color del placeholder */
+}
+
+.Button {
+  background-color: #1db954; /* Color verde de Spotify */
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+
+.Button:hover {
+  background-color: #1ed760; /* Color verde más claro al pasar el ratón */
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+#results {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+#title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  background-color: #282828;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.track-image {
+  width: 64px;
+  height: 64px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.track-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.track-info h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.track-info p {
+  margin: 0;
+  color: #b3b3b3;
+}

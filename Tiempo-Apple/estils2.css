@@ -1,0 +1,60 @@
+body{
+    background-image: url('blue-sky-background-and-white-clouds-vector.jpg');
+
+    align-items: center;
+    text-align: center;
+    background-size: 100%;
+}
+.capcelera{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    width: 20pc;
+    margin: auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: aliceblue;
+}
+#lloc{
+    font-size: 2pc;
+
+    margin-bottom: 0%;
+}
+#graus{
+    font-size: 5pc;
+    margin-top: 1px;
+
+    margin-bottom: 0%;
+}
+#nublado{
+    font-size: 1.5pc;
+    margin-bottom: 0%;
+}
+.graella{
+    display: flex;
+    flex-direction: row;
+    margin:auto;
+    width: 20pc;
+    
+    position: relative;
+    border-radius: 2px;
+ 
+
+}
+.dia{
+    margin: auto;
+    opacity: 800%;
+}
+.background{
+    background-color: rgb(107, 106, 106);
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
