@@ -7,27 +7,38 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="header">
-      <h1>Aplicació del Temps</h1>
+    <header class="header" id="weather-header">
+      <img id="weather-icon" src="" alt="Weather icon" />
+      <!-- El contenido del header se inserta por JS -->
     </header>
-    <nav class="sticky-nav">
-      <ul>
-        <li><a href="#current-weather">Temps Actual</a></li>
-        <li><a href="#weekly-forecast">Previsió Setmanal</a></li>
-      </ul>
-    </nav>
+
     <main class="container">
-      <section class="weather-box" id="current-weather">
-        <h2>Temps Actual</h2>
-        <div>Carregant...</div>
-      </section>
-      <section class="weather-box" id="weekly-forecast">
-        <h2>Previsió de la Setmana</h2>
-        <div>Carregant...</div>
-      </section>
+      <div class="box" id="vent">
+        <div class="header-title">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" style="vertical-align:middle;">
+            <path d="M4 20h16a4 4 0 1 0 0-8H8" stroke="#007bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 24h12a2 2 0 1 1 0 4h-2" stroke="#007bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 12h10a2 2 0 1 0 0-4h-1" stroke="#007bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Vent
+        </div>
+        <div class="vent-content">
+          <div class="sensacio-section" id="sensacio-data"></div>
+          <div class="wind-section" id="vent-data"></div>
+        </div>
+      </div>
     </main>
+
+    <section class="hourly-forecast" id="hourly-forecast">
+      <!-- Hourly forecast will be inserted here -->
+    </section>
+
+    <section class="daily-forecast" id="daily-forecast">
+      <!-- Daily forecast will be inserted here -->
+    </section>
+
     <footer class="footer">
-      <p>&copy; 2023 Aplicació del Temps</p>
+      El Temps &copy; 2024
     </footer>
     <script src="script.js"></script>
   </body>
