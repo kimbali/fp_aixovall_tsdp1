@@ -25,8 +25,8 @@
         <ul class="horizontal-list">
           <li>
             Now<br />
-            <span id="icon">⛅️</span><br />
-            <span>8º</span>
+            <img id="weather-icon"></img><br />
+            <span id="tempNow">8º</span>
           </li>
           <li>
             13<br />
@@ -76,17 +76,25 @@
         </ul>
       </div>
     </main>  
-
-    
     <!-- Viento -->
-
-
-
-    <div id="up">
-        <p class="horizontal-list">
-          
-        </p>
+    <div class="wind-box">
+      <h4>WIND</h4>
+      <div class="wind-data">
+        <div class="wind-row">
+          <span>speed</span>
+          <span id="speed">4 km/h</span>
+        </div>
+        <div class="wind-row">
+          <span>gust</span>
+          <span id="gust">18 km/h</span>
+        </div>
+        <div class="wind-row">
+          <span>Direccion</span>
+          <span id="direccion">201°</span>
+        </div>
       </div>
+    </div>
+     
     <script src="script.js"></script>
   </body>
 </html>

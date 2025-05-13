@@ -26,15 +26,21 @@ fetch(
 
     const descripcion = document.getElementById('descripcion');
     descripcion.textContent = `${data.weather[0].description}`;
- 
+
+    const iconCode = data.weather[0].icon;
+    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
+    document.getElementById('weather-icon').src = iconUrl;
 
     const icon = document.getElementById('icon');
     icon.innerHTML = data.weather[0].icon;
 
+    
+
     const temp = data.main.temp;
     const descr = data.weather[0].description;
     document.querySelector('#weather').innerHTML = `${temp} °C - ${descr}`;
-
+    
     
   })
   .catch(error => console.error('Error amb la petició:', error));

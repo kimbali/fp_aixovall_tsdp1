@@ -175,3 +175,44 @@ ul {
 #descripcion, #conditions-messsage, #maxTemp, #minTemp, #location {
   font-weight: bold;
 }
+
+#weather-icon{
+  height: 40px;
+}
+
+/* Viento */
+.wind-box {
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 16px 10px;
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1.5px solid rgba(255, 255, 255, 0.28);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.18);
+}
+
+.wind-data {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+
+.wind-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+.wind-value {
+  position: absolute;
+  top: 5px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.1;
+}
