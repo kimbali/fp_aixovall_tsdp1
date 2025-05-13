@@ -13,8 +13,13 @@ fetch(
     console.log('El temps d avui: ', data);
 
     const temp = data.main.temp;
-    const descr = data.weather[0].description;
-    document.querySelector('#weather').innerHTML = `${temp} °C - ${descr}`;
+    const description = data.weather[0].description;
+
+    const iconCode = data.weather[0].icon;
+    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
+    document.getElementById('weather-icon').src = iconUrl;
+    document.getElementById('weather-description').textContent = description;
   })
   .catch(error => console.error('Error amb la petició:', error));
 
