@@ -2,7 +2,6 @@ const API_KEY = '212ebafd80e67458b4fdf2fe666f697f';
 
 const ANDORRA_LATITUDE = 42.5078;
 const ANDORRA_LONGITUDE = 1.5211;
-
 const CATALA = 'ca';
 
 function fetchCurrentWeather() {
@@ -18,7 +17,6 @@ function fetchCurrentWeather() {
       console.log('Vent:', data.wind.speed + ' m/s');
       console.log('Direcció del vent:', data.wind.deg + ' º');
 
-      // Icono + descripcio
       const descripcio = data.weather[0].description;
       const icona = data.weather[0].icon;
 
@@ -27,11 +25,41 @@ function fetchCurrentWeather() {
         'icona'
       ).src = `https://openweathermap.org/img/wn/${icona}@2x.png`;
       document.getElementById('icona').alt = descripcio;
+<<<<<<< HEAD
+=======
 
       // Temperatura + temperatura maxima i minima
 <<<<<<< HEAD
+       graus =document.getElementById("graus")
+       maxmin = document.getElementById("maxmin")
+    
+      graus.textContent = data.main.temp + "ºC"
+      maxmin.textContent = "temperatura maxima : "+data.main.temp_max+ " ºC "+"temperauta minima : "+data.main.temp_min+ " ºC"
+
+      // Vent + direccio
+      velocitat = document.getElementById("velocitat")
+      direccio = document.getElementById("direccio")
+
+      velocitat.textContent = "velocitat del vent :",data.wind.speed+ " ºC"
+      direccio.textContent = "direccio del vent :",data.wind.deg+ " ºC"
+      
+=======
+<<<<<<< HEAD
+      const graus = document.getElementById('graus');
+      document.getElementById('graus').textContent = data.main.temp + ' ºC';
+      maxmin.innerHTML = `
+      <span class="max">${data.main.temp_max }</span>
+      <span class="min">${data.main.temp_min}</span>
+      `;
+      // Vent + direccio
+      const velocitat = document.getElementById('velocitat');
+      
+      
+=======
+<<<<<<< HEAD
       const graus = document.getElementById('graus');
       graus.textContent = data.main.temp + ' ºC';
+>>>>>>> 0802c34199cbb07656d9731e9f96d69cb6a56730
 
       const maxMin = document.getElementById('maxmin');
       maxMin.innerHTML = `
@@ -49,14 +77,18 @@ function fetchCurrentWeather() {
       const direccio = document.getElementById('direccio');
       direccio.textContent = data.wind.deg + ' º';
 
+>>>>>>> 06efd34a671baec9b3772f76dffd9e68aad9ee48
       // El día d'avui: Miercoles 16 de Abril
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> dbb6ed96a9f506f4777639aa94d765dfd608e9f8
+>>>>>>> 0802c34199cbb07656d9731e9f96d69cb6a56730
     });
 }
 fetchCurrentWeather();
 
-// Aquest endpoint retorna 40 valors: 8 per dia (cada 3h).
-// Nosaltres agafem només les dades de les 12:00h perquè són les més representatives del migdia.
-// Es pot canviar l'hora buscant per dt_txt.includes("15:00:00"), per exemple.
 function fetchForecast() {
   const urlSetmana = `https://api.openweathermap.org/data/2.5/forecast?lat=${ANDORRA_LATITUDE}&lon=${ANDORRA_LONGITUDE}&units=metric&lang=${CATALA}&appid=${API_KEY}`;
 
@@ -65,7 +97,6 @@ function fetchForecast() {
     .then(data => {
       const diesContainer = document.getElementById('dies');
 
-      // Agrupem per dia (filtrant les 12:00h)
       const previsions = data.list.filter(item =>
         item.dt_txt.includes('12:00:00')
       );
