@@ -4,6 +4,23 @@ const city = 'Aixovall';
 const units = 'metric'; // centigrades o 'imperial' per Fahrenheit
 const language = 'ca';
 
+function updateWindData(data) {
+  const { windSpeed, direction, gust } = data.wind;
+
+  document.getElementById('speed').textContent = `${windSpeed} km/h`;
+  document.getElementById('direction').textContent = `${direction}°`;
+  document.getElementById('gust').textContent = `${gust} km/h`;
+}
+
+function updateIcon(data) {
+  const iconCode = data.weather[0].icon;
+  const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+  const description = data.weather[0].description;
+
+  document.getElementById('weather-icon').src = iconUrl;
+  document.getElementById('weather-description').textContent = description;
+}
+
 // WEATHER of today
 fetch(
   `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${WEATHER_API_KEY}&units=${units}&lang=${language}`
@@ -12,14 +29,8 @@ fetch(
   .then(data => {
     console.log('El temps d avui: ', data);
 
-    const temp = data.main.temp;
-    const description = data.weather[0].description;
-
-    const iconCode = data.weather[0].icon;
-    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-
-    document.getElementById('weather-icon').src = iconUrl;
-    document.getElementById('weather-description').textContent = description;
+    updateWindData(data);
+    updateIcon(data);
   })
   .catch(error => console.error('Error amb la petició:', error));
 
