@@ -4,7 +4,7 @@ const city = 'Andorra';
 const units = 'metric'; // centigrades o 'imperial' per Fahrenheit
 const language = 'es';
 
-// WEATHER of today
+
 fetch(
   `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${WEATHER_API_KEY}&units=${units}&lang=${language}`
 )
@@ -13,8 +13,8 @@ fetch(
     console.log('El temps d avui: ', data);
 
     const temp = data.main.temp;
-    const tempMax = data.main.temp_max; // Temperatura màxima
-    const tempMin = data.main.temp_min; // Temperatura mínima
+    const tempMax = data.main.temp_max;
+    const tempMin = data.main.temp_min;
     const descr = data.weather[0].description;
 
     const ciutat = document.querySelector('.location');
@@ -26,7 +26,7 @@ fetch(
     const condition = document.querySelector('.condition');
     condition.textContent = descr;
 
-    // Mostrar temperatura máxima y mínima
+
     const tempRange = document.getElementById('temperature-range');
     if (tempRange) {
       tempRange.textContent = `Màx. ${Math.round(tempMax)}º Min. ${Math.round(tempMin)}º`;
@@ -34,9 +34,8 @@ fetch(
       console.warn('Element amb ID "temperature-range" no trobat.');
     }
 
-    // Mostrar tota la informació de l'API
     const weatherDetailsContainer = document.querySelector('.weather-details');
-    weatherDetailsContainer.innerHTML = ''; // Netejar contingut anterior
+    weatherDetailsContainer.innerHTML = '';
 
     const labels = {
       temp: 'Temperatura',
@@ -67,7 +66,6 @@ fetch(
       weatherDetailsContainer.appendChild(detailBox);
     });
 
-    // Afegir informació del vent
     const windBox = document.createElement('div');
     windBox.classList.add('detail');
 
@@ -77,13 +75,12 @@ fetch(
 
     const windValue = document.createElement('p');
     windValue.classList.add('value');
-    windValue.textContent = `${Math.round(data.wind.speed * 3.6)} km/h`; // Convertir m/s a km/h
+    windValue.textContent = `${Math.round(data.wind.speed * 3.6)} km/h`;
 
     windBox.appendChild(windLabel);
     windBox.appendChild(windValue);
     weatherDetailsContainer.appendChild(windBox);
 
-    // Afegir informació de visibilitat
     const visibilityBox = document.createElement('div');
     visibilityBox.classList.add('detail');
 
@@ -93,13 +90,12 @@ fetch(
 
     const visibilityValue = document.createElement('p');
     visibilityValue.classList.add('value');
-    visibilityValue.textContent = `${data.visibility / 1000} km`; // Convertir a km
+    visibilityValue.textContent = `${data.visibility / 1000} km`;
 
     visibilityBox.appendChild(visibilityLabel);
     visibilityBox.appendChild(visibilityValue);
     weatherDetailsContainer.appendChild(visibilityBox);
 
-    // Afegir informació del temps
     const weatherBox = document.createElement('div');
     weatherBox.classList.add('detail');
 
@@ -115,7 +111,6 @@ fetch(
     weatherBox.appendChild(weatherValue);
     weatherDetailsContainer.appendChild(weatherBox);
 
-    // Afegir icona del temps
     const iconBox = document.createElement('div');
     iconBox.classList.add('detail');
 
@@ -143,9 +138,8 @@ fetch(
     console.log('Previsió de 5 dies: ', data);
 
     const forecastContainer = document.querySelector('.forecast-container');
-    forecastContainer.innerHTML = ''; // Clear previous content
+    forecastContainer.innerHTML = '';
 
-    // Filter today's forecast
     const today = new Date().toDateString();
     const todayForecast = data.list.filter(item => {
       const forecastDate = new Date(item.dt * 1000).toDateString();
@@ -181,9 +175,8 @@ fetch(
     });
 
     const forecastNextContainer = document.querySelector('.forecast-next-container');
-    forecastNextContainer.innerHTML = ''; // Clear previous content
+    forecastNextContainer.innerHTML = '';
 
-    // Group forecast data by day
     const dailyForecast = {};
     data.list.forEach(item => {
       const date = new Date(item.dt * 1000).toDateString();
@@ -193,7 +186,6 @@ fetch(
       dailyForecast[date].push(item);
     });
 
-    // Process the forecast for the next 5 days
     Object.entries(dailyForecast).slice(0, 5).forEach(([date, items]) => {
       const day = new Date(date).toLocaleDateString('es-ES', { weekday: 'long' });
       const avgTemp = Math.round(
