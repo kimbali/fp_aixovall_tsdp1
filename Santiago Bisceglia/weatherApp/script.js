@@ -37,10 +37,7 @@ fetch(
 
     
 
-    const temp = data.main.temp;
-    const descr = data.weather[0].description;
-    document.querySelector('#weather').innerHTML = `${temp} °C - ${descr}`;
-    
+  
     
   })
   .catch(error => console.error('Error amb la petició:', error));
