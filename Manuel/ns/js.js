@@ -1,30 +1,25 @@
-const WEATHER_API_KEY = '212ebafd80e67458b4fdf2fe666f697f';
+const API_KEY = "212ebafd80e67458b4fdf2fe666f697f";
 
-const city = 'Aixovall';
-const units = 'metric'; // centigrades o 'imperial' per Fahrenheit
+const city= "Aixovall";
+const units ="metric";
 const language = 'ca';
+const grados = document.getElementById("grados")
 
-// WEATHER of today
+
 fetch(
-  `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${WEATHER_API_KEY}&units=${units}&lang=${language}`
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${WEATHER_API_KEY}&units=${units}&lang=${language}`
 )
-  .then(response => response.json())
+ .then(response => response.json())
   .then(data => {
     console.log('El temps d avui: ', data);
 
     const temp = data.main.temp;
-    const description = data.weather[0].description;
-
-    const iconCode = data.weather[0].icon;
-    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-
-    document.getElementById('weather-icon').src = iconUrl;
-    document.getElementById('weather-description').textContent = description;
+    const descr = data.weather[0].description;
+    document.querySelector('#weather').innerHTML = `${temp} °C - ${descr}`;
   })
   .catch(error => console.error('Error amb la petició:', error));
 
-// FORECAST of the week
-fetch(
+  fetch(
   `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${units}&appid=${WEATHER_API_KEY}&lang=${language}`
 )
   .then(response => response.json())
@@ -44,3 +39,5 @@ fetch(
   .catch(error => {
     console.error('Hi ha hagut un error:', error);
   });
+
+  grados.value= current.dt

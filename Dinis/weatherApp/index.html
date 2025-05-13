@@ -11,94 +11,37 @@
       <p class="location">Aixovall</p>
       <p class="temperature">5º</p>
       <p class="condition">Ennuvolat</p>
+      <p id="temperature-range">Màx. 9º Mín. 2º</p>
     </header>
 
     <main>
-      <!-- First Section -->
       <section class="weather-details">
         <div class="detail">
-          <p class="title">Posta</p>
-          <p class="value">21:01</p>
+          <p class="label">Pressió</p>
+          <p class="value">1020 hPa</p>
         </div>
         <div class="detail">
-          <p class="title">Precipitació</p>
-          <p class="value">7 mm</p>
+          <p class="label">Humedat</p>
+          <p class="value">80%</p>
         </div>
         <div class="detail">
-          <p class="title">Visibilitat</p>
-          <p class="value">7 km</p>
-        </div>
-        <div class="detail">
-          <p class="title">Humitat</p>
-          <p class="value">90%</p>
+          <p class="label">Vents</p>
+          <p class="value">5 km/h</p>
         </div>
       </section>
-
-      <!-- Second Section -->
-      <section class="moon-details">
-        <div class="moon-phase">
-          <p class="title">Gibosa Creixent</p>
-          <p>Lluminositat: 87%</p>
-          <p>Propera posta: 4:59</p>
-          <p>Propera lluna plena: 4 dies</p>
-        </div>
-        <div class="moon-image">
-          <img src="moon.png" alt="Moon Phase" />
+      <section class="forecast-today">
+        <h2>Previsió d'avui</h2>
+        <div class="forecast-container">
+          <!-- Forecast items will be dynamically added here -->
         </div>
       </section>
-
-      <!-- Third Section -->
-      <section class="averages">
-        <div class="average">
-          <p class="title">Mitjanes</p>
-          <p class="value">-1º</p>
-          <p>respecte de la màxima diària mitjana</p>
-        </div>
-        <div class="pressure">
-          <p class="title">Pressió</p>
-          <p class="value">1.012 hPa</p>
-        </div>
-      </section>
-
-      <!-- Fourth Section -->
-      <section class="hourly-forecast">
-        <div class="hour">
-          <p>Ara</p>
-          <p>5º</p>
-          <p>🌥</p>
-        </div>
-        <div class="hour">
-          <p>21</p>
-          <p>5º</p>
-          <p>🌧 25%</p>
-        </div>
-        <div class="hour">
-          <p>22</p>
-          <p>4º</p>
-          <p>🌙</p>
-        </div>
-      </section>
-
-      <!-- Fifth Section -->
-      <section class="ten-day-forecast">
-        <div class="day">
-          <p>Avui</p>
-          <p>🌧 45%</p>
-          <p>2º - 9º</p>
-        </div>
-        <div class="day">
-          <p>dv</p>
-          <p>🌧 60%</p>
-          <p>3º - 9º</p>
-        </div>
-        <div class="day">
-          <p>ds</p>
-          <p>🌧 35%</p>
-          <p>4º - 11º</p>
+      <section class="forecast-next-days">
+        <h2>Previsió dels pròxims 5 dies</h2>
+        <div class="forecast-next-container">
+          <!-- Forecast items for the next 5 days will be dynamically added here -->
         </div>
       </section>
     </main>
-
     <script src="script.js"></script>
   </body>
 </html>
