@@ -1,3 +1,4 @@
+
 # 🌦 Weather App - Inspirada en l'app d’iPhone
 
 ## 🔍 Descripció
