@@ -30,6 +30,21 @@ function fetchCurrentWeather() {
 
       // Temperatura + temperatura maxima i minima
 <<<<<<< HEAD
+       graus =document.getElementById("graus")
+       maxmin = document.getElementById("maxmin")
+    
+      graus.textContent = data.main.temp + "ºC"
+      maxmin.textContent = "temperatura maxima : "+data.main.temp_max+ " ºC "+"temperauta minima : "+data.main.temp_min+ " ºC"
+
+      // Vent + direccio
+      velocitat = document.getElementById("velocitat")
+      direccio = document.getElementById("direccio")
+
+      velocitat.textContent = "velocitat del vent :",data.wind.speed+ " ºC"
+      direccio.textContent = "direccio del vent :",data.wind.deg+ " ºC"
+      
+=======
+<<<<<<< HEAD
       const graus = document.getElementById('graus');
       document.getElementById('graus').textContent = data.main.temp + ' ºC';
       maxmin.innerHTML = `
@@ -44,6 +59,7 @@ function fetchCurrentWeather() {
 <<<<<<< HEAD
       const graus = document.getElementById('graus');
       graus.textContent = data.main.temp + ' ºC';
+>>>>>>> 0802c34199cbb07656d9731e9f96d69cb6a56730
 
       const maxMin = document.getElementById('maxmin');
       maxMin.innerHTML = `
@@ -63,7 +79,12 @@ function fetchCurrentWeather() {
 
 >>>>>>> 06efd34a671baec9b3772f76dffd9e68aad9ee48
       // El día d'avui: Miercoles 16 de Abril
+<<<<<<< HEAD
+
+
+=======
 >>>>>>> dbb6ed96a9f506f4777639aa94d765dfd608e9f8
+>>>>>>> 0802c34199cbb07656d9731e9f96d69cb6a56730
     });
 }
 fetchCurrentWeather();

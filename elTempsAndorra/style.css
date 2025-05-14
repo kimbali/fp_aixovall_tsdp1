@@ -1,4 +1,23 @@
 <<<<<<< HEAD
+body{
+
+    background-color: aqua;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+h2{
+    margin-top: 150px;
+    margin-left: 50px;
+}
+
+#temps{
+    display: flex;
+    margin-left: 50px;
+=======
+<<<<<<< HEAD
 body {
     background-color: #ffffff;
     font-family: Arial, sans-serif;
