@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex + Batalles</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ef5350;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 2rem auto;
+      max-width: 1000px;
+    }
+
+    .pokemon-card {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 300px;
+    }
+
+    img {
+      width: 120px;
+      height: 120px;
+    }
+
+    .type {
+      display: inline-block;
+      background-color: #eee;
+      border-radius: 12px;
+      padding: 0.25rem 0.75rem;
+      margin: 0.25rem;
+      font-weight: bold;
+    }
+
+    input, button {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin: 0.5rem 0;
+    }
+
+    button {
+      background-color: #ef5350;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #battleLog {
+      margin: 2rem auto;
+      max-width: 800px;
+      padding: 1rem;
+      background-color: #fff8e1;
+      border-left: 5px solid #ffb300;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pokédex Professional amb Batalles</h1>
+    <p>Consulta, compara i lluita amb els teus Pokémon preferits!</p>
+  </header>
+
+  <div class="container">
+    <div class="pokemon-card">
+      <h3>Pokémon 1</h3>
+      <input type="text" id="pokemon1Input" placeholder="Escriu el nom">
+      <button onclick="carregarPokemon(1)">Cercar</button>
+      <div id="pokemon1Info"></div>
+    </div>
+
+    <div class="pokemon-card">
+      <h3>Pokémon 2</h3>
+      <input type="text" id="pokemon2Input" placeholder="Escriu el nom">
+      <button onclick="carregarPokemon(2)">Cercar</button>
+      <div id="pokemon2Info"></div>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin: 1rem;">
+    <button onclick="iniciarBatalla()">🔥 Iniciar Batalla</button>
+  </div>
+
+  <div id="battleLog"></div>
+
+  <script>
+    let pokemonData = [null, null];
+
+    async function carregarPokemon(num) {
+      const nom = document.getElementById(`pokemon${num}Input`).value.toLowerCase().trim();
+      const infoDiv = document.getElementById(`pokemon${num}Info`);
+      try {
+        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${nom}`);
+        if (!res.ok) throw new Error("Pokémon no trobat");
+        const data = await res.json();
+        pokemonData[num - 1] = data;
+
+        const tipus = data.types.map(t => `<span class="type">${t.type.name}</span>`).join("");
+        const stats = Object.fromEntries(data.stats.map(s => [s.stat.name, s.base_stat]));
+
+        infoDiv.innerHTML = `
+          <h4>${data.name.toUpperCase()}</h4>
+          <img src="${data.sprites.front_default}" alt="${data.name}">
+          <p><strong>Tipus:</strong> ${tipus}</p>
+          <p><strong>PS:</strong> ${stats.hp}</p>
+          <p><strong>Atac:</strong> ${stats.attack}</p>
+          <p><strong>Defensa:</strong> ${stats.defense}</p>
+        `;
+      } catch (error) {
+        infoDiv.innerHTML = `<p style="color:red;">${error.message}</p>`;
+      }
+    }
+
+    function calcularDany(atacant, defensor) {
+      const atk = atacant.stats.find(s => s.stat.name === "attack").base_stat;
+      const def = defensor.stats.find(s => s.stat.name === "defense").base_stat;
+      return Math.max(1, Math.floor((atk - def / 2) + Math.random() * 10));
+    }
+
+    async function iniciarBatalla() {
+      const p1 = pokemonData[0];
+      const p2 = pokemonData[1];
+      const log = document.getElementById("battleLog");
+
+      if (!p1 || !p2) {
+        log.innerHTML = "<p style='color:red;'>Has d’escollir dos Pokémon primer!</p>";
+        return;
+      }
+
+      let ps1 = p1.stats.find(s => s.stat.name === "hp").base_stat;
+      let ps2 = p2.stats.find(s => s.stat.name === "hp").base_stat;
+      let torn = 0;
+      let batallaText = `<h3>⚔️ Batalla entre ${p1.name.toUpperCase()} i ${p2.name.toUpperCase()}</h3>`;
+
+      while (ps1 > 0 && ps2 > 0) {
+        torn++;
+        const dany = torn % 2 === 1
+          ? calcularDany(p1, p2)
+          : calcularDany(p2, p1);
+        if (torn % 2 === 1) {
+          ps2 -= dany;
+          batallaText += `<p>${p1.name} fa ${dany} de dany a ${p2.name} (${Math.max(ps2, 0)} PS restants)</p>`;
+        } else {
+          ps1 -= dany;
+          batallaText += `<p>${p2.name} fa ${dany} de dany a ${p1.name} (${Math.max(ps1, 0)} PS restants)</p>`;
+        }
+      }
+
+      const guanyador = ps1 > 0 ? p1.name.toUpperCase() : p2.name.toUpperCase();
+      batallaText += `<h3>🏆 Guanya ${guanyador}!</h3>`;
+      log.innerHTML = batallaText;
+    }
+  </script>
+</body>
+</html>

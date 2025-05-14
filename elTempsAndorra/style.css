@@ -1,5 +1,73 @@
+<<<<<<< HEAD
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.temps-avui {
+    border: 1px solid black;
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.tittle {
+    font-size: 25px;
+    color: #333;
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    margin-top: 10px;
+}
+
+#temps {
+    border: 1px solid black;
+    width: 400px;
+    height: 490px;
+    position: absolute;
+    left: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+#temps #icona {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    border: 1px solid black;
+    background-color: #d2d2d2;
+    border-radius: 10px;
+}
+
+#temps p {
+    font-size: 30px;
+    font-weight: bold;
+    width: 150px;
+    position: absolute;
+    top: 70px;
+    left: 160px;
+}
+
+#temperatura {
+    border: 1px solid black;
+    width: 100px;
+}
+
+#vent {
+    border: 1px solid black;
+=======
 .min {
   color: gray;
+<<<<<<< HEAD
 }
 
 #temps, #temperatura, #vent, #setmana {
@@ -62,4 +130,7 @@
   margin: 5px 0;
   font-size: 0.95rem;
   color: #555;
+=======
+>>>>>>> dbb6ed96a9f506f4777639aa94d765dfd608e9f8
+>>>>>>> 0802c34199cbb07656d9731e9f96d69cb6a56730
 }
