@@ -4,6 +4,18 @@ const city = 'Aixovall';
 const units = 'metric'; // centigrades o 'imperial' per Fahrenheit
 const language = 'ca';
 
+function updateWindData(data) {
+  const { speed, gust, deg } = data.wind;
+
+  console.log(7777777777, speed, gust, deg);
+  
+
+  document.getElementById('speed').textContent = `${speed} km/h`;
+  document.getElementById('direction').textContent = `${deg}°`;
+  document.getElementById('gust').textContent = `${gust} km/h`;
+}
+
+
 // WEATHER of today
 fetch(
   `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${WEATHER_API_KEY}&units=${units}&lang=${language}`
@@ -32,11 +44,10 @@ fetch(
 
     document.getElementById('weather-icon').src = iconUrl;
 
-    const icon = document.getElementById('icon');
-    icon.innerHTML = data.weather[0].icon;
 
     
-
+    updateWindData(data);
+    
   
     
   })
