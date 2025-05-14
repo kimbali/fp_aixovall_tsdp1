@@ -1,32 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather</title>
+    <title>El Temps</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <p>Aixovall</p>
-      <p class="temperatura">5º</p>
-      <p>Ennuvolat</p>
-      <p>Max. 9º Min. 2º</p>
+    <header class="header" id="weather-header">
+      <img id="weather-icon" src="" alt="Weather icon" style="width:80px;height:80px;display:block;margin:0 auto 10px auto;" />
+      <!-- Dynamic content will be inserted here by the JavaScript -->
     </header>
 
-    <div class="box">
-      <div class="header-title">Presio</div>
-      <div class="data">1024hPa</div>
-    </div>
-    <div class="box">
-      <div class="title">Presió</div>
-    </div>
+    <main class="container">
+      <div class="box" id="vent">
+        <div class="header-title">
+          <span style="vertical-align:middle;display:inline-block;width:32px;height:32px;">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M4 20h16a4 4 0 1 0 0-8H8" stroke="#007bff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 24h12a2 2 0 1 1 0 4h-2" stroke="#007bff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M6 12h10a2 2 0 1 0 0-4h-1" stroke="#007bff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          VENT
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;">
+          <div class="sensacio-section" id="sensacio-data"></div>
+          <div class="wind-section" id="vent-data"></div>
+        </div>
+      </div>
+    </main>
 
-    <div class="side">
-      <div class="box"></div>
-      <div class="box"></div>
-    </div>
+    <section class="hourly-forecast" id="hourly-forecast">
+      <!-- Hourly forecast will be inserted here -->
+    </section>
 
+    <section class="daily-forecast" id="daily-forecast">
+      <!-- Daily forecast will be inserted here -->
+    </section>
+
+    <footer class="footer">
+      El Temps &copy; 2024
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
