@@ -1,6 +1,6 @@
 const WEATHER_API_KEY = '212ebafd80e67458b4fdf2fe666f697f';
 
-const city = 'Aixovall';
+const city = 'Andorra la Vella';
 const units = 'metric'; // centigrades o 'imperial' per Fahrenheit
 const language = 'es';
 
