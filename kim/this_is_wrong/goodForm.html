@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preinscripció universitària</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 2rem;
+        background-color: #f4f4f4;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 0.2rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+        color: #444;
+        margin-bottom: 1rem;
+      }
+
+      form {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 8px;
+        max-width: 600px;
+        margin: auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        display: block;
+        margin-top: 1rem;
+        font-weight: bold;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+      }
+
+      button {
+        margin-top: 2rem;
+        padding: 12px 20px;
+        background-color: #005aa7;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+      button:hover {
+        background-color: #004080;
+      }
+
+      .required {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎓 Formulari de preinscripció a la universitat</h1>
+    <h2>
+      Omple aquest formulari per sol·licitar la teva plaça al grau universitari
+    </h2>
+
+    <form>
+      <label for="nom">Nom complet <span class="required">*</span></label>
+      <input type="text" id="nom" name="nom" />
+
+      <label for="email"
+        >Correu electrònic <span class="required">*</span></label
+      >
+      <input type="email" id="email" name="email" />
+
+      <label for="tlf">Telèfon de contacte</label>
+      <input type="tel" id="tlf" name="tlf" />
+
+      <label for="adreça">Adreça postal</label>
+      <input type="text" id="adreça" name="adreça" />
+
+      <label for="grau"
+        >Grau o cicle que vols cursar <span class="required">*</span></label
+      >
+      <select id="grau" name="grau">
+        <option value="">-- Selecciona una opció --</option>
+        <option value="web">Desenvolupament d'aplicacions web</option>
+        <option value="multimedia">Multimèdia i arts digitals</option>
+        <option value="mec">Mecatrònica</option>
+      </select>
+
+      <label for="motivació">Breu text de motivació personal</label>
+      <textarea id="motivació" name="motivació" rows="4"></textarea>
+
+      <button type="submit">Enviar sol·licitud</button>
+    </form>
+  </body>
+</html>
