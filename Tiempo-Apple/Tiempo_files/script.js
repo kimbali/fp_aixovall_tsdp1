@@ -30,11 +30,11 @@ function fetchCurrentWeather() {
 
       // Temperatura + temperatura maxima i minima
       const graus = document.getElementById('graus');
-      graus.textContent = Math.floor(data.main.temp) + ' º';
+      graus.textContent = '🌡' + data.main.temp + ' ºC';
 
       const maxMin = document.getElementById('maxmin');
       maxMin.innerHTML = `
-      <span class="max">${Math.floor(data.main.temp_max)}</span> -
+      <span class="max">🌡 ${Math.floor(data.main.temp_max)}</span> -
       <span class="min">${Math.floor(data.main.temp_min)}</span>
       ºC`;
       // Vent + direccio

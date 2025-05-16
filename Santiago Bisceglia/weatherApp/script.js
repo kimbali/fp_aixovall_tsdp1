@@ -4,6 +4,18 @@ const city = 'Aixovall';
 const units = 'metric'; // centigrades o 'imperial' per Fahrenheit
 const language = 'ca';
 
+function updateWindData(data) {
+  const { speed, gust, deg } = data.wind;
+
+  console.log(7777777777, speed, gust, deg);
+  
+
+  document.getElementById('speed').textContent = `${speed} km/h`;
+  document.getElementById('direction').textContent = `${deg}°`;
+  document.getElementById('gust').textContent = `${gust} km/h`;
+}
+
+
 // WEATHER of today
 fetch(
   `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${WEATHER_API_KEY}&units=${units}&lang=${language}`
@@ -12,11 +24,35 @@ fetch(
   .then(data => {
     console.log('El temps d avui: ', data);
 
-    const temp = data.main.temp;
-    const descr = data.weather[0].description;
-    document.querySelector('#weather').innerHTML = `${temp} °C - ${descr}`;
+    const city = document.getElementById('city');
+    city.textContent = `${data.name}`;
+
+    const graus = document.getElementById('graus');
+    graus.textContent = `${Math.floor(data.main.temp)}º`;
+
+    const maxTemp = document.getElementById('maxTemp');
+    maxTemp.textContent = `H:${Math.floor(data.main.temp_max)}º`;
+
+    const minTemp = document.getElementById('minTemp');
+    minTemp.innerHTML = `L:${Math.floor(data.main.temp_min)}º`;
+
+    const descripcion = document.getElementById('descripcion');
+    descripcion.textContent = `${data.weather[0].description}`;
+
+    const iconCode = data.weather[0].icon;
+    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
+    document.getElementById('weather-icon').src = iconUrl;
+
+
+    
+    updateWindData(data);
+    
+  
+    
   })
   .catch(error => console.error('Error amb la petició:', error));
+
 
 // FORECAST of the week
 fetch(
@@ -25,6 +61,8 @@ fetch(
   .then(response => response.json())
   .then(data => {
     console.log('Previsió de 5 dies: ', data);
+
+    
 
     data.list.forEach(item => {
       const time = new Date(item.dt * 1000).toLocaleString(); // Temps en format llegible
