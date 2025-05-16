@@ -1,43 +1,28 @@
 const API_KEY = "212ebafd80e67458b4fdf2fe666f697f";
-
-const city= "Aixovall";
-const units ="metric";
-const language = 'ca';
-const grados = document.getElementById("grados")
-
+const city = "Aixovall";
+const units = "metric";
+const language = "ca";
+const grados = document.getElementById("grados");
+const info = document.getElementById("masInfo")
+const maxmin = document.getElementById("maxmin")
 
 fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${WEATHER_API_KEY}&units=${units}&lang=${language}`
-)
- .then(response => response.json())
-  .then(data => {
-    console.log('El temps d avui: ', data);
-
-    const temp = data.main.temp;
-    const descr = data.weather[0].description;
-    document.querySelector('#weather').innerHTML = `${temp} °C - ${descr}`;
-  })
-  .catch(error => console.error('Error amb la petició:', error));
-
-  fetch(
-  `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${units}&appid=${WEATHER_API_KEY}&lang=${language}`
+  `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=${units}&lang=${language}`
 )
   .then(response => response.json())
   .then(data => {
-    console.log('Previsió de 5 dies: ', data);
+    console.log("El temps d'avui:", data);
 
-    data.list.forEach(item => {
-      const time = new Date(item.dt * 1000).toLocaleString(); // Temps en format llegible
-      const temperature = item.main.temp; // Temperatura
-      const description = item.weather[0].description; // Descripció de l'estat del temps
-      const icon = item.weather[0].icon; // Codi de l'icona del temps
-      console.log(
-        `A les ${time} hi haurà ${description} amb una temperatura de ${temperature}°C. Icona: ${icon}`
-      );
-    });
+    const temp = data.main.temp;
+    const descr = data.weather[0].description;
+    const tempMax = data.main.temp_max;
+    const tempMin = data.main.temp_min;
+
+
+    grados.textContent = `${temp} °C`;
+    info.textContent = `${descr}`;
+    maxmin.textContent= ` Max ${tempMax}°C - min ${tempMin}°C`
+
+
   })
-  .catch(error => {
-    console.error('Hi ha hagut un error:', error);
-  });
-
-  grados.value= current.dt
+  .catch(error => console.error("Error amb la petició:", error));
