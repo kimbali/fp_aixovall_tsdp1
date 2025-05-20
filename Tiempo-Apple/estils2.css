@@ -30,3 +30,31 @@ body{
     font-size: 1.5pc;
     margin-bottom: 0%;
 }
+.graella{
+    display: flex;
+    flex-direction: row;
+    margin:auto;
+    width: 20pc;
+    
+    position: relative;
+    border-radius: 2px;
+ 
+
+}
+.dia{
+    margin: auto;
+    opacity: 800%;
+}
+.background{
+    background-color: rgb(107, 106, 106);
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+

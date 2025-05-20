@@ -1,0 +1,41 @@
+body{
+
+    background-image: url('blue-sky-background-and-white-clouds-vector.jpg');
+    align-items: center;
+    text-align: center;
+    background-size: 100%;
+}
+.min{
+    color: grey;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+}
+
+#temps{
+    border: 2px solid;
+}
+
+#temperatura{
+    border: 2px solid;
+}
+
+#vent{
+    border: 2px solid;
+}
+
+#setmana{
+    border: 2px solid;
+}

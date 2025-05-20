@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <p class="location">Aixovall</p>
+      <p class="temperature">5º</p>
+      <p class="condition">Ennuvolat</p>
+      <p id="temperature-range">Màx. 9º Mín. 2º</p>
+    </header>
+
+    <main>
+      <section class="weather-details">
+        <div class="detail">
+          <p class="label">Pressió</p>
+          <p class="value">1020 hPa</p>
+        </div>
+        <div class="detail">
+          <p class="label">Humedat</p>
+          <p class="value">80%</p>
+        </div>
+        <div class="detail">
+          <p class="label">Vents</p>
+          <p class="value">5 km/h</p>
+        </div>
+      </section>
+      <section class="forecast-today">
+        <h2>Previsió d'avui</h2>
+        <div class="forecast-container">
+        </div>
+      </section>
+      <section class="forecast-next-days">
+        <h2>Previsió dels pròxims 5 dies</h2>
+        <div class="forecast-next-container">
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
