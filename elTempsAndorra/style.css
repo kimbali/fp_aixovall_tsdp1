@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -69,9 +69,7 @@ body {
     width: 48px;
     height: 48px;
   }
-  
-=======
-<<<<<<< HEAD
+
 body{
 
     background-color: aqua;
@@ -89,8 +87,7 @@ h2{
 #temps{
     display: flex;
     margin-left: 50px;
-=======
-<<<<<<< HEAD
+}
 body {
     background-color: #ffffff;
     font-family: Arial, sans-serif;
@@ -156,10 +153,4 @@ body {
 
 #vent {
     border: 1px solid black;
-=======
-.min {
-  color: gray;
->>>>>>> dbb6ed96a9f506f4777639aa94d765dfd608e9f8
->>>>>>> 0802c34199cbb07656d9731e9f96d69cb6a56730
 }
->>>>>>> 542e7482834c15baf0f2b18f437c34252d8a9a7f

@@ -1,54 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Temps Aixovall</title>
     <link rel="stylesheet" href="estils2.css">
 </head>
 <body>
-    <div class="capcelera">
-        <p id="lloc">Andorra</p>
-        <p id="graus">55º</p>
-        <p id="nublado">Nublado</p>
-        <p id="maxmin">Máx. 22º Mín.16º</p>
-
-    </div>
-    <div class="graellaOp">
-        <div class="graella">
-        <div class="background"></div>
-        <div class="dia">
-            <p id="cuan">Ahora</p>
-            <p id="nubol">☁️</p>
-            <p id="graus2">19ª</p>
-            
-        </div>
-        <div class="dia">
-            <p id="cuan">Ahora</p>
-            <p id="nubol">☁️</p>
-            <p id="graus2">19ª</p>
-            
-        </div>
-        <div class="dia">
-            <p id="cuan">Ahora</p>
-            <p id="nubol">☁️</p>
-            <p id="graus2">19ª</p>
-            
-        </div>
-        <div class="dia">
-            <p id="cuan">Ahora</p>
-            <p id="nubol">☁️</p>
-            <p id="graus2">19ª</p>
-            
-        </div>
-        <div class="dia">
-            <p id="cuan">Ahora</p>
-            <p id="nubol">☁️</p>
-            <p id="graus2">19ª</p>
-            
-        </div>
-        
-    </div>
-    </div>
+    <main class="weather-app">
+        <section class="capcelera">
+            <p id="lloc">Aixovall</p>
+            <p id="graus">5º</p>
+            <p id="nublado">Ennuvolat</p>
+            <p id="maxmin">Màx. 9º  Mín. 2º</p>
+        </section>
+        <section class="graellaOp">
+            <div class="graella">
+                <div class="background"></div>
+                <div class="dia">
+                    <p class="cuan">Ara</p>
+                    <p class="icona">🌥️</p>
+                    <p class="graus2">5º</p>
+                </div>
+                <div class="dia">
+                    <p class="cuan">21</p>
+                    <p class="icona">🌧️<span class="percent">25%</span></p>
+                    <p class="graus2">5º</p>
+                </div>
+                <div class="dia">
+                    <p class="cuan">21:01</p>
+                    <p class="icona">🌇</p>
+                    <p class="graus2">Posta</p>
+                </div>
+                <div class="dia">
+                    <p class="cuan">22</p>
+                    <p class="icona">🌫️</p>
+                    <p class="graus2">5º</p>
+                </div>
+                <div class="dia">
+                    <p class="cuan">23</p>
+                    <p class="icona">☁️</p>
+                    <p class="graus2">4º</p>
+                </div>
+                <div class="dia">
+                    <p class="cuan">0</p>
+                    <p class="icona">🌧️<span class="percent">20%</span></p>
+                    <p class="graus2">4º</p>
+                </div>
+            </div>
+            <div class="info">
+                <p class="resum">S’espera que plogui sobre les 21:00. Les ràfegues de vent arriben als 18 km/h.</p>
+            </div>
+            <div class="previsio">
+                <p class="titol">PREVISIÓ A 10 DIES</p>
+                <div class="dies">
+                    <div class="fila">
+                        <span class="nomdia">Avui</span>
+                        <span class="icona">🌧️</span>
+                        <span class="percent">45%</span>
+                        <span class="minmax"><span class="min">2º</span> <span class="barra"></span> <span class="max">9º</span></span>
+                    </div>
+                    <div class="fila">
+                        <span class="nomdia">dv</span>
+                        <span class="icona">🌧️</span>
+                        <span class="percent">60%</span>
+                        <span class="minmax"><span class="min">3º</span> <span class="barra"></span> <span class="max">9º</span></span>
+                    </div>
+                    <div class="fila">
+                        <span class="nomdia">ds</span>
+                        <span class="icona">🌧️</span>
+                        <span class="percent">35%</span>
+                        <span class="minmax"><span class="min">4º</span> <span class="barra"></span> <span class="max">11º</span></span>
+                    </div>
+                    <div class="fila">
+                        <span class="nomdia">dg</span>
+                        <span class="icona">🌧️</span>
+                        <span class="percent">40%</span>
+                        <span class="minmax"><span class="min">4º</span> <span class="barra"></span> <span class="max">10º</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
