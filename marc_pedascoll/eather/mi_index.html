@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="box">
+            <div class="background-box"></div>
+            <p id="ciudad">Aixovall</p>
+            <h1 id="temperatura">5º</h1>
+            <p id="clima">Ennuvolat</p>
+            <div class="min-max">
+                <span id="min">Mín. -1º</span>
+                <span id="max">Max. 9º</span>
+            </div>
+        </header>
+        <div class="container-main">
+            <div class="three-elements">
+                
+                <div class="card">
+                    <div class="background-box"></div>
+                    <h3>Vent</h3>
+                    <p id="velocidad">10 km/h</p> 
+                    <p id="rafagas">10 km/h</p> 
+                    <p id="orientacion">10 km/h</p> 
+                </div>
+                <div class="card">
+                    <div class="background-box"></div>
+                    <h3>Sensació tèrmica</h3>
+                    <p id="senstermic">1015 hPa</p>
+                </div>
+                <div class="card">
+                    <div class="background-box"></div>
+                    <h3>Altura</h3>
+                    <p id="altura">500 m</p>                    
+                    <p id="altura-mar">500 m</p>                    
+                </div>
+            </div>
+            <div class="box">
+                <div class="background-box"></div>
+                <h2>Previsió per hores</h2>
+            </div>
+            <div class="box separa">
+                <div class="background-box"></div>
+                <div class="hours-align">
+                    <div class="hour">
+                            <img alt="icona" id="imatge1">
+                            <p id="date1">Avui a les 15:00</p>
+                            <p id="clima-hora-1">Assolellat</p>
+                        </div>
+                        <div class="hour">
+                            <img id="imatge2" alt="icona">
+                            <p id="data-2">Avui a les 15:00</p>
+                            <p id="clima-hora-2">Assolellat</p>
+                        </div>
+                        <div class="hour">
+                            <img id="imatge3" alt="icona">
+                            <p id="data-3">Avui a les 15:00</p>
+                            <p id="clima-hora-3">Assolellat</p>
+                        </div>
+                        <div class="hour">
+                            <img id="imatge4" alt="icona">
+                            <p id="data-4">Avui a les 15:00</p>
+                            <p id="clima-hora-4">Assolellat</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    </body>
+</html>
+<!-- graus, vent, humitat, icones, descripcio, sensació termica, risc, pressió, posta sol, sortida sol -->
+ <!-- previsió per hores -->

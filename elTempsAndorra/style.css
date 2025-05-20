@@ -1,3 +1,228 @@
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #00695c;
+    margin-bottom: 40px;
+  }
+  
+  h2, h3 {
+    color: #00796b;
+    margin-top: 30px;
+  }
+  
+  #temps, #temperatura, #vent {
+    background-color: #ffffff;
+    border: 1px solid #b2dfdb;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  #temps {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  #temps img {
+    width: 64px;
+    height: 64px;
+  }
+  
+  #temperatura p, #vent p {
+    margin: 5px 0;
+    font-size: 1.1em;
+  }
+  
+  #setmana {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  #dies {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+  }
+  
+  #dies > div {
+    background-color: #e0f2f1;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  #dies img {
+    width: 48px;
+    height: 48px;
+  }
+
+body{
+
+    background-color: aqua;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+h2{
+    margin-top: 150px;
+    margin-left: 50px;
+}
+
+#temps{
+    display: flex;
+    margin-left: 50px;
+}
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.temps-avui {
+    border: 1px solid black;
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.tittle {
+    font-size: 25px;
+    color: #333;
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    margin-top: 10px;
+}
+
+#temps {
+    border: 1px solid black;
+    width: 400px;
+    height: 490px;
+    position: absolute;
+    left: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+#temps #icona {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    border: 1px solid black;
+    background-color: #d2d2d2;
+    border-radius: 10px;
+}
+
+#temps p {
+    font-size: 30px;
+    font-weight: bold;
+    width: 150px;
+    position: absolute;
+    top: 70px;
+    left: 160px;
+}
+
+#temperatura {
+    border: 1px solid black;
+    width: 100px;
+}
+
+#vent {
+    border: 1px solid black;
+<<<<<<< HEAD
+=======
+=======
 .min {
   color: gray;
+<<<<<<< HEAD
+}
+
+#temps, #temperatura, #vent, #setmana {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#temps:hover, #temperatura:hover, #vent:hover, #setmana:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+#temps img, .dia img {
+  max-width: 100px;
+  border-radius: 8px;
+}
+
+#dies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.dia {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  width: 160px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.dia:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.dia h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.dia p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: #555;
+=======
+>>>>>>> dbb6ed96a9f506f4777639aa94d765dfd608e9f8
+>>>>>>> 0802c34199cbb07656d9731e9f96d69cb6a56730
+>>>>>>> 8df8e2280106c11704b1002099ea0d24b196ebb6
 }

@@ -4,19 +4,35 @@
 // const units = 'metric'; // centigrades o 'imperial' per Fahrenheit
 // const language = 'ca';
 
-// // WEATHER of today
-// fetch(
-//   `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${WEATHER_API_KEY}&units=${units}&lang=${language}`
-// )
-//   .then(response => response.json())
-//   .then(data => {
-//     console.log('El temps d avui: ', data);
+function updateWindData(data) {
+  const { windSpeed, direction, gust } = data.wind;
 
-//     const temp = data.main.temp;
-//     const descr = data.weather[0].description;
-//     document.querySelector('#weather').innerHTML = `${temp} °C - ${descr}`;
-//   })
-//   .catch(error => console.error('Error amb la petició:', error));
+  document.getElementById('speed').textContent = `${windSpeed} km/h`;
+  document.getElementById('direction').textContent = `${direction}°`;
+  document.getElementById('gust').textContent = `${gust} km/h`;
+}
+
+function updateIcon(data) {
+  const iconCode = data.weather[0].icon;
+  const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+  const description = data.weather[0].description;
+
+  document.getElementById('weather-icon').src = iconUrl;
+  document.getElementById('weather-description').textContent = description;
+}
+
+// WEATHER of today
+fetch(
+  `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${WEATHER_API_KEY}&units=${units}&lang=${language}`
+)
+  .then(response => response.json())
+  .then(data => {
+    console.log('El temps d avui: ', data);
+
+    updateWindData(data);
+    updateIcon(data);
+  })
+  .catch(error => console.error('Error amb la petició:', error));
 
 // // FORECAST of the week
 // fetch(

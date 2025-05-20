@@ -14,15 +14,44 @@
       <p class="Maxima_minima">Màx.9º Mín.2º</p>      
     </header>
     <div class="box">
+      <div class="overlay"></div>
       <div class="title">Presio</div>
       <div class="data">1024hPa</div>
     </div>
+
     <div class="box">
+      <div class="overlay"></div>
       <div class="title">Presio</div>
     </div>
     <div class="side">
-      <div class="box"></div>
-      <div class="box"></div>
+      <div class="box">
+        <div class="overlay"></div>
+        <p>Humeditat</p>
+      </div>
+      <div class="box">
+        <div class="overlay"></div>
+        <p>Ennuvolat</p>
+      </div>
+    </div>
+
+    <div>
+      <img id="weather-icon" alt="Weather Icon" />
+      <p id="weather-description"></p>
+    </div>
+
+    <div class="wind">
+      <div class="windData">
+        <p>Vent</p>
+        <div id="speed">Speed</div>
+      </div>
+      <div class="windData">
+        <p>Ràfegues</p>
+        <div id="gust">gust</div>
+      </div>
+      <div class="windData">
+        <p>Direcció</p>
+        <div id="direction">direction</div>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

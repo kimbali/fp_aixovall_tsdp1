@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Aixovall</h1>
+    <h2>5ºC</h2>
+  </header>
+
+  <div class="box">
+    <h3>Ennuvolat</h3>
+    <p>S'espera que plogui sobre les 21:00. Les ràfegues de vent arriben als 18km/h</p>
+  </div>
+
+  <div class="box">
+    <h3>Presió</h3>
+  </div>
+
+  <div class="side">
+    <div class="box">
+      <h3>Previsió a 10 dies</h3>
+
+      <div class="forecast">
+
+        <div class="day">
+          <p>Avui</p>
+          <img src="image.png" class="pluja"/>
+          <p>Pluja: 45%</p>
+          <p>Min: 2º | Max: 9º</p>
+        </div>
+
+        <div class="day">
+          <p>Divendres</p>
+          <img src="image.png" class="pluja"/>
+          <p>Pluja: 60%</p>
+          <p>Min: 3º | Max: 9º</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <img id="weather-icon" alt="Weather Icon" />
+    <p id="weather-description"></p>
+  </div>
+
+  <div class="wind">
+    <div class="windData">
+      <p>Vent:</p>
+      <p id="speed">Speed</p>
+    </div>
+    <div class="windData">
+      <p>Ràfegues:</p>
+      <p id="gust">gust</p>
+    </div>
+    <div class="windData">
+      <p>Direcció:</p>
+      <p id="direction">direction</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
