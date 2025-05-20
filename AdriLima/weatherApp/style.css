@@ -1,0 +1,84 @@
+.weather-icon {
+  width: 20px;
+  height: 20px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(to top, #7c8a99, #a7b5c3);
+  color: white;
+  text-align: center;
+}
+
+header {
+  padding: 20px 0;
+  font-size: 2rem;
+}
+
+header p:last-child {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.box,
+.windData {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin: 10px auto;
+  padding: 10px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.data {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.side .box {
+  width: 100%;
+  height: auto;
+}
+
+#weather-icon {
+  width: 70px;
+  margin-top: 15px;
+}
+
+#weather-description {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin: 15px 0;
+}
+
+.wind {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.windData p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.windData div {
+  margin-top: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
