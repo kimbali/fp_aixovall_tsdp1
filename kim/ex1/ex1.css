@@ -1,0 +1,61 @@
+:root {
+  --primary: blue;
+  --secondary: yellow;
+}
+
+body {
+  background-color: lightyellow;
+  color: lightgray;
+  font-family: Comic Sans MS, cursive;
+  margin: 0;
+}
+
+header {
+  background-color: pink;
+  text-align: center;
+  padding: 10px;
+}
+
+h1 {
+  color: var(--primary);
+}
+
+nav {
+  background-color: purple;
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: yellow;
+}
+
+main {
+  padding: 20px;
+}
+
+img {
+  width: 1000px;
+  height: auto;
+}
+
+form {
+  margin-top: 30px;
+}
+
+input,
+textarea {
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+}
+
+footer {
+  background-color: gray;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}

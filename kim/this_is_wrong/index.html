@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemples de mals dissenys UX</title>
+    <style>
+      body {
+        /* background-color: #222; */
+        color: #222;
+        font-family: Comic Sans MS;
+        padding: 10px;
+      }
+      h1 {
+        font-size: 166px;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+      }
+      nav li {
+        margin-right: 10px;
+      }
+      nav a {
+        color: #222;
+        text-decoration: none;
+      }
+      .btn {
+        background: none;
+        border: none;
+        font-size: 16px;
+        cursor: default;
+      }
+      .popup {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: yellow;
+        padding: 20px;
+        border: 2px solid red;
+        display: block;
+        z-index: 1000;
+      }
+      .hidden-section {
+        display: none;
+      }
+      .form-section {
+        margin-top: 30px;
+      }
+      input[type='text'] {
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Benvingut a l'espai d'examen POBPRO</h1>
+
+    <!-- 1: Navegació confusa -->
+    <nav style="background-color: #333; color: #444; padding: 10px">
+      <ul>
+        <li><a href="#">Inici</a></li>
+        <li><a href="#">Examen</a></li>
+        <li><a href="#">Avaluació final</a></li>
+        <li><a href="#">Coses</a></li>
+        <!-- poc clar -->
+      </ul>
+    </nav>
+
+    <!-- 2: Càrrega lenta simulada amb JS -->
+    <p id="carregant">Carregant l'examen...</p>
+    <script>
+      setTimeout(() => {
+        document.getElementById('carregant').innerText = 'Examen llest!';
+      }, 5000); // simula lentitud
+    </script>
+
+    <!-- 3: Mal contrast -->
+    <p style="color: #999; background-color: #eee; font-size: 18px">
+      Llegeix atentament les instruccions abans de començar.
+    </p>
+
+    <!-- 4: Botó poc visible -->
+    <button
+      class="btn"
+      style="background: transparent; border: none; color: #ccc"
+    >
+      Comença l'examen
+    </button>
+
+    <!-- 5: Jerarquia visual dolenta -->
+    <h2>Instruccions importants</h2>
+    <h2>Preguntes de teoria</h2>
+    <h2>Envia les respostes abans del final</h2>
+
+    <!-- 6: Informació amagada -->
+    <button
+      onclick="document.querySelector('.hidden-section').style.display = 'block'"
+    >
+      Mostra informació
+    </button>
+    <div class="hidden-section">
+      <p>Aquesta informació era amagada sense cap raó.</p>
+    </div>
+
+    <!-- 7: Incoherències de disseny -->
+    <p style="font-family: Arial; color: green; font-size: 22px">
+      Un altre estil aleatori aquí.
+    </p>
+
+    <!-- 8: No responsive (força una amplada gran) -->
+    <div style="width: 1200px; background: pink">
+      Aquesta secció no és responsive.
+    </div>
+
+    <!-- 9: Sense feedback -->
+    <button onclick="alert('...o no?')">Envia formulari</button>
+
+    <!-- 10: Enllaç que no sembla clicable -->
+    <span>Fes clic aquí per més info</span>
+
+    <!-- 11: Pop-up molest -->
+    <div class="popup">Subscriu-te al nostre butlletí!</div>
+
+    <!-- 12: Sense indicador de progrés -->
+    <div class="form-section">
+      <form>
+        <input type="text" placeholder="Nom" />
+        <input type="text" placeholder="Cognoms" />
+        <input type="text" placeholder="Adreça" />
+        <input type="text" placeholder="Telèfon" />
+        <input type="text" placeholder="Email" />
+      </form>
+    </div>
+
+    <!-- 13: Formulari llarg i complicat -->
+    <form>
+      <h3>Formulari de registre complex</h3>
+      <input type="text" placeholder="Nom complet" /><br />
+      <input type="text" placeholder="DNI/NIE" /><br />
+      <input type="text" placeholder="Telèfon fix" /><br />
+      <input type="text" placeholder="Telèfon mòbil" /><br />
+      <input type="text" placeholder="Telèfon alternatiu" /><br />
+      <input type="text" placeholder="Correu electrònic (empresa)" /><br />
+      <input type="text" placeholder="Correu electrònic (personal)" /><br />
+      <input type="text" placeholder="Adreça postal 1" /><br />
+      <input type="text" placeholder="Adreça postal 2" /><br />
+    </form>
+
+    <!-- 14: Sense accessibilitat -->
+    <img src="imatge.jpg" alt="" />
+    <!-- sense alt útil -->
+
+    <!-- 15: Llenguatge poc entenedor -->
+    <p>
+      El sistema MIL requereix autenticació via passarel·la d'identitats
+      federades.
+    </p>
+  </body>
+</html>
