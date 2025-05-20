@@ -1,6 +1,6 @@
 const WEATHER_API_KEY = '212ebafd80e67458b4fdf2fe666f697f';
 
-const city = 'Andorra la Vella';
+const city = 'Aixovall';
 const units = 'metric'; // centigrades o 'imperial' per Fahrenheit
 const language = 'es';
 
@@ -99,30 +99,9 @@ fetch(
     const weatherBox = document.createElement('div');
     weatherBox.classList.add('detail');
 
-    const weatherLabel = document.createElement('p');
-    weatherLabel.classList.add('label');
-    weatherLabel.textContent = 'Descripció';
-
-    const weatherValue = document.createElement('p');
-    weatherValue.classList.add('value');
-    weatherValue.textContent = data.weather[0].description;
-
     weatherBox.appendChild(weatherLabel);
     weatherBox.appendChild(weatherValue);
     weatherDetailsContainer.appendChild(weatherBox);
-
-    const iconBox = document.createElement('div');
-    iconBox.classList.add('detail');
-
-    const iconLabel = document.createElement('p');
-    iconLabel.classList.add('label');
-    iconLabel.textContent = 'Icona';
-
-    const iconValue = document.createElement('img');
-    iconValue.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-    iconValue.alt = data.weather[0].description;
-    iconValue.style.width = '50px';
-    iconValue.style.height = '50px';
 
     iconBox.appendChild(iconLabel);
     iconBox.appendChild(iconValue);

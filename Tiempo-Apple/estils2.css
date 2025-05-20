@@ -58,6 +58,7 @@ body{
     display: flex;
     flex-direction: row;
     margin:auto;
+<<<<<<< HEAD
     width: 32pc;
     position: relative;
     border-radius: 18px;
@@ -181,3 +182,15 @@ body{
     margin: 0 2px;
 }
 
+=======
+    width: 20pc;
+    border: 1px solid white;
+
+ 
+
+}
+.dia{
+    margin: auto;
+    opacity: 800%;
+}
+>>>>>>> 8df8e2280106c11704b1002099ea0d24b196ebb6
