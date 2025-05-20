@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  height: 100vh;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center all content inside the body */
+}
+
+form {
+  background-color: #fff;
+  width: 360px; /* Ensure the form width is 360px */
+  padding: 24px 16px;
+  border-radius: 16px;
+}
+
+h2 {
+  font-size: 18px; /* Make the title larger */
+  font-weight: bold; /* Make the title bold */
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border-radius: 16px;
+  border: thin solid #f4f4f4;
+  margin-bottom: 16px;
+}
+
+button {
+  cursor: pointer;
+  margin: 12px 0;
+  border-radius: 16px; 
+  padding: 8px 16px; 
+  float: right; 
+  text-align: center; 
+}

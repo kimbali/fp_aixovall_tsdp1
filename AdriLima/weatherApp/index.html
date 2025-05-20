@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
-
     <link rel="stylesheet" href="style.css" />
   </head>
+  
   <body>
     <header>
       <p>Aixovall</p>
@@ -14,26 +14,37 @@
     </header>
 
     <div class="box">
-      <div class="overlay"></div>
-      <div class="title">Presio</div>
-      <div class="data">1024hPa</div>
+      <div class="title">Ennuvolat</div>
+      <div class="data">S'espera que plogui sobre les 21:00. Les ràfegues de vent arriben als 18km/h</div>
     </div>
-
     <div class="box">
-      <div class="overlay"></div>
       <div class="title">Presio</div>
     </div>
 
     <div class="side">
       <div class="box">
-        <div class="overlay"></div>
-        <p>Humeditat</p>
-      </div>
-      <div class="box">
-        <div class="overlay"></div>
-        <p>Ennuvolat</p>
+        <div class="title">Previsió a 10 dies</div>
+        <div class="forecast">
+          <div class="day">
+            <span class="day-name">Avui</span>
+            <img class="weather-icon" src="icon.png" alt="icon" />
+            <span class="rain">45%</span>
+            <span class="temp-min">2º</span>
+            <span class="bar">|</span>
+            <span class="temp-max">9º</span>
+          </div>
+          <div class="day">
+            <span class="day-name">dv</span>
+            <img class="weather-icon" src="icon.png" alt="icon" />
+            <span class="rain">60%</span>
+            <span class="temp-min ">3º</span>
+            <span class="bar">|</span>
+            <span class="temp-max">9º</span>
+          </div>
+      €¬
       </div>
     </div>
+
 
     <div>
       <img id="weather-icon" alt="Weather Icon" />

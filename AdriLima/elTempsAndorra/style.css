@@ -1,0 +1,49 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d6d8da;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1, h2, h3 {
+    color: #004080;
+  }
+  
+  #temps, #temperatura, #vent {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  #icona {
+    width: 60px;
+    height: 60px;
+  }
+  
+  #graus {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  #maxmin, #velocitat, #direccio {
+    color: #555;
+  }
+  
+  #setmana {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  #dies {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
