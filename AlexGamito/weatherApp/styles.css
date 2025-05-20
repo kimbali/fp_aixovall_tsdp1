@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  /* Imagen de fondo similar, cielo azul con nubes */
+  background-image: url("https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1200&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Oswald', sans-serif;
+  color: #f8fafd;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Elimina las nubes del fondo */
+body::before,
+body::after {
+  display: none !important;
+}
+
+
+.header {
+  text-align: center;
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 90%;
+  color: #f8fafd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-family: 'Oswald', sans-serif;
+}
+
+.header .location {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #f8fafd;
+  text-shadow: 0 2px 12px #1e69de88;
+}
+
+.header .temperature {
+  font-size: 6rem;
+  font-weight: 700;
+  margin: 10px 0;
+  color: #f8fafd;
+  text-shadow: 0 2px 12px #1e69de88;
+}
+
+.header .description {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #f8fafd;
+  text-shadow: 0 2px 12px #1e69de88;
+}
+
+.header .range {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #f8fafd;
+  text-shadow: 0 2px 12px #1e69de88;
+}
+
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.box {
+  background: rgba(0,0,0,0.18);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #f8fafd;
+}
+
+.box .header-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f8fafd;
+  margin-bottom: 10px;
+}
+
+.box .data {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #555;
+}
+
+.side {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.side .box {
+  flex: 1;
+  max-width: 48%;
+}
+
+.hourly-forecast {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hourly-forecast .hour-box {
+  text-align: center;
+  min-width: 80px;
+  color: #f8fafd;
+  background: rgba(0,0,0,0.13);
+}
+
+.hourly-forecast .hour-box img {
+  max-width: 40px;
+  margin-bottom: 5px;
+}
+
+.hourly-forecast .hour-box p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  font-family: 'Oswald', sans-serif;
+}
+
+.daily-forecast {
+  margin: 20px auto;
+  max-width: 90%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.daily-forecast .day-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  color: #f8fafd;
+  background: rgba(0,0,0,0.13);
+}
+
+.daily-forecast .day-box:last-child {
+  border-bottom: none;
+}
+
+.daily-forecast .day-box img {
+  max-width: 40px;
+}
+
+.daily-forecast .day-box p {
+  margin: 0;
+  font-size: 1rem;
+  font-family: 'Oswald', sans-serif;
+}
+
+.daily-forecast .day-box .day {
+  font-weight: 600;
+}
+
+.daily-forecast .day-box .temp-range {
+  font-size: 0.9rem;
+  color: #ffdd57;
+}
+
+.footer {
+  text-align: center;
+  background: none;
+  color: #f8fafd;
+  padding: 10px 0;
+  margin-top: 20px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Oswald', sans-serif;
+}
