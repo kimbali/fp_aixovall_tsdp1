@@ -1,11 +1,52 @@
-body{
-    background-image:url("https://cdns3.eltiempo.es/eltiempo/blog/noticias/2019/03/11135102/cumulus_tipos-de-nubes.jpg");
+body {
+  background-image: url("https://cdns3.eltiempo.es/eltiempo/blog/noticias/2019/03/11135102/cumulus_tipos-de-nubes.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
 
+
+#gradosDiv {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  position: relative; 
+  z-index: 9999;
+}
+#Titulo{
+  font-size: 60px;
 }
 #grados{
-    color:#2ECC40;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 150px;
+  font-size: 60px;
+}
+
+
+
+.box {
+  border-radius: 10px;
+  padding: 12px;
+  color: rgb(145, 145, 145);
+  position: relative;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+
+.box .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(58, 58, 58, 0.5);
+  z-index: 1;
+}
+
+
+.box .contenido {
+  position: relative;
+  z-index: 2;
 }

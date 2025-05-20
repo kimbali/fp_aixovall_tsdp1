@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(180deg, #b5c7d3 0%, #8fa1b3 100%);
+    color: #fff;
+}
+
+.weather-app {
+    max-width: 420px;
+    margin: 40px auto;
+    background: rgba(60, 70, 90, 0.10);
+    border-radius: 28px;
+    box-shadow: 0 8px 32px rgba(60, 60, 120, 0.15);
+    overflow: hidden;
+    padding-bottom: 24px;
+}
+
+.capcelera {
+    background: none;
+    color: #fff;
+    text-align: center;
+    padding: 48px 0 18px 0;
+}
+
+.capcelera #lloc {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.capcelera #graus {
+    font-size: 5.5rem;
+    font-weight: 200;
+    margin: 0;
+    line-height: 1;
+}
+
+.capcelera #nublado {
+    font-size: 1.3rem;
+    margin: 8px 0 0 0;
+    font-weight: 300;
+}
+
+.capcelera #maxmin {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    margin-top: 4px;
+    font-weight: 300;
+}
+
+.graellaOp {
+    padding: 18px 18px 0 18px;
+}
+
+.graella {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: rgba(80, 90, 110, 0.25);
+    border-radius: 22px;
+    padding: 16px 10px 10px 10px;
+    margin-bottom: 12px;
+    position: relative;
+    overflow-x: auto;
+    box-shadow: 0 2px 8px rgba(60, 60, 120, 0.10);
+}
+
+.graella .background {
+    position: absolute;
+    inset: 0;
+    background: none;
+    opacity: 0;
+    z-index: 0;
+    border-radius: 22px;
+}
+
+.dia {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    min-width: 56px;
+    margin: 0 2px;
+}
+
+.dia .cuan {
+    font-size: 1.05rem;
+    color: #e0e7ef;
+    margin-bottom: 2px;
+    font-weight: 400;
+}
+
+.dia .icona {
+    font-size: 1.7rem;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dia .percent {
+    font-size: 0.85rem;
+    color: #38bdf8;
+    margin-left: 2px;
+    font-weight: 500;
+}
+
+.dia .graus2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.info {
+    margin: 12px 0 18px 0;
+    padding: 14px 18px;
+    background: rgba(80, 90, 110, 0.25);
+    border-radius: 18px;
+    font-size: 1.08rem;
+    color: #e0e7ef;
+    font-weight: 300;
+    box-shadow: 0 2px 8px rgba(60, 60, 120, 0.10);
+}
+
+.previsio {
+    margin-top: 10px;
+}
+
+.previsio .titol {
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: #cbd5e1;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.dies {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.fila {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(80, 90, 110, 0.25);
+    border-radius: 12px;
+    padding: 10px 16px;
+    font-size: 1.08rem;
+    color: #e0e7ef;
+    font-weight: 400;
+    box-shadow: 0 2px 8px rgba(60, 60, 120, 0.10);
+}
+
+.fila .nomdia {
+    font-weight: 500;
+    width: 60px;
+    color: #fff;
+    opacity: 0.95;
+}
+
+.fila .icona {
+    font-size: 1.5rem;
+    width: 32px;
+    text-align: center;
+}
+
+.fila .percent {
+    color: #38bdf8;
+    font-size: 1.05rem;
+    width: 38px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.fila .minmax {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.08rem;
+}
+
+.fila .min {
+    color: #bae6fd;
+    font-weight: 400;
+}
+
+.fila .max {
+    color: #fff;
+    font-weight: 600;
+}
+
+.fila .barra {
+    display: inline-block;
+    width: 22px;
+    height: 3px;
+    background: #38bdf8;
+    border-radius: 2px;
+    margin: 0 2px;
+    opacity: 0.7;
+}
+
+@media (max-width: 500px) {
+    .weather-app {
+        max-width: 98vw;
+        margin: 0.5rem;
+    }
+    .graella {
+        overflow-x: auto;
+    }
+}
