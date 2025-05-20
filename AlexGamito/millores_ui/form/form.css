@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Oswald, sans-serif;
+  background-color: #f4f4f4;
+  height: 100vh;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  background-color: #fff;
+  width: 360px;
+  padding: 24px 16px;
+  border-radius: 16px;
+}
+
+h2 {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border-radius: 16px;
+  border: thin solid #f4f4f4;
+  margin-bottom: 16px;
+}
+
+button {
+  cursor: pointer;
+  margin: 12px 0;
+}

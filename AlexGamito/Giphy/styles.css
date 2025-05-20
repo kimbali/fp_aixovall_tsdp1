@@ -1,0 +1,85 @@
+body {
+    background-color: #121212;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #1e1e1e;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #ff5a5f;
+}
+
+header input {
+    flex: 1;
+    margin: 0 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+header button {
+    padding: 10px 20px;
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header button:hover {
+    background-color: #e04848;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gif-item {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.gif-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.gif-item:hover {
+    transform: scale(1.05);
+}
+
+.gif-item p {
+    margin: 10px 0 0;
+    font-size: 0.9rem;
+    color: #ccc;
+    word-wrap: break-word;
+    text-align: center;
+}
