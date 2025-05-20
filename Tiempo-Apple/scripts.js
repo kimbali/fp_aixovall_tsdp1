@@ -16,4 +16,4 @@ async function meteo(){
     console.error('Hubo un error con la llamada a la API:', error);
   });
 }
-await meteo();
+meteo();
