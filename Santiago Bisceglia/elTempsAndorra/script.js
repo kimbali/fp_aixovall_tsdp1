@@ -30,7 +30,7 @@ function fetchCurrentWeather() {
 
       // Temperatura + temperatura maxima i minima
       const graus = document.getElementById('graus');
-      graus.textContent = data.main.temp + ' ºC';
+      graus.textContent = Math.floor(data.main.temp) + ' º';
 
       const maxMin = document.getElementById('maxmin');
       maxMin.innerHTML = `
@@ -39,7 +39,7 @@ function fetchCurrentWeather() {
       ºC`;
       // Vent + direccio
       const velocitat = document.getElementById('velocitat');
-      velocitat.textContent = data.wind.speed + ' m/s';
+      velocitat.textContent = '💨' + data.wind.speed + ' m/s';
 
       const direccio = document.getElementById('direccio');
       direccio.textContent = data.wind.deg + ' º';

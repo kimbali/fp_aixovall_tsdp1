@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div id="header">
+        <h4 id="location">MY LOCATION</h4>
+        <h1 id="city">Sant Julia</h1>
+      </div>
+      <h1 id="graus">8º</h1>
+      <p id="descripcion"><b>Mostly Cloudy</b></p>
+      <p><span id="maxTemp">H:9º</span><span id="minTemp">L:4º</span></p>
+    </header>
+    <main>
+      <div id="up">
+        <p class="conditions-message">
+          HOURLY FORECAST
+        </p>
+        <ul class="horizontal-list" id="forecast-list">
+          <li>
+            Now<br />
+            <img id="weather-icon"></img><br />
+            <span id="gr">8º</span>
+          </li>
+        </ul>
+      </div>
+    </main>  
+    <!-- Viento -->
+    <div class="wind-box">
+      <h4>WIND</h4>
+      <div class="wind-data">
+        <div class="wind-row">
+          <span>Speed</span>
+          <span id="speed"> km/h</span>
+        </div>
+        <div class="wind-row">
+          <span>Gusts</span>
+          <span id="gust">18 km/h</span>
+        </div>
+        <div class="wind-row">
+          <span>Direction</span>
+          <span id="direction">201°</span>
+        </div>
+      </div>
+    </div>
+    <!-- Humidity etc -->
+    <div id="container">
+      <div class="item">
+        <span>Humidity</span>
+        <span id="humidity">1231%</span>
+      </div>
+      <div class="item">
+        <span>Pressure</span>
+        <span id="pressure">1000hPa</span>
+      </div>
+      <div class="item">
+        <span>Visibility</span>
+        <span id="visibility">2Km</span>
+      </div>
+      <div class="item">
+        <span>Sea Level</span>
+        <span id="sea-level">123</span>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
