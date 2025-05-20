@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border-bottom: solid 1px navy;
+    height: 10vh;
+}
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+h1{
+    color: #acd4ff;
+}
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#search {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
+    background-color: #acd4ff;
+}
+
+button {
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 4px;
+}
+button:hover{
+    background-color: rgb(41, 37, 134);
+}
+main {
+    display: flex;
+    margin-top: 30px;
+    width: 80%;
+    justify-content: space-between;
+}
+
+/* Estilos para el aside (categorías) */
+aside {
+    width: 20%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+aside h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 18px;
+}
+
+aside ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el contenido principal */
+.content {
+    width: 75%;
+}
+
+.content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.movie-card {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.movie-card p {
+    font-size: 16px;
+    color: #333;
+}.search{
+    gap: 10px;
+}
