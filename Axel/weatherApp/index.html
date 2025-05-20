@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather</title>
-  </head>
-  <body>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteo Andorra</title>
+    <link rel="stylesheet" href="estils2.css">
+</head>
+<body>
+    <div class="capcelera">
+        <p id="lloc">Andorra</p>
+        <p id="graus">15º</p>
+        <p id="nublado">Núvols</p>
+        <p id="maxmin">Máx. 22º Mín. 16º</p>
+    </div>
+
+    <div class="graellaOp">
+        <div class="graella">
+            <div class="background"></div>
+            <div class="dia"></div>
+            <div class="dia"></div>
+            <div class="dia"></div>
+            <div class="dia"></div>
+            <div class="dia"></div>
+        </div>
+    </div>
+
+    <div class="wind-container">
+        <p id="speed">Velocitat del vent: -- km/h</p>
+        <p id="direction">Direcció: --°</p>
+        <p id="gust">Ratxes: -- km/h</p>
+        <div class="meteo-extra">
+            <p id="rain">Probabilitat de pluja: --%</p>
+            <p id="humidity">Humitat: --%</p>
+            <p id="pressure">Pressió: -- hPa</p>
+        </div>
+    </div>
+
     <script src="script.js"></script>
-  </body>
+</body>
 </html>

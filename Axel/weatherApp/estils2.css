@@ -1,0 +1,138 @@
+body {
+    background-image: url('nubes.avif');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+    color: rgb(117, 135, 235);
+    text-align: center;
+}
+
+.capcelera {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 20pc;
+    margin: auto;
+    color: white;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+#lloc {
+    font-size: 2pc;
+    margin-bottom: 0;
+}
+
+#graus {
+    font-size: 5pc;
+    margin: 0;
+}
+
+#nublado {
+    font-size: 1.5pc;
+    margin: 0;
+}
+
+#maxmin {
+    font-size: 1.2pc;
+    margin-top: 5px;
+}
+
+.graella {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    width: 20pc;
+    position: relative;
+    border-radius: 2px;
+    padding: 10px 0;
+}
+
+.dia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    color: white;
+}
+
+.dia img {
+    width: 50px;
+    height: 50px;
+}
+
+.background {
+    background-color: rgba(148, 148, 148, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.wind-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 20pc;
+    margin: 15px auto;
+    padding: 10px;
+    background-color: rgba(148, 148, 148, 0.5);
+    border-radius: 5px;
+    color: white;
+}
+
+.wind-container p {
+    margin: 5px;
+    font-size: 1.2pc;
+}
+
+.meteo-extra {
+    margin-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 10px;
+}
+
+.meteo-extra p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* Animació */
+.capcelera, .graellaOp, .wind-container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive mòbil */
+@media (max-width: 600px) {
+    .graella {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .dia {
+        margin-bottom: 10px;
+        width: 80%;
+    }
+
+    .wind-container {
+        width: 95%;
+    }
+}
