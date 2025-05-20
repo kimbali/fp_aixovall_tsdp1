@@ -1,47 +1,22 @@
 body {
   margin: 0;
-  background: linear-gradient(to bottom, #4a90e2 0%, #b3d1f7 100%);
+  /* Imagen de fondo similar, cielo azul con nubes */
+  background-image: url("https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1200&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   font-family: 'Oswald', sans-serif;
   color: #f8fafd;
-  /* Nubes SVG en el fondo */
   position: relative;
   overflow-x: hidden;
 }
 
+/* Elimina las nubes del fondo */
 body::before,
 body::after {
-  content: "";
-  position: fixed;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.32;
-  background-repeat: no-repeat;
-  background-size: contain;
-  animation: nube-move 60s linear infinite alternate;
+  display: none !important;
 }
 
-body::before {
-  top: 40px;
-  left: -120px;
-  width: 420px;
-  height: 180px;
-  background-image: url('data:image/svg+xml;utf8,<svg width="420" height="180" viewBox="0 0 420 180" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="110" cy="90" rx="110" ry="60" fill="white"/><ellipse cx="220" cy="100" rx="90" ry="50" fill="white"/><ellipse cx="320" cy="80" rx="70" ry="40" fill="white" opacity="0.8"/><ellipse cx="180" cy="80" rx="40" ry="18" fill="white" opacity="0.5"/><ellipse cx="320" cy="120" rx="40" ry="18" fill="white" opacity="0.3"/><ellipse cx="370" cy="60" rx="30" ry="12" fill="white" opacity="0.2"/></svg>');
-  animation-delay: 0s;
-}
-
-body::after {
-  bottom: 0;
-  right: -100px;
-  width: 340px;
-  height: 120px;
-  background-image: url('data:image/svg+xml;utf8,<svg width="340" height="120" viewBox="0 0 340 120" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="90" cy="60" rx="90" ry="40" fill="white"/><ellipse cx="200" cy="70" rx="70" ry="30" fill="white"/><ellipse cx="280" cy="50" rx="60" ry="25" fill="white" opacity="0.7"/><ellipse cx="300" cy="100" rx="30" ry="10" fill="white" opacity="0.3"/><ellipse cx="60" cy="100" rx="30" ry="10" fill="white" opacity="0.2"/></svg>');
-  animation-delay: 10s;
-}
-
-@keyframes nube-move {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(60px); }
-}
 
 .header {
   text-align: center;
