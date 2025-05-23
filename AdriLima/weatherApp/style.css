@@ -1,57 +1,43 @@
 .weather-icon {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  background: linear-gradient(to top, #7c8a99, #a7b5c3);
+  font-family: Arial, sans-serif;
+  background-color: #7c8a99;
   color: white;
   text-align: center;
 }
 
 header {
-  padding: 20px 0;
-  font-size: 2rem;
+  padding: 20px;
+  font-size: 24px;
 }
 
-header p:last-child {
-  font-size: 3rem;
+header h2 {
+  font-size: 32px;
   margin: 10px 0;
 }
 
-.box,
-.windData {
-  background-color: rgba(255, 255, 255, 0.1);
+.box {
+  background-color: #ffffff30;
   border-radius: 10px;
-  margin: 10px auto;
+  margin: 10px;
   padding: 10px;
-  width: 90%;
-  max-width: 400px;
-}
-
-.title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.data {
-  font-size: 1rem;
-  opacity: 0.9;
 }
 
 .side {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  margin: 10px;
 }
 
-.side .box {
-  width: 100%;
-  height: auto;
+.day {
+  background-color: #ffffff20;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 #weather-icon {
@@ -59,26 +45,18 @@ header p:last-child {
   margin-top: 15px;
 }
 
-#weather-description {
-  font-size: 1rem;
-  opacity: 0.8;
-  margin: 15px 0;
-}
-
 .wind {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  margin-top: 20px;
+}
+
+.windData {
+  background-color: #ffffff20;
+  margin: 10px;
   padding: 10px;
+  border-radius: 10px;
 }
 
-.windData p {
-  margin: 0;
-  font-size: 1rem;
-}
-
-.windData div {
-  margin-top: 5px;
-  font-size: 1rem;
-  font-weight: bold;
+.pluja {
+  width: 50px;
+  height: 50px;
 }

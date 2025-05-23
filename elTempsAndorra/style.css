@@ -1,4 +1,75 @@
-<<<<<<< HEAD
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #00695c;
+    margin-bottom: 40px;
+  }
+  
+  h2, h3 {
+    color: #00796b;
+    margin-top: 30px;
+  }
+  
+  #temps, #temperatura, #vent {
+    background-color: #ffffff;
+    border: 1px solid #b2dfdb;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  #temps {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  #temps img {
+    width: 64px;
+    height: 64px;
+  }
+  
+  #temperatura p, #vent p {
+    margin: 5px 0;
+    font-size: 1.1em;
+  }
+  
+  #setmana {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  #dies {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+  }
+  
+  #dies > div {
+    background-color: #e0f2f1;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  #dies img {
+    width: 48px;
+    height: 48px;
+  }
+
 body{
 
     background-color: aqua;
@@ -16,8 +87,7 @@ h2{
 #temps{
     display: flex;
     margin-left: 50px;
-=======
-<<<<<<< HEAD
+}
 body {
     background-color: #ffffff;
     font-family: Arial, sans-serif;
@@ -83,6 +153,8 @@ body {
 
 #vent {
     border: 1px solid black;
+<<<<<<< HEAD
+=======
 =======
 .min {
   color: gray;
@@ -152,4 +224,5 @@ body {
 =======
 >>>>>>> dbb6ed96a9f506f4777639aa94d765dfd608e9f8
 >>>>>>> 0802c34199cbb07656d9731e9f96d69cb6a56730
+>>>>>>> 8df8e2280106c11704b1002099ea0d24b196ebb6
 }
