@@ -70,9 +70,8 @@ fetch(
   .then((data) => {
     console.log("Previsió de 5 dies: ", data);
 
-    // Selecciona el contenedor de la lista
     const forecastList = document.getElementById("forecast-list");
-    forecastList.innerHTML = ""; // Limpia la lista antes de agregar nuevos elementos
+    forecastList.innerHTML = "";
 
     // Recorre los primeros 7 elementos de la lista de pronóstico
     data.list.slice(0, 7).forEach((item, index) => {
@@ -87,7 +86,6 @@ fetch(
         <span class="forecast-small-text">${Math.floor(item.main.temp)}º</span>
       `;
       forecastList.appendChild(li);;
-      
 
       const time = new Date(item.dt * 1000).toLocaleString(); // Temps en format llegible
       const temperature = item.main.temp; // Temperatura
