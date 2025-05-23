@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -179,10 +178,20 @@ ul {
 
 #descripcion, #conditions-messsage, #maxTemp, #minTemp, #location {
   font-weight: bold;
+  color: white;
 }
 
-#weather-icon{
-  height: 40px;
+
+/* .weather-icon{
+  height: 50px;
+} */
+
+.weather-icon-small {
+  width: 50px;
+  height: 50px;
+}
+.forecast-small-text {
+  font-size: 0.8em;
 }
 
 /* Viento */
@@ -224,3 +233,41 @@ ul {
   font-weight: bold;
   line-height: 1.1;
 }
+
+#container {
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 24px auto 16px auto;
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1.5px solid rgba(255, 255, 255, 0.28);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.18);
+  width: 370px;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+
+/* Para los elementos internos, similar a .wind-row */
+#container .item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+/* Opcional: si quieres que los títulos dentro de #container se vean igual que en wind-box */
+#container h4 {
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #e0e6ed;
+  text-align: center;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+

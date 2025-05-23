@@ -1,0 +1,193 @@
+:root {
+  --primary-color: #000000;
+  --secondary-color: #7700ff;
+  --accent-color: #ea4335;
+  --text-color: #831dac;
+  --light-text: #022533;
+  --background: #fcf8f8;
+  --card-bg: #1260f06c;
+  --shadow: 0 4px 6px rgba(66, 2, 2, 0.1);
+}
+
+/* Fons per diferents condicions meteorològiques */
+body.default-bg {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+body.sunny-bg {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+
+body.cloudy-bg {
+  background: linear-gradient(135deg, #e6e9f0 0%, #eef1f5 100%);
+}
+
+body.rainy-bg {
+  background: linear-gradient(135deg, #4b79cf 0%, #283e51 100%);
+  color: white;
+}
+
+body.stormy-bg {
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  color: white;
+}
+
+body.snowy-bg {
+  background: linear-gradient(135deg, #e6e9f0 0%, #eef1f5 100%);
+}
+
+body.foggy-bg {
+  background: linear-gradient(135deg, #bdc3c7 0%, #2c3e50 100%);
+  color: white;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  min-height: 100vh;
+  transition: background 0.5s ease;
+}
+
+.app-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.weather-app {
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.location-current {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.location-current h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.current-temp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.current-temp span:first-child {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.current-temp span:last-child {
+  font-size: 1.2rem;
+}
+
+.forecast-section {
+  margin-bottom: 25px;
+}
+
+.forecast-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+  text-align: center;
+  border-bottom: 1px solid var(--primary-color);
+  padding-bottom: 5px;
+}
+
+.hourly-forecast {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.hourly-item {
+  min-width: 60px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 10px;
+  backdrop-filter: blur(5px);
+}
+
+.daily-forecast {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.daily-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 10px;
+  backdrop-filter: blur(5px);
+}
+
+.day-name {
+  font-weight: bold;
+}
+
+.weather-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.temp-range {
+  display: flex;
+  justify-content: space-between;
+}
+
+.max-temp {
+  color: var(--accent-color);
+}
+
+.min-temp {
+  color: var(--primary-color);
+}
+
+/* Ajustos per a fons foscos */
+body.rainy-bg .weather-app,
+body.stormy-bg .weather-app,
+body.foggy-bg .weather-app {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+body.rainy-bg .forecast-section h2,
+body.stormy-bg .forecast-section h2,
+body.foggy-bg .forecast-section h2 {
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    padding: 10px;
+  }
+  
+  .hourly-item {
+    min-width: 50px;
+    padding: 8px;
+  }
+  
+  .daily-item {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .weather-icon {
+    display: none;
+  }
+}

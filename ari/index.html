@@ -1,21 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="ca">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buscador de Cançons</title>
+  <title>Exemple Grid Layout</title>
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <h1>Buscador de Cançons</h1>
-  <input type="text" id="searchInput" placeholder="Cerca una cançó...">
-  <button onclick="searchTracks()">Cercar</button>
-
-  <div id="results"></div>
-
-  <script src="index.js"></script>
+  <div class="container">
+    <header>Header</header>
+    <aside>
+      <h2>Aside</h2>
+      <p>Contingut relacionat</p>
+    </aside>
+    <main>
+      <section class="subgrid">
+        <article>
+          <h3>Article 1</h3>
+          <p>Contingut llarg per veure com creix la cel·la.</p>
+        </article>
+        <article>
+          <h3>Article 2</h3>
+          <p>Contingut curt.</p>
+        </article>
+      </section>
+    </main>
+    <footer>Footer</footer>
+  </div>
 </body>
 </html>
-
-

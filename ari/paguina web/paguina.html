@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Temps a Andorra</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #e3f2fd;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1565c0;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+
+    .forecast {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2em;
+      gap: 1em;
+    }
+
+    .day {
+      background-color: white;
+      border-radius: 10px;
+      padding: 1em;
+      width: 200px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .day:hover {
+      transform: scale(1.05);
+    }
+
+    .day h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌤️ Previsió del temps a Andorra</h1>
+  </header>
+
+  <div class="forecast" id="forecast-container">
+    <p>Carregant dades...</p>
+  </div>
+
+  <script>
+    const container = document.getElementById('forecast-container');
+
+    fetch("https://api.open-meteo.com/v1/forecast?latitude=42.5078&longitude=1.5211&daily=weathercode,temperature_2m_max,temperature_2m_min,windspeed_10m_max,wind_direction_10m_dominant&timezone=Europe%2FAndorra")
+      .then(response => response.json())
+      .then(data => {
+        container.innerHTML = '';
+        const days = data.daily;
+
+        for (let i = 0; i < 5; i++) {
+          const date = new Date(days.time[i]);
+          const weather = getWeatherEmoji(days.weathercode[i]);
+
+          const div = document.createElement('div');
+          div.classList.add('day');
+          div.innerHTML = `
+            <h3>${date.toLocaleDateString('ca-ES', { weekday: 'long' })}</h3>
+            <div style="font-size: 2em">${weather}</div>
+            <p>🌡️ ${days.temperature_2m_min[i]}°C - ${days.temperature_2m_max[i]}°C</p>
+            <p>💨 ${days.windspeed_10m_max[i]} km/h</p>
+          `;
+
+          // Quan es fa clic, mostra la direcció del vent
+          div.addEventListener('click', () => {
+            const angle = days.wind_direction_10m_dominant[i];
+            const direction = getWindDirection(angle);
+            alert(`🧭 Direcció del vent: ${direction} (${angle}°)`);
+          });
+
+          container.appendChild(div);
+        }
+      });
+
+    function getWeatherEmoji(code) {
+      if ([0].includes(code)) return "☀️";
+      if ([1, 2].includes(code)) return "⛅";
+      if ([3].includes(code)) return "☁️";
+      if ([45, 48].includes(code)) return "🌫️";
+      if ([51, 53, 55, 61, 63, 65].includes(code)) return "🌧️";
+      if ([71, 73, 75, 85, 86].includes(code)) return "❄️";
+      if ([95, 96, 99].includes(code)) return "⛈️";
+      return "🌈";
+    }
+
+    function getWindDirection(angle) {
+      const directions = ['Nord', 'Nord-est', 'Est', 'Sud-est', 'Sud', 'Sud-oest', 'Oest', 'Nord-oest'];
+      const index = Math.round(angle / 45) % 8;
+      return directions[index];
+    }
+  </script>
+
+</body>
+</html>
+
