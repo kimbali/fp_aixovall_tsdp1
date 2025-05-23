@@ -1,57 +1,38 @@
 const WEATHER_API_KEY = '212ebafd80e67458b4fdf2fe666f697f';
-
 const city = 'Aixovall';
-const units = 'metric'; // centigrades o 'imperial' per Fahrenheit
+const units = 'metric';
 const language = 'ca';
 
-function updateWindData(data) {
-  const { windSpeed, direction, gust } = data.wind;
-
-  document.getElementById('speed').textContent = `${windSpeed} km/h`;
-  document.getElementById('direction').textContent = `${direction}°`;
-  document.getElementById('gust').textContent = `${gust} km/h`;
-}
-
-function updateIcon(data) {
+function updateWeatherData(data) {
+  const temperature = Math.round(data.main.temp);
+  const pressure = data.main.pressure;
+  const description = data.weather[0].description;
   const iconCode = data.weather[0].icon;
   const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-  const description = data.weather[0].description;
+
+  document.querySelector('header h2').textContent = `${temperature}ºC`;
+  document.querySelector('.box h3').textContent = description.charAt(0).toUpperCase() + description.slice(1);
 
   document.getElementById('weather-icon').src = iconUrl;
   document.getElementById('weather-description').textContent = description;
+
+  document.querySelectorAll('.box')[1].innerHTML = `<h3>Pressió</h3><p>${pressure} hPa</p>`;
 }
 
-// WEATHER of today
+function updateWindData(data) {
+  const { speed, deg, gust } = data.wind;
+  document.getElementById('speed').textContent = `${speed} km/h`;
+  document.getElementById('direction').textContent = `${deg}°`;
+  document.getElementById('gust').textContent = `${gust || '—'} km/h`;
+}
+
 fetch(
   `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${WEATHER_API_KEY}&units=${units}&lang=${language}`
 )
   .then(response => response.json())
   .then(data => {
     console.log('El temps d avui: ', data);
-
+    updateWeatherData(data);
     updateWindData(data);
-    updateIcon(data);
   })
   .catch(error => console.error('Error amb la petició:', error));
-
-// FORECAST of the week
-fetch(
-  `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${units}&appid=${WEATHER_API_KEY}&lang=${language}`
-)
-  .then(response => response.json())
-  .then(data => {
-    console.log('Previsió de 5 dies: ', data);
-
-    data.list.forEach(item => {
-      const time = new Date(item.dt * 1000).toLocaleString(); // Temps en format llegible
-      const temperature = item.main.temp; // Temperatura
-      const description = item.weather[0].description; // Descripció de l'estat del temps
-      const icon = item.weather[0].icon; // Codi de l'icona del temps
-      console.log(
-        `A les ${time} hi haurà ${description} amb una temperatura de ${temperature}°C. Icona: ${icon}`
-      );
-    });
-  })
-  .catch(error => {
-    console.error('Hi ha hagut un error:', error);
-  });
