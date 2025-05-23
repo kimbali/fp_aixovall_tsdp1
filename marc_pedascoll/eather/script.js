@@ -18,10 +18,14 @@ const imatge1 = document.getElementById('imatge1');
 const imatge2 = document.getElementById('imatge2');
 const imatge3 = document.getElementById('imatge3');
 const imatge4 = document.getElementById('imatge4');
-const infoData1 = document.getElementById('date-1');
-const infoData2 = document.getElementById('data-2');
-const infoData3 = document.getElementById('data-3');
-const infoData4 = document.getElementById('data-4');
+const infoData1 = document.getElementById('date1');
+const infoData2 = document.getElementById('date2');
+const infoData3 = document.getElementById('date3');
+const infoData4 = document.getElementById('date4');
+const textData1 = document.getElementById('desc1');
+const textData2 = document.getElementById('desc2');
+const textData3 = document.getElementById('desc3');
+const textData4 = document.getElementById('desc4');
 
 // WEATHER of today
 fetch(
@@ -66,17 +70,22 @@ fetch(
     let icona3= data.list[2].weather[0].icon;
     let icona4= data.list[3].weather[0].icon;
     let data1= data.list[0].dt_txt;
-    console.log(data1);
-    console.log(infoData1);
-    console.log(imatge4);
-    // let data2= data.list[1].dt_txt;
-    // let data3= data.list[2].dt_txt;
-    // let data4= data.list[3].dt_txt;
+    let data2= data.list[1].dt_txt;
+    let data3= data.list[2].dt_txt;
+    let data4= data.list[3].dt_txt;
+    let infoText1= data.list[0].weather[0].description;
+    let infoText2= data.list[1].weather[0].description;
+    let infoText3= data.list[2].weather[0].description;
+    let infoText4= data.list[3].weather[0].description;
+    textData1.textContent = infoText1
+    textData2.textContent = infoText2;
+    textData3.textContent = infoText3;
+    textData4.textContent = infoText4;
 
-    // infoData1.textContent=data1;
-    // infoData2.textContent=data2;
-    // infoData3.textContent=data3;
-    // infoData4.textContent=data4;
+    infoData1.textContent=data1;
+    infoData2.textContent=data2;
+    infoData3.textContent=data3;
+    infoData4.textContent=data4;
     imatge1.src=`https://openweathermap.org/img/wn/${icona}@2x.png`;
     imatge2.src=`https://openweathermap.org/img/wn/${icona2}@2x.png`;
     imatge3.src=`https://openweathermap.org/img/wn/${icona3}@2x.png`;
