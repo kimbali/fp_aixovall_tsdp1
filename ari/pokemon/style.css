@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 2rem;
+  background-color: #f0f8ff;
+}
+
+input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 200px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+#pokemonResult {
+  margin-top: 2rem;
+}
+
+#pokemonResult img {
+  width: 200px;
+  height: auto;
+  margin-top: 1rem;
+}
+
+h1 {
+  color: #ff0000;
+}
+
+h2 {
+  color: #333;
+  margin-top: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}

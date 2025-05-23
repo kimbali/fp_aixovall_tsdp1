@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple de Pàgina Simple</title>
+    <script>
+        function mostrarMissatge() {
+            alert('Gràcies per visitar-nos!');
+        }
+
+        // Validació i enviament del formulari
+        function validarFormulari(event) {
+            event.preventDefault(); // Impedeix l'enviament real del formulari per tal de validar-lo primer
+
+            var nom = document.getElementById('nom').value;
+            var correu = document.getElementById('correu').value;
+
+            if (nom === "" || correu === "") {
+                alert("Si us plau, ompli tots els camps.");
+            } else {
+                // Emmagatzemem la informació del formulari en el localStorage per a la demostració
+                localStorage.setItem('nom', nom);
+                localStorage.setItem('correu', correu);
+
+                // Mostrem un missatge d'èxit
+                alert("Formulari enviat amb èxit!");
+
+                // Opció per redirigir a una pàgina aleatòria
+                redirigirAPaginaAleatoria();
+            }
+        }
+
+        // Funció per redirigir a una pàgina aleatòria
+        function redirigirAPaginaAleatoria() {
+            const urls = [
+                "https://www.wikipedia.org",    // Wikipedia
+                "https://www.google.com",       // Google
+                "https://www.youtube.com",      // YouTube
+                "https://www.bing.com",         // Bing
+                "https://www.reddit.com"        // Reddit
+            ];
+
+            // Generem un índex aleatori
+            const urlAleatoria = urls[Math.floor(Math.random() * urls.length)];
+
+            // Redirigim a la pàgina aleatòria
+            window.location.href = urlAleatoria;
+        }
+    </script>
+</head>
+<body>
+    <!-- Capçalera de la pàgina -->
+    <header>
+        <h1>Benvinguts a la nostra pàgina web</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre nosaltres</a></li>
+                <li><a href="#contacte">Contacte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contingut principal -->
+    <main>
+        <section id="sobre">
+            <h2>Sobre nosaltres</h2>
+            <p>Som una petita empresa que ofereix serveis de qualitat.</p>
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHV3d3VkajlhZjJ3ODlwa2d3ZGI4YXZxejZrcDV5ajhhdG1oNHJmZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o85xsGXVuYh8lM3EQ/giphy.gif" alt="Imatge representativa de l'empresa" width="300">
+        </section>
+
+        <section id="contacte">
+            <h2>Contacte</h2>
+            <form id="formulari" onsubmit="validarFormulari(event)">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" required>
+                <br><br>
+
+                <label for="correu">Correu electrònic:</label>
+                <input type="email" id="correu" name="correu" required>
+                <br><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Peu de pàgina -->
+    <footer>
+        <p>2025 Empresa Exemplar. Tots els drets reservats.</p>
+        <button onclick="mostrarMissatge()">Fes clic aquí</button>
+    </footer>
+</body>
+</html>

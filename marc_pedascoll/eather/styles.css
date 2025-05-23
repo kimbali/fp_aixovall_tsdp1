@@ -49,8 +49,8 @@ h1{
     flex-direction: row;
     margin-top: 15px;
     height: fit-content;
-    justify-content: space-around;
-    padding: 16px;
+    justify-content: space-between;
+    padding-bottom: 16px;
 }
 .card{
     position: relative;

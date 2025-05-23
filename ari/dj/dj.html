@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DJ AlexH - Electrònica i Energia</title>
+
+  <!-- Fonts i icones -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* Reset i base */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1f1f1f, #660033);
+      color: #eee;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 1;
+    }
+    .hero .content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 600;
+      margin-bottom: 0.3em;
+      text-shadow: 0 0 10px #ff0077, 0 0 20px #ff0077;
+    }
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 1.5em;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .buttons {
+      display: flex;
+      gap: 1.5em;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2em;
+    }
+    .btn {
+      background: #ff0077;
+      color: white;
+      padding: 0.8em 2em;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(255,0,119,0.5);
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #cc0066;
+      box-shadow: 0 6px 20px rgba(204,0,102,0.7);
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 1.5em;
+      font-size: 1.8rem;
+    }
+    .social-icons a {
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #ff0077;
+    }
+
+    /* Seccions */
+    section.section {
+      width: 90%;
+      max-width: 1000px;
+      margin: 3em auto;
+      padding: 2em;
+      background: #222831cc;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255,0,119,0.3);
+    }
+    section.section h2 {
+      text-align: center;
+      margin-bottom: 1em;
+      font-weight: 600;
+      font-size: 2.2rem;
+      color: #ff0077;
+      text-shadow: 0 0 8px #ff0077;
+    }
+
+    /* Spotify iframes */
+    iframe {
+      border-radius: 12px;
+      width: 100%;
+      max-width: 600px;
+      height: 152px;
+      margin-bottom: 1.5em;
+      box-shadow: 0 0 15px rgba(255,0,119,0.4);
+    }
+
+    /* Llista actuacions */
+    #tours ul {
+      list-style: none;
+      font-size: 1.2rem;
+      line-height: 2;
+      color: #eee;
+      padding-left: 0;
+    }
+    #tours ul li {
+      margin-bottom: 0.8em;
+      padding-left: 1.2em;
+      position: relative;
+    }
+    #tours ul li::before {
+      content: "🎧";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 1.3rem;
+    }
+
+    /* Peu de pàgina */
+    footer {
+      width: 100%;
+      padding: 1.5em 0;
+      background: #111;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+      box-shadow: inset 0 1px 3px rgba(255,0,119,0.3);
+      margin-top: auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 3rem;
+      }
+      .hero p {
+        font-size: 1.2rem;
+      }
+      .btn {
+        padding: 0.7em 1.5em;
+        font-size: 0.9rem;
+      }
+      iframe {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="content">
+      <h1>DJ AlexH</h1>
+      <p>Electrònica. House. remenver.</p>
+      <div class="buttons">
+        <a href="#music" class="btn">Escolta Música</a>
+        <a href="#tours" class="btn">Actuacions</a>
+      </div>
+      <div class="social-icons">
+        <a href="https://instagram.com/djalexh" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/djalexh" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://spotify.com/djalexh" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+        <a href="https://soundcloud.com/djalexh" target="_blank" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="music" class="section">
+    <h2>La meva música</h2>
+    <iframe src="https://open.spotify.com/embed/track/21bk4m2BIbuHZ6GKiPqFsG" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe src="https://open.spotify.com/embed/track/0VjIjW4GlUZAMYd2vXMi3b" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe src="https://open.spotify.com/embed/track/2XU0oxnq2qxCpomAAuJY8K" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </section>
+
+  <section id="tours" class="section">
+    <h2>Pròximes Actuacions</h2>
+    <ul>
+      <li>25 de maig - bikepark, Arinsal</li>
+      <li>15 de juny - Festival, Granbalira</li>
+      <li>10 de juliol - poble, Valencia</li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2025 DJ AlexH · Web oficial
+  </footer>
+
+</body>
+</html>
