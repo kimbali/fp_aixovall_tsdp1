@@ -1,71 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  
-  <body>
-    <header>
-      <p>Aixovall</p>
-      <p>5ºC</p>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-    <div class="box">
-      <div class="title">Ennuvolat</div>
-      <div class="data">S'espera que plogui sobre les 21:00. Les ràfegues de vent arriben als 18km/h</div>
+  <header>
+    <h1>Aixovall</h1>
+    <h2>5ºC</h2>
+  </header>
+
+  <div class="box">
+    <h3>Ennuvolat</h3>
+    <p>S'espera que plogui sobre les 21:00. Les ràfegues de vent arriben als 18km/h</p>
+  </div>
+
+  <div class="box">
+    <h3>Presió</h3>
+  </div>
+
+  <div>
+    <img id="weather-icon" alt="Weather Icon" />
+    <p id="weather-description"></p>
+  </div>
+
+  <div class="wind">
+    <div class="windData">
+      <p>Vent:</p>
+      <p id="speed">Speed</p>
     </div>
-    <div class="box">
-      <div class="title">Presio</div>
+    <div class="windData">
+      <p>Ràfegues:</p>
+      <p id="gust">gust</p>
     </div>
-
-    <div class="side">
-      <div class="box">
-        <div class="title">Previsió a 10 dies</div>
-        <div class="forecast">
-          <div class="day">
-            <span class="day-name">Avui</span>
-            <img class="weather-icon" src="icon.png" alt="icon" />
-            <span class="rain">45%</span>
-            <span class="temp-min">2º</span>
-            <span class="bar">|</span>
-            <span class="temp-max">9º</span>
-          </div>
-          <div class="day">
-            <span class="day-name">dv</span>
-            <img class="weather-icon" src="icon.png" alt="icon" />
-            <span class="rain">60%</span>
-            <span class="temp-min ">3º</span>
-            <span class="bar">|</span>
-            <span class="temp-max">9º</span>
-          </div>
-      €¬
-      </div>
+    <div class="windData">
+      <p>Direcció:</p>
+      <p id="direction">direction</p>
     </div>
+  </div>
 
+  <script src="script.js"></script>
 
-    <div>
-      <img id="weather-icon" alt="Weather Icon" />
-      <p id="weather-description"></p>
-    </div>
-
-    <div class="wind">
-      <div class="windData">
-        <p>Vent</p>
-        <div id="speed">Speed</div>
-      </div>
-      <div class="windData">
-        <p>Ràfegues</p>
-        <div id="gust">gust</div>
-      </div>
-      <div class="windData">
-        <p>Direcció</p>
-        <div id="direction">direction</div>
-      </div>
-    </div>
-
-    <script src="script.js"></script>
-  </body>
+</body>
 </html>

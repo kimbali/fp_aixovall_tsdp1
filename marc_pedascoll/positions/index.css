@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+
+}
+body{
+    background-color: antiquewhite;
+    padding-top: 60px;
+    margin: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 250vh;
+}
+nav{
+    position: sticky;
+    left: 100px;
+}
+header{
+    height: 60px;
+    background-color: rgb(45, 42, 42);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    text-align: center;
+    align-content: center;
+}
+.parent{
+    position: relative;
+    background-color: aqua;
+    width: 100%;
+    padding: 16px;
+}
+.child1{
+    position: sticky;
+    top: 0;
+    background-color: yellow;
+    width: 100%;
+    height: 60px;
+}
+.child2{
+    background-color: brown;
+    width: 100%;
+    height: 60px;
+}
+.child3{
+    background-color: navy;
+    width: 100%;
+    height: 60px;
+}

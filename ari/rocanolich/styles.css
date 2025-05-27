@@ -1,0 +1,84 @@
+/* Variables de colors */
+:root {
+    --color-principal: #0e3489; /* Blau fosc */
+    --color-secundari: #ffc72c; /* Groc */
+    --color-tercer: #ff5733; /* Taronja */
+
+}
+
+/* Estils generals */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🏔 Capçalera */
+.header {
+    position: relative;
+    height: 60vh;
+    /* background: var(--color-principal) url('https://rocanolich.com/assets/img/ROCANOLICH-2025.svg') no-repeat center; */
+    background-color: var(--color-principal) ;
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Fons fosc a la capçalera */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Text millorat per llegibilitat */
+.header h1, .header p {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* 🏃‍♂️ Navbar */
+.navbar {
+    background: rgba(14, 52, 137, 0.9);
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 10px 20px;
+}
+
+.navbar .nav-link {
+    color: white;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-secundari);
+}
+
+/* Botó d’inscripció destacat */
+.btn-inscripcio {
+    background: var(--color-secundari);
+    color: #0e3489;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-inscripcio:hover {
+    background: #e0a800;
+    transform: scale(1.05);
+}
+
+/* 🌟 Navbar sticky efecte */
+.navbar.sticky {
+    background: var(--color-principal);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

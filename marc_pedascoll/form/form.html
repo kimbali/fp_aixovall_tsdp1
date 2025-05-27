@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulari de registre</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <form id="registerForm">
+        <h2>Registre</h2>
+        <input type="text" id="name" placeholder="Nom complet" required/>
+        <input type="email" id="email" placeholder="Email" required/>
+        <span class="errorMail"><p>El mail no és vàlid</p></span>
+        <input type="password" id="password" placeholder="Contrasenya" required/>
+        <span class="errorPass"><p>La contrasenya ha de tenir 8 caràcters mínim</p></span>
+        <button type="submit" class="btn-register">Registrar-se</button>
+      </form>
+  </div>
+  </body>
+</html>

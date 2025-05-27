@@ -22,56 +22,11 @@
         <p class="conditions-message">
           HOURLY FORECAST
         </p>
-        <ul class="horizontal-list">
+        <ul class="horizontal-list" id="forecast-list">
           <li>
             Now<br />
             <img id="weather-icon"></img><br />
-            <span id="tempNow">8º</span>
-          </li>
-          <li>
-            13<br />
-            <span>🌧️</span><br />
-            <span>8º</span>
-          </li>
-          <li>
-            14<br />
-            <span>🌧️</span><br />
-            <span>8º</span>
-          </li>
-          <li>
-            15<br />
-            <span>🌧️</span><br />
-            <span>8º</span>
-          </li>
-          <li>
-            16<br />
-            <span>🌧️</span><br />
-            <span>8º</span>
-          </li>
-          <li>
-            17<br />
-            <span>🌧️</span><br />
-            <span>8º</span>
-          </li>
-          <li>
-            18<br />
-            <span>🌧️</span><br />
-            <span>8º</span>
-          </li>
-          <li>
-            19<br />
-            <span>🌧️</span><br />
-            <span>8º</span>
-          </li>
-          <li>
-            20<br />
-            <span>🌧️</span><br />
-            <span>8º</span>
-          </li>
-          <li>
-            21<br />
-            <span>🌧️</span><br />
-            <span>8º</span>
+            <span id="gr">8º</span>
           </li>
         </ul>
       </div>
@@ -81,20 +36,44 @@
       <h4>WIND</h4>
       <div class="wind-data">
         <div class="wind-row">
-          <span>speed</span>
+          <span>Speed</span>
           <span id="speed"> km/h</span>
         </div>
         <div class="wind-row">
-          <span>gust</span>
+          <span>Gusts</span>
           <span id="gust">18 km/h</span>
         </div>
         <div class="wind-row">
-          <span>Direccion</span>
+          <span>Direction</span>
           <span id="direction">201°</span>
         </div>
       </div>
     </div>
-     
+    <!-- Humidity etc -->
+    <div id="container">
+      <div class="item">
+        <span>Humidity</span>
+        <span id="humidity">1231%</span>
+      </div>
+      <div class="item">
+        <span>Pressure</span>
+        <span id="pressure">1000hPa</span>
+      </div>
+      <div class="item">
+        <span>Visibility</span>
+        <span id="visibility">2Km</span>
+      </div>
+      <div class="item">
+        <span>Sea Level</span>
+        <span id="sea-level">123</span>
+      </div>
+      <div class="item">
+        <span>Ground level</span>
+        <span id="ground-level">3663</span>
+      </div>
+    </div>
+    <div id="espacio">
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
