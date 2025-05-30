@@ -9,8 +9,8 @@ function updateWindData(data) {
 
   // console.log( speed, gust, deg);
 
-  const speedKmh = ( speed * 3.6).toFixed(1);
-  const gustKmh = ( gust * 3.6).toFixed(1);
+  const speedKmh = (speed * 3.6).toFixed(1);
+  const gustKmh = (gust * 3.6).toFixed(1);
 
   document.getElementById("speed").textContent = `${speedKmh} km/h`;
   document.getElementById("direction").textContent = `${deg}°`;
@@ -47,18 +47,22 @@ fetch(
 
     updateWindData(data);
 
-    const humidity = document.getElementById('humidity');
+    const humidity = document.getElementById("humidity");
     humidity.textContent = `${data.main.humidity}%`;
 
-    const pressure = document.getElementById('pressure');
+    const pressure = document.getElementById("pressure");
     pressure.textContent = `${data.main.pressure}hPa`;
 
-    const visibility = document.getElementById('visibility');
+    const visibility = document.getElementById("visibility");
     const visibilityKm = (data.visibility / 1000).toFixed(1);
     visibility.textContent = `${visibilityKm} km`;
 
-    const seaLevel = document.getElementById('sea-level');
+    const seaLevel = document.getElementById("sea-level");
     seaLevel.textContent = `${data.main.sea_level}`;
+
+    const groundLevel = document.getElementById("ground-level");
+    groundLevel.textContent = `${data.main.grnd_level}m`;
+
   })
   .catch((error) => console.error("Error amb la petició:", error));
 
@@ -70,24 +74,22 @@ fetch(
   .then((data) => {
     console.log("Previsió de 5 dies: ", data);
 
-    // Selecciona el contenedor de la lista
     const forecastList = document.getElementById("forecast-list");
-    forecastList.innerHTML = ""; // Limpia la lista antes de agregar nuevos elementos
+    forecastList.innerHTML = "";
 
     // Recorre los primeros 7 elementos de la lista de pronóstico
     data.list.slice(0, 7).forEach((item, index) => {
-      const li = document.createElement('li');
+      const li = document.createElement("li");
       const iconUrl = `https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`;
       const date = new Date(item.dt * 1000);
-      const hour = date.getHours().toString().padStart(2, '0');
+      const hour = date.getHours().toString().padStart(2, "0");
 
       li.innerHTML = `
         <span class="forecast-small-text">${hour}</span><br>
         <img src="${iconUrl}" alt="icon" class="weather-icon-small" /><br>
         <span class="forecast-small-text">${Math.floor(item.main.temp)}º</span>
       `;
-      forecastList.appendChild(li);;
-      
+      forecastList.appendChild(li);
 
       const time = new Date(item.dt * 1000).toLocaleString(); // Temps en format llegible
       const temperature = item.main.temp; // Temperatura
