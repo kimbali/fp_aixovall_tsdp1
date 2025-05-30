@@ -16,13 +16,15 @@ body {
   position: relative;
   z-index: 2;
 }
-.semana{
-    color: #ffffff;
+.semana {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  margin-top: 20px;
-  position: relative;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px;
+  color: #ffffff;
   z-index: 2;
 }
 
