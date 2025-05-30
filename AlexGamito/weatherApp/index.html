@@ -9,9 +9,7 @@
   <body>
     <header class="header" id="weather-header">
       <img id="weather-icon" src="" alt="Weather icon" style="width:80px;height:80px;display:block;margin:0 auto 10px auto;" />
-      <!-- Dynamic content will be inserted here by the JavaScript -->
     </header>
-
     <main class="container">
       <div class="box" id="vent">
         <div class="header-title">
@@ -24,26 +22,15 @@
           </span>
           VENT
         </div>
-        <div style="display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;">
-          <div class="sensacio-section" id="sensacio-data"></div>
-          <div class="wind-section" id="vent-data"></div>
-        </div>
+        <div class="wind-section" id="vent-data"></div>
       </div>
     </main>
-
-    <section class="hourly-forecast" id="hourly-forecast">
-      <!-- Hourly forecast will be inserted here -->
-    </section>
-
-    <section class="daily-forecast" id="daily-forecast">
-      <!-- Daily forecast will be inserted here -->
-    </section>
-
+    <section class="hourly-forecast" id="hourly-forecast"></section>
+    <section class="daily-forecast" id="daily-forecast"></section>
     <footer class="footer">
-      <div class="footer-content">
-        <p>Aplicació creada per Alex Gamito</p>
-        <p>FP TSDP1 - AIXOVALL</p>
-      </div>
+      <p>Aplicació creada per Alex Gamito</p>
+      <p>FP TSDP1 - AIXOVALL</p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,5 +1,6 @@
 body {
     background-image: url('nubes.avif');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     margin: 0;
@@ -7,6 +8,7 @@ body {
     font-family: system-ui, sans-serif;
     color: rgb(117, 135, 235);
     text-align: center;
+    min-height: 100vh;
 }
 
 .capcelera {
